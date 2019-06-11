@@ -1,9 +1,10 @@
-\documentclass[a4paper,12p]{article}
+   \documentclass[a4paper,12p]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[a4paper, left=2.5cm, right=2.5cm]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{mathtools}
 
 \title{\huge Modellbildung\\\large \huge Beispielsammlung}
 \author{\huge 4.Semester ET-Studium}
@@ -136,10 +137,78 @@ Hieraus folgt:
 \begin{flushleft}
     \textbf{\textit{\underline{Aufgabe 2.4}}}
 \end{flushleft}
-Geben Sie die Momentenbilanz für das Beispiel von Abbildung 2.14 um den Bezugspunkt \textit{C} an.
+Geben Sie die Momentenbilanz für das Beispiel von Abbildung 2.14 um den Bezugspunkt \textit{C} an.  \newline
 \begin{figure}[h]
     \includegraphics[width=12.5cm]{pic/Angabe2_4}
     \caption{Angabe Aufgabe 2.4}
     \label{Angabe 2.4}
 \end{figure}
+\begin{flushleft}
+Ausgehend von den Kräften
+\end{flushleft}
+\begin{equation*}
+	\textbf{f}_{A} = \left[\begin{array}{c}	f_{A,x} \\	f_{A,y} \\	f_{A,z} \\\end{array}\right] , 
+	\textbf{f}_{B} = \left[\begin{array}{c}	f_{B,x} \\	f_{B,y} \\	f_{B,z} \\\end{array}\right] ,
+	\textbf{f}_{C} = \left[\begin{array}{c}	f_{C,x} \\	f_{C,y} \\	f_{C,z} \\\end{array}\right]
+\end{equation*}
+sowie die zugehörigen Ortsvektoren
+\begin{equation*}
+	\textbf{r}_{0A} = \left[\begin{array}{c} \frac{a_{x}}{2} \\ 0 \\ \frac{a_{z}}{2} \\\end{array}\right] ,
+	\textbf{r}_{0B} = \left[\begin{array}{c} \frac{a_{x}}{2} \\ \frac{a_{y}}{2} \\ a_{z} \\\end{array}\right]
+	\textbf{r}_{0C} = \left[\begin{array}{c} 0 \\ 0 \\ 0 \\\end{array}\right]
+	\textbf{r}_{0D} = \left[\begin{array}{c} a_{x} \\ 0 \\ 0 \\\end{array}\right]
+\end{equation*}
+\newpage
+\begin{flushleft}
+	Für den Bezugspunkt \textit{C} folgen die Momente zu
+\end{flushleft}
+\begin{align*}
+	\boldsymbol{\tau}_{A}^{(C)} &= \underbrace{(\textbf{r}_{0A} - \textbf{r}_{0C})}_{\textbf{r}_{CA}} \times \textbf{f}_{A} = \left[\begin{array}{c} \frac{a_{x}}{2} \\ 0 \\ \frac{a_{z}}{2} \\\end{array}\right] \times \left[\begin{array}{c} f_{A,x} \\ f_{A,y} \\ f_{A,z} \\\end{array}\right] = \left[\begin{array}{c}
+		-\frac{f_{A,y}a_{z}}{2} \\
+		-\frac{f_{A,z}a_{x}}{2} + \frac{f_{a,x}a_{z}}{2} \\
+		\frac{f_{A,y}a_{x}}{2} \\
+	\end{array}\right]
+	\\
+	\boldsymbol{\tau}_{B}^{(C)} &= \underbrace{(\textbf{r}_{0B} - \textbf{r}_{0C})}_{\textbf{r}_{CB}} \times \textbf{f}_{B} = 
+	\left[\begin{array}{c}
+		\frac{a_{x}}{2} \\
+		\frac{a_{y}}{2} \\
+		a_{z} \\
+	\end{array}\right]
+	\times
+	\left[
+	\begin{array}{c}
+		f_{B,x} \\
+		f_{B,y} \\
+		f_{B,z} \\
+	\end{array}
+	\right]
+	=
+	\left[\begin{array}{c}
+	\frac{f_{B,y}a_{z}}{2} - f_{B,y}a_{z} \\
+	-\frac{f_{B,z}a_{x}}{2} + f_{B,x}a_{z} \\
+	\frac{f_{B,y}a_{x}}{2} - \frac{f_{B,x}a_{y}}{2} \\
+	\end{array}\right]
+	\\
+	\boldsymbol{\tau}_{C}^{(C)} &= \underbrace{(\textbf{r}_{0C} - \textbf{r}_{0C})}_{\textbf{r}_{CC}} \times \textbf{f}_{C} = 
+	\left[\begin{array}{c}
+			0 \\
+			0 \\
+			0 \\
+	\end{array}\right]
+	\times
+	\left[
+	\begin{array}{c}
+	f_{C,x} \\
+	f_{C,y} \\
+	f_{C,z} \\
+	\end{array}
+	\right]
+	=
+	\left[\begin{array}{c}
+		0 \\
+		0 \\
+		0 \\
+	\end{array}\right]
+\end{align*}
 \end{document}
