@@ -211,4 +211,52 @@ sowie die zugehörigen Ortsvektoren
 		0 \\
 	\end{array}\right]
 \end{align*}
+
+\begin{flushleft}
+	\underline{\textbf{\textit{Aufgabe 2.6}}} \\
+\end{flushleft}
+Berechnen Sie den Schwerpunkt einer homogenen Halbkugel gemäß Abbildung 2.19. 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=12.5cm]{pic/Angabe2_6}
+		\caption{Angabe Aufgabe 2.6}
+		\label{Aufgabe2.6}
+	\end{center}
+\end{figure}
+\newline
+\textbf{Lösungsweg:} \\
+Schwerpunkt einer homogenen Halbkugel: \\
+\begin{align*}
+	dV &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}R^2\sin(\theta)dr d\theta d\varphi = \\
+	dV &= \frac{2r^3\pi}{3}
+\end{align*}
+\newpage
+Koordinaten des Ortsvektors zum Schwerpunkt:
+\begin{align*}
+	r_{Sx} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\sin(\theta)\cos(\varphi)\sin(\theta)dr d\theta d\varphi = 0 \\
+	r_{Sy} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\sin(\theta)\sin(\varphi)\sin(\theta)dr d\theta d\varphi = 0 \\
+	r_{Sx} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\cos(\theta)\sin(\theta)dr d\theta d\varphi = \frac{\pi r^4}{4}
+\end{align*}
+Koordinaten als Vektor:
+\[
+	\textbf{r}_{SK} = 
+	\left[
+		\begin{array}{c}
+			0 \\
+			0 \\
+		    \frac{\pi r^4}{4} \\
+		\end{array}
+	\right]
+\]
+Schwerpunkt:
+\[
+	\textbf{r}_{S} = \frac{\textbf{r}_{SK}}{dV} = 
+	\left[
+		\begin{array}{c}
+			0 \\
+			0 \\
+			\frac{3}{8}r \\
+		\end{array}
+	\right]
+\]
 \end{document}
