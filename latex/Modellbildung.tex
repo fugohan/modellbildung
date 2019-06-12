@@ -1,4 +1,4 @@
-   \documentclass[a4paper,12p]{article}
+\documentclass[a4paper,12p]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[a4paper, left=2.5cm, right=2.5cm]{geometry}
@@ -259,4 +259,33 @@ Schwerpunkt:
 		\end{array}
 	\right]
 \]
+\underline{\textbf{\textit{Aufgabe 2.9}}} \\ \\
+Berechnen Sie jeweils die Gesamtsteifigkeit $c_{g}$ sowie die zugehörige entspannte Länge $s_{0g}$ der Ersatzschaltung gemäß der Angabe.
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=12.5cm]{pic/Angabe2_9}
+		\caption{Angabe Augfabe 2.9}
+		\label{Aufgabe 2.9}
+	\end{center}
+\end{figure}
+\newline
+\textbf{Lösungsweg:}\\
+Serienschaltung:\\
+Die entspannten Längen werde addiert und die Steifigkeit wird wie einer einer "Parallelschaltung" berechnet.
+\[
+	s_{0g} = s_{10} + s_{20}, \qquad c_{g} = \frac{c_{1}c_{2}}{c_{1} + c_{2}}
+\]
+\newpage
+\begin{flushleft}
+Parallelschaltung:
+\end{flushleft}
+Steifigkeit:
+\[ c_{g} = c_{1} + c_{2}\]
+entspannte Länge:
+\begin{align*}
+	feder1_{F0} &= c_{1}s_{10} \\
+	feder2_{F0} &= c_{2}s_{20} \\
+	F_{g0} = feder1_{F0} + feder2_{F0} &= c_{1}s_{10} + c_{2}s_{20} \\
+	s_{g0} = \frac{F_{g0}}{c_{g}} &= \frac{c_{1}s_{10} + c_{2}s_{20}}{c_{1} + c_{2}}
+\end{align*}
 \end{document}
