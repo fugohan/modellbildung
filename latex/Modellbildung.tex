@@ -211,7 +211,7 @@ sowie die zugehörigen Ortsvektoren
 		0 \\
 	\end{array}\right]
 \end{align*}
-
+\subsubsection{Schwerpunkt}
 \begin{flushleft}
 	\underline{\textbf{\textit{Aufgabe 2.6}}} \\
 \end{flushleft}
@@ -222,7 +222,7 @@ Berechnen Sie den Schwerpunkt einer homogenen Halbkugel gemäß Abbildung 2.19.
 		\caption{Angabe Aufgabe 2.6}
 		\label{Aufgabe2.6}
 	\end{center}
-\end{figure}
+\end{figure} 
 \newline
 \textbf{Lösungsweg:} \\
 Schwerpunkt einer homogenen Halbkugel: \\
@@ -259,6 +259,9 @@ Schwerpunkt:
 		\end{array}
 	\right]
 \]
+\subsubsection{Impulserhaltung}
+Die Aufgaben in diesem Kapitel beinhalten nur Beweise, aber diese Ausarbeitung behandelt keine mathematischen Beweise.
+\subsubsection{Translatorische kinetische Energie und potentielle Energie  }
 \underline{\textbf{\textit{Aufgabe 2.9}}} \\ \\
 Berechnen Sie jeweils die Gesamtsteifigkeit $c_{g}$ sowie die zugehörige entspannte Länge $s_{0g}$ der Ersatzschaltung gemäß der Angabe.
 \begin{figure}[h]
@@ -287,5 +290,52 @@ entspannte Länge:
 	feder2_{F0} &= c_{2}s_{20} \\
 	F_{g0} = feder1_{F0} + feder2_{F0} &= c_{1}s_{10} + c_{2}s_{20} \\
 	s_{g0} = \frac{F_{g0}}{c_{g}} &= \frac{c_{1}s_{10} + c_{2}s_{20}}{c_{1} + c_{2}}
+\end{align*}
+\subsubsection{Dissipative Kräfte }
+\underline{\textbf{\textit{Aufgabe 2.10}}}\\ \\
+Berechnen Sie die notwendige Zugkraft $f_{s}$ als Funktion der Winkel $\alpha$ und $\beta$ sowie der Masse $m$ und des Haftreibungskoeffizienten $\mu_{H}$, damit die Masse bewegt werden kann.
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=12.5cm]{pic/Angabe2_10}
+		\caption{Angabe Aufgabe 2.10}
+		\label{Angabe 2.10}
+	\end{center}
+\end{figure}
+\newpage
+\begin{flushleft}
+	\textbf{Lösungsweg:}
+\end{flushleft}
+!!!Bild der eingefügten Masse einfügen!!! \\ \\
+Gleichgewichtsbedingungen:
+\begin{align*}
+	\textbf{e}_{x} &: -f_{s}\cos(\beta) + f_{R}\cos(\alpha) + f_{N}\sin(\alpha) = 0 \\
+	\textbf{e}_{y} &: -mg + f_{s}\sin(\beta) - f_{r}\sin(\alpha) + f_{N}\cos(\beta) = 0 \\
+\end{align*}
+Haftreibungskraft $f_{R} = f_{N}\mu_{H}$ \\
+Setzt man diese in die obigen Bedingungen lässt sich folgendes Gleichungssystem ermitteln: \\
+$\textbf{e}_{x}:$
+\begin{align*}
+	 -f_{S}\cos(\beta) + f_{N}\mu_{H}\cos(\alpha) + f_{N}\sin(\alpha) = 0 \\
+	 -f_{S}\cos(\beta) + f_{N}(\mu_{H}\cos(\alpha) + \sin(\alpha)) = 0 \\
+\end{align*}
+$\textbf{e}_{y}:$
+\begin{align*}
+	-mg + f_{S}\sin(\beta) - f_{N}\mu_{H}\sin(\beta) + f_{N}\cos(\beta) = 0 \\
+	-mg + f_{S}\sin(\beta) - f_{N}(\mu_{H}\sin(\alpha) + \cos(\beta)) = 0 \\
+\end{align*}
+Gleichungssystem:
+\begin{align*}
+	I  &: -f_{S}\cos(\beta) + f_{N}(\mu_{H}\cos(\alpha) + \sin(\alpha)) = 0 \\
+	II &: 	-mg + f_{S}\sin(\beta) - f_{N}(\mu_{H}\sin(\alpha) + \cos(\beta)) = 0 \\
+\end{align*}
+Nun wird ganz normal dieses Gleichungssystem gelöst.\\
+I auf $f_{N}$ umgeformt:
+\[
+	f_{N} = \frac{f_{S}\cos(\beta)}{\mu_{H}\cos(\alpha) + \sin(\alpha)}
+\]
+I in II eingesetzt und auf $f_{S}$ umgeformt:
+\begin{align*}
+	-mg + f_{S}\sin(\beta) - \frac{f_{S}\cos(\beta)}{\mu_{H}\cos(\alpha) + \sin(\alpha)}(\mu_{H}\sin(\alpha) + \cos(\beta)) = 0 \\
+	-mg(\mu_{H}\cos(\alpha) + \sin(\alpha)) + f_{S}\sin(\beta)(\mu_{H}\cos(\alpha) + \sin(\alpha)) - f_{S}\cos(\beta)(\mu_{H}\sin(\alpha) + \cos(\beta)) = 0 \\
 \end{align*}
 \end{document}
