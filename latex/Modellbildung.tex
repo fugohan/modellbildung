@@ -235,7 +235,7 @@ Koordinaten des Ortsvektors zum Schwerpunkt:
 \begin{align*}
 	r_{Sx} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\sin(\theta)\cos(\varphi)\sin(\theta)dr d\theta d\varphi = 0 \\
 	r_{Sy} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\sin(\theta)\sin(\varphi)\sin(\theta)dr d\theta d\varphi = 0 \\
-	r_{Sx} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\cos(\theta)\sin(\theta)dr d\theta d\varphi = \frac{\pi r^4}{4}
+	r_{Sz} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\cos(\theta)\sin(\theta)dr d\theta d\varphi = \frac{\pi r^4}{4}
 \end{align*}
 Koordinaten als Vektor:
 \[
@@ -347,12 +347,12 @@ I in II eingesetzt und auf $f_{S}$ umgeformt:
 	&-mg(\mu_{H}\cos(\alpha) + \sin(\alpha)) + f_{S}(\mu_{H}\sin(\beta)\cos(\alpha) + \sin(\beta)\sin(\alpha)) - f_{S}(\mu_{H}\cos(\beta)\sin(\alpha) + \cos(\alpha)\cos(\beta)) = 0 \\
 	&-mg(\mu_{H}\cos(\alpha) + \sin(\alpha)) + f_{S}(\mu_{H}\underbrace{(\sin(\beta)\cos(\alpha) - \cos(\beta)\sin(\alpha))}_{\sin(\beta - \alpha)} + \underbrace{(\sin(\beta)\sin(\alpha) + \cos(\beta)\cos(\alpha))}_{\cos(\beta - \alpha)}) = 0 \\
 	&-mg(\mu_{H}\cos(\alpha) + \sin(\alpha)) + f_{S}(\mu_{H}\sin(\beta - \alpha) + \cos(\beta - \alpha)) = 0 \\
-	&f_{S} = \frac{-mg(\mu_{H}\cos(\alpha) + \sin(\alpha))}{\cos(\beta - \alpha) + \mu_{H}\sin(\beta - \alpha)}
+	&f_{S} = \frac{mg(\mu_{H}\cos(\alpha) + \sin(\alpha))}{\cos(\beta - \alpha) + \mu_{H}\sin(\beta - \alpha)}
 \end{align*}
 \newline
 Der Körper haftet bei der Bedingung \( |f_{S}|\leq f_{H}\).\\
 Damit der Körper sich nun bewegen kann muss \(|f_{S}| > f_{H}\) erfüllt. Daraus folgt für \(f_{S}\):
 \[
-	f_{S} > \frac{-mg(\mu_{H}\cos(\alpha) + \sin(\alpha))}{\cos(\beta - \alpha) + \mu_{H}\sin(\beta - \alpha)}
+	f_{S} > \frac{mg(\mu_{H}\cos(\alpha) + \sin(\alpha))}{\cos(\beta - \alpha) + \mu_{H}\sin(\beta - \alpha)}
 \] 
 \end{document}
