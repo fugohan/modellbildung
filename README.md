@@ -9,7 +9,7 @@ Beispiele|fugohan|fagohan
 3||
 4||
 5||
-6||
+6|x|
 7||
 8||
 9|x|
