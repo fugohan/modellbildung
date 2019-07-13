@@ -7,4 +7,4 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Schwerpunkt}{7}
 \contentsline {subsubsection}{\numberline {2.2.3}Impulserhaltung}{8}
 \contentsline {subsubsection}{\numberline {2.2.4}Translatorische kinetische Energie und potentielle Energie }{8}
-\contentsline {subsubsection}{\numberline {2.2.5}Dissipative Kr\IeC {\"a}fte }{10}
+\contentsline {subsubsection}{\numberline {2.2.5}Dissipative Kr\IeC {\"a}fte }{9}

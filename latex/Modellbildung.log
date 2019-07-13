@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.9)  12 JUN 2019 21:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.9)  13 JUL 2019 19:22
 entering extended mode
 **./Modellbildung.tex
 (Modellbildung.tex
@@ -675,22 +675,22 @@ dung.toc)
 \openout3 = `Modellbildung.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 24--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--39
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--39
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--64
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
 
  []
 
@@ -698,20 +698,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--64
 <pic/Angabe.png, id=25, 396.98312pt x 205.26688pt>
 File: pic/Angabe.png Graphic file (type png)
 <use pic/Angabe.png>
-Package pdftex.def Info: pic/Angabe.png  used on input line 111.
+Package pdftex.def Info: pic/Angabe.png  used on input line 112.
 (pdftex.def)             Requested size: 355.65944pt x 183.90532pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--119
+Underfull \hbox (badness 10000) in paragraph at lines 108--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--119
+Underfull \hbox (badness 10000) in paragraph at lines 108--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--119
+Underfull \hbox (badness 10000) in paragraph at lines 108--120
 
  []
 
@@ -719,16 +719,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--119
 <pic/Angabe2_4.png, id=31, 754.31813pt x 374.90062pt>
 File: pic/Angabe2_4.png Graphic file (type png)
 <use pic/Angabe2_4.png>
-Package pdftex.def Info: pic/Angabe2_4.png  used on input line 142.
+Package pdftex.def Info: pic/Angabe2_4.png  used on input line 143.
 (pdftex.def)             Requested size: 355.65944pt x 176.76392pt.
  [6 <./pic/Angabe2_4.png>]
 <pic/Angabe2_6.png, id=37, 742.27313pt x 341.02406pt>
 File: pic/Angabe2_6.png Graphic file (type png)
 <use pic/Angabe2_6.png>
-Package pdftex.def Info: pic/Angabe2_6.png  used on input line 221.
+Package pdftex.def Info: pic/Angabe2_6.png  used on input line 222.
 (pdftex.def)             Requested size: 355.65944pt x 163.40349pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--229
+Underfull \hbox (badness 10000) in paragraph at lines 219--230
 
  []
 
@@ -736,32 +736,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--229
 <pic/Angabe2_9.png, id=46, 467.24562pt x 210.28563pt>
 File: pic/Angabe2_9.png Graphic file (type png)
 <use pic/Angabe2_9.png>
-Package pdftex.def Info: pic/Angabe2_9.png  used on input line 269.
+Package pdftex.def Info: pic/Angabe2_9.png  used on input line 270.
 (pdftex.def)             Requested size: 355.65944pt x 160.07222pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--274
+Underfull \hbox (badness 10000) in paragraph at lines 266--275
 
  []
 
 [8 <./pic/Angabe2_9.png>]
-Overfull \hbox (6.0344pt too wide) in paragraph at lines 278--280
+Overfull \hbox (6.0344pt too wide) in paragraph at lines 279--281
 \OT1/cmr/m/n/10 Die ent-spann-ten L[]angen wer-de ad-diert und die Stei-fig-kei
 t wird wie ei-ner ei-ner "Par-al-lel-schal-tung"berechnet. 
  []
 
-[9]
-<pic/Angabe2_10.png, id=54, 570.63188pt x 408.02437pt>
+<pic/Angabe2_10.png, id=51, 570.63188pt x 408.02437pt>
 File: pic/Angabe2_10.png Graphic file (type png)
 <use pic/Angabe2_10.png>
 Package pdftex.def Info: pic/Angabe2_10.png  used on input line 301.
-(pdftex.def)             Requested size: 355.65944pt x 254.31107pt.
+(pdftex.def)             Requested size: 284.52756pt x 203.44511pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 297--306
 
  []
 
-[10 <./pic/Angabe2_10.png>]
-<pic/Angabe2_10_2.png, id=59, 341.77687pt x 260.47313pt>
+[9 <./pic/Angabe2_10.png>]
+<pic/Angabe2_10_2.png, id=56, 341.77687pt x 260.47313pt>
 File: pic/Angabe2_10_2.png Graphic file (type png)
 <use pic/Angabe2_10_2.png>
 Package pdftex.def Info: pic/Angabe2_10_2.png  used on input line 312.
@@ -771,11 +770,11 @@ Overfull \hbox (16.99068pt too wide) detected at line 352
 []
  []
 
-[11 <./pic/Angabe2_10_2.png>] [12] (Modellbildung.aux) ) 
+[10 <./pic/Angabe2_10_2.png>] [11] (Modellbildung.aux) ) 
 Here is how much of TeX's memory you used:
  4004 strings out of 493303
  57755 string characters out of 3129350
- 139879 words of memory out of 3000000
+ 139878 words of memory out of 3000000
  7465 multiletter control sequences out of 15000+200000
  12476 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -800,9 +799,9 @@ sers/Marcus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb><C:/Users/Marcus/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmsy7.pfb><C:/Users/Marcus/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Modellbildung.pdf (12 pages, 394698 bytes).
+Output written on Modellbildung.pdf (11 pages, 394102 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
+ 115 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
