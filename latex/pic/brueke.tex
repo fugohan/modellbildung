@@ -19,8 +19,16 @@
 	(0.25,-0.5) node[right]{$f_{By}$} -- (0.25,0.5);
 	\draw[-Latex,thick]
 	(1.75,0.90) -- +(0,-1) node[right]{$m_Bg$};
+	\fill
+		(1.75,0.9) circle (1pt);
 	\draw[-Latex,thick]
 	(2.66,1.14) -- +(0,1) node[right]{$f_{s1}$};
+	\fill
+		(2.66,1.14) circle (1pt);
+	\draw[very thin]
+		(0.25,0.5) -- +(2.5,0);
+	\draw[very thin,-Latex]
+		(2.7,0.5) node[right] {$\varphi_B$}  arc (0:18.5:2cm);
 	\end{tikzpicture}
 	\caption{freigeschnittene Brücke}
 \end{center}
