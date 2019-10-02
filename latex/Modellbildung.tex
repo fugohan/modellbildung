@@ -1,4 +1,4 @@
-     \documentclass[a4paper,12p]{article}
+           \documentclass[a4paper,12p]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[a4paper, left=2.5cm, right=2.5cm]{geometry}
@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{mathtools}
 \usepackage{tikz}
+\usepackage{cancel}
 \usetikzlibrary{intersections}
 \usetikzlibrary{calc,arrows.meta}  
 
@@ -22,21 +23,13 @@ Die Modellbildung beschäftigt sich mit der mathematischen Beschreibung von Syst
 \newline
 Der Inhalt dieser Ausarbeitung beinhaltet nur die Aufgaben, aus dem Skript der Vorlesung der Modellbildung, welche eine Pflichtlehrveranstaltung im 4.Semester im Bachelor-Studium der Elektrotechnik ist. Der Lösungsweg der hier erwähnten Beispiele wird im Skript nicht explizit ausgearbeitet. Variablen der Form \textbf{x} sind Vektoren und der Form \textbf{A} sind Matrizen. \\
 Die Ausarbeitung enthält nur die Beispiele die ohne nötiger Hilfe von Maple gelöst werden können und wo man keine mathematischen Beweise durchführen muss. \\
-Außerdem beinhaltet dieses Dokument weiters komplett durchgerechnete Prüfungen.
+Außerdem beinhaltet dieses Dokument weiters komplett durchgerechnete Prüfungen. \\
+Hier wird keine Theorie ausgearbeitet, sondern außerschließlich nur Berechnungsaufgaben. \\
+ACHTUNG nur Rechnungen in dieser Ausarbeitung. Sämtliche Bilder zu den Angaben und Angaben finden Sie im Vorlesungskript.\\
+ACHTUNG nicht alle Beispiele und Prüfungen befinden sich durchgerechnet in dieser Sammlung.
 \section{Mechanische Systeme}
 \subsection{Punkt-Kinematik}
-\textbf{\textit{\underline{Aufgabe 2.1}}}
-\newline\newline
- Zeigen Sie, dass sich die Geschwindigkeitskomponenten eines materiellen Punktes \textit{P} im Raum bezüglich der normierten Basisvektoren $ e_{r} , e_{\theta} $ und $ e_{\varphi} $ in Kugelkoordinaten
- \begin{equation*}
- 	x = r\sin(\theta)\cos(\varphi),\qquad y = r\sin(\theta)\sin(\varphi),\qquad z = r\cos(\theta)
- \end{equation*}
- zu
- \begin{equation*}
- 	v_{r} = \dot{r},\qquad v_{\theta} = r\dot{\theta},\qquad v_{\varphi} = r\sin(\theta)\dot{\varphi}
- \end{equation*}
- errechnen.
- \newline\newline
+\textbf{\textit{\underline{Aufgabe 2.1}}} \\ \\
  \textbf{Lösungsweg:}
  \newline\newline
  Die Geschwindigkeit mit der Form
@@ -109,17 +102,8 @@ darstellen.
 \subsection{Newtonsche Gesetze}
 \subsubsection{Kräftesystem}
 \textbf{\textit{\underline{Aufgabe 2.3}}} \\ \\
-Ein vertikaler Mast M wird gemäß der Abbildung durch Seile abgespannt.
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=12.5cm]{pic/Angabe}
-\caption{Angabe Aufgabe 2.3}
-\label{Angabe}
-\end{center}
-\end{figure} \\
-Wie groß sind die Kräfte $ f_{s1} $ und $ f_{s2} $ in den Seilen 1 und 2 und die Kraft $ f_M $ im Mast, wenn am Seil 3 die Zugkraft $ f_{s3} $ aufgebracht wird? \\ \\
 \textbf{Lösungsweg:} \\ \\
-Zunächst müssen die Gleichungen für die Gleichgewichtsbedingung aufgestellt werden. Da sich es in Abbildung \ref{Angabe} um ein 3-dimensionales Beispiel handelt muss man die Gleichgewichtsbedingung für alle drei Raumrichtungen aufstellen.
+Zunächst müssen die Gleichungen für die Gleichgewichtsbedingung aufgestellt werden. Da es sich um ein 3-dimensionales Beispiel handelt muss man die Gleichgewichtsbedingung für alle drei Raumrichtungen aufstellen.
 \begin{align*}
 	(1) \ \ \ e_x & : f_{s1}\cos(\alpha) - f_{s2}\cos(\alpha) = 0 \\
 	(2) \ \ \ e_y & : f_{s3}\cos(\gamma) - f_{s1}\cos(\alpha)\cos(\beta) - f_{s2}\cos(\alpha)\cos(\beta) = 0 \\  
@@ -142,11 +126,6 @@ Hieraus folgt:
     \textbf{\textit{\underline{Aufgabe 2.4}}}
 \end{flushleft}
 Geben Sie die Momentenbilanz für das Beispiel von Abbildung 2.14 um den Bezugspunkt \textit{C} an.  \newline
-\begin{figure}[h]
-    \includegraphics[width=12.5cm]{pic/Angabe2_4}
-    \caption{Angabe Aufgabe 2.4}
-    \label{Angabe 2.4}
-\end{figure}
 \begin{flushleft}
 Ausgehend von den Kräften
 \end{flushleft}
@@ -219,28 +198,20 @@ sowie die zugehörigen Ortsvektoren
 \begin{flushleft}
 	\underline{\textbf{\textit{Aufgabe 2.6}}} \\
 \end{flushleft}
-Berechnen Sie den Schwerpunkt einer homogenen Halbkugel gemäß Abbildung 2.19. 
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=12.5cm]{pic/Angabe2_6}
-		\caption{Angabe Aufgabe 2.6}
-		\label{Aufgabe2.6}
-	\end{center}
-\end{figure} 
-\newline
 \textbf{Lösungsweg:} \\
 Schwerpunkt einer homogenen Halbkugel: \\
 \begin{align*}
 	dV &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}R^2\sin(\theta)dr d\theta d\varphi = \\
 	dV &= \frac{2r^3\pi}{3}
 \end{align*}
-\newpage
+\noindent
 Koordinaten des Ortsvektors zum Schwerpunkt:
 \begin{align*}
 	r_{Sx} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\sin(\theta)\cos(\varphi)\sin(\theta)dr d\theta d\varphi = 0 \\
 	r_{Sy} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\sin(\theta)\sin(\varphi)\sin(\theta)dr d\theta d\varphi = 0 \\
 	r_{Sz} &= \int_{0}^{2\pi}\int_{0}^{\frac{\pi}{2}}\int_{0}^{r}r^3\cos(\theta)\sin(\theta)dr d\theta d\varphi = \frac{\pi r^4}{4}
 \end{align*}
+\noindent
 Koordinaten als Vektor:
 \[
 	\textbf{r}_{SK} = 
@@ -266,16 +237,7 @@ Schwerpunkt:
 \subsubsection{Impulserhaltung}
 Die Aufgaben in diesem Kapitel beinhalten nur Beweise, aber diese Ausarbeitung behandelt keine mathematischen Beweise.
 \subsubsection{Translatorische kinetische Energie und potentielle Energie  }
-\underline{\textbf{\textit{Aufgabe 2.9}}} \\ \\
-Berechnen Sie jeweils die Gesamtsteifigkeit $c_{g}$ sowie die zugehörige entspannte Länge $s_{0g}$ der Ersatzschaltung gemäß der Angabe.
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=12.5cm]{pic/Angabe2_9}
-		\caption{Angabe Augfabe 2.9}
-		\label{Aufgabe 2.9}
-	\end{center}
-\end{figure}
-\newpage
+\underline{\textbf{\textit{Aufgabe 2.9}}}
 \begin{flushleft}
 	\textbf{Lösungsweg:}
 \end{flushleft}
@@ -291,32 +253,13 @@ Steifigkeit:
 \[ c_{g} = c_{1} + c_{2}\]
 entspannte Länge:
 \begin{align*}
-	feder1_{F0} &= c_{1}s_{10} \\
-	feder2_{F0} &= c_{2}s_{20} \\
-	F_{g0} = feder1_{F0} + feder2_{F0} &= c_{1}s_{10} + c_{2}s_{20} \\
+	F_{F1} &= c_{1}s_{10} \\
+	F_{F2} &= c_{2}s_{20} \\
+	F_{g0} = F_{F1} + F_{F2} &= c_{1}s_{10} + c_{2}s_{20} \\
 	s_{g0} = \frac{F_{g0}}{c_{g}} &= \frac{c_{1}s_{10} + c_{2}s_{20}}{c_{1} + c_{2}}
 \end{align*}
 \subsubsection{Dissipative Kräfte }
 \underline{\textbf{\textit{Aufgabe 2.10}}}\\ \\
-Berechnen Sie die notwendige Zugkraft $f_{s}$ als Funktion der Winkel $\alpha$ und $\beta$ sowie der Masse $m$ und des Haftreibungskoeffizienten $\mu_{H}$, damit die Masse bewegt werden kann.
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=10    cm]{pic/Angabe2_10}
-		\caption{Angabe Aufgabe 2.10}
-		\label{Angabe 2.10}
-	\end{center}
-\end{figure}
-\newpage
-\begin{flushleft}
-	\textbf{Lösungsweg:}
-\end{flushleft}
-\begin{figure}[h]
-	\begin{center}
-		\includegraphics[width=7.5cm]{pic/Angabe2_10_2}
-		\caption{Freigeschnittener Masseblock}
-		\label{Loesung2.10}
-	\end{center}
-\end{figure}
 Gleichgewichtsbedingungen:
 \begin{align*}
 	\textbf{e}_{x} &: -f_{s}\cos(\beta) + f_{R}\cos(\alpha) + f_{N}\sin(\alpha) = 0 \\
@@ -359,21 +302,14 @@ Damit der Körper sich nun bewegen kann muss \(|f_{S}| > f_{H}\) erfüllt. Darau
 \[
 	f_{S} > \frac{mg(\mu_{H}\cos(\alpha) + \sin(\alpha))}{\cos(\beta - \alpha) + \mu_{H}\sin(\beta - \alpha)}
 \] 
-
-\section{Wärmeübertragung}
-\textbf{Cross-String-Methode:} \\
-Dies ist eine Berechnungsmethode für die Sichtfaktormatrix 2-dimensionaler Geometrien. Mit dem folgendem Beispiel wird nun erklärt wie man diese Methode genau verwendet. \\
-
-
+\newpage
 \renewcommand\thesection{\Alph{section}} % Umstellung des Section-Zählung auf Buchstaben
 \setcounter{section}{1} % Damit die neue Section bei B beginnt
 \section{Aufgaben zum Selbststudium}
 Sämtliche Angaben zu diesem Beispielen finden Sie im Skript dieser Lehrveranstaltung. Diese Zusammenfassung soll die Lösungen aus dem Skript vereinfachen.
-\newpage
 \subsection{Klappbrücke}
-Anfangs werden der Träger und die Brücke einmal frei geschnitten. \\ \\
-\input{pic/brueke}
-\\ Gleichgewichtsbedingungen:
+Anfangs werden der Träger und die Brücke einmal frei geschnitten. \\
+Gleichgewichtsbedingungen für die Brücke:
 \begin{align*}
 	\textbf{e}_{x} &: f_{B,x} = 0 \\
 	\textbf{e}_{y} &: f_{B,y} - m_Bg + f_{s1} = 0 \\
@@ -381,9 +317,9 @@ Anfangs werden der Träger und die Brücke einmal frei geschnitten. \\ \\
 \end{align*}
 Mit der Gleichgewichtsbedingung $\textbf{e}_{z}$ wird nun die die Seilkraft $f_{s1}$ ermittelt.
 \begin{align*}
-	-m_Bgl_B\cos\varphi_B  + f_{s1}l_s\cos\varphi_B &= 0 \quad /:\cos\varphi_B \\
-	-m_Bgl_B + f_{s1}l_s &= 0 \quad /+ m_Bl_B \\
-	f_{s1}l_s &= m_Bl_B \quad /:l_s\\
+	-m_Bgl_B\cos\varphi_B  + f_{s1}l_s\cos\varphi_B &= 0 \\
+	-m_Bgl_B + f_{s1}l_s &= 0 \\
+	f_{s1}l_s &= m_Bl_B \\
 	f_{s1} &= m_B\frac{l_B}{l_s}
 \end{align*}
 Die Seilkraft beträgt nun
@@ -392,7 +328,7 @@ Die Seilkraft beträgt nun
 \end{equation*}
 Mit der Seilkraft $f_{s1}$ und der Gleichgewichtsbedingung $e_y$ schließt man:
 \begin{align*}
-	f_{B,y} - m_Bg + m_B\frac{l_B}{l_s} &= 0 \quad | + m_Bg - m_B\frac{l_B}{l_s} \\
+	f_{B,y} - m_Bg + m_B\frac{l_B}{l_s} &= 0  \\
 	f_{B,y} = + m_Bg - m_B\frac{l_B}{l_s} &= m_Bg \left(1 - \frac{l_B}{l_S}\right)
 \end{align*}
 Die Kraft in y-Richtung von Lager B beträgt nun:
@@ -405,5 +341,20 @@ Die Lagerkraft B $f_B$ setzt sich nun aus $f_{B,x}$ und $f_{B,y}$ zusammen.
 		0 \\
 		m_Bg\left(1 - \frac{l_B}{l_S}\right)
 	\end{matrix}\right]
+\end{align*}
+\newpage
+\noindent
+Gleichgewichtsbedingung für den Träger:
+\begin{align*}
+\textbf{e}_{x} &: f_{A,x} = 0 \\
+\textbf{e}_{y} &: -mg - f_{s2} + f_{A,y} - m_tg - f_{s1} = 0 \\
+\textbf{e}_{z} &: mg\cos\varphi_B l_m + f_{s2}R - m_Tg\cos\varphi_Bl_T - f_{s1}\cos\varphi_Bl_s= 0
+\end{align*}
+Mit der Gleichgewichtungbedingung $\textbf{e}_x$ kann man $f_{s2}$ bestimmen.
+\begin{align*}
+	mg\cos\varphi_B l_m + f_{s2}R - m_Tg\cos\varphi_Bl_T - f_{s1}\cos\varphi_Bl_s &= 0 \\
+	mg\cos\varphi_B l_m + f_{s2}R - m_Tg\cos\varphi_Bl_T - m_B\frac{l_B}{\bcancel{l_s}}\cos\varphi_B\bcancel{l_s} &= 0 \\
+	f_{s2}R = - mg\cos\varphi_B l_m + m_Tg\cos\varphi_Bl_T + m_B\cos\varphi_Bl_B \\
+	f_{s2} = \frac{- mg\cos\varphi_B l_m + m_Tg\cos\varphi_Bl_T + m_B\cos\varphi_Bl_B}{R}
 \end{align*}
 \end{document}
