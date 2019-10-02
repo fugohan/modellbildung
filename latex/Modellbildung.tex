@@ -379,4 +379,31 @@ Anfangs werden der Träger und die Brücke einmal frei geschnitten. \\ \\
 	\textbf{e}_{y} &: f_{B,y} - m_Bg + f_{s1} = 0 \\
 	\textbf{e}_{z} &: -m_Bgl_B\cos\varphi_B  + f_{s1}l_s\cos\varphi_B = 0
 \end{align*}
+Mit der Gleichgewichtsbedingung $\textbf{e}_{z}$ wird nun die die Seilkraft $f_{s1}$ ermittelt.
+\begin{align*}
+	-m_Bgl_B\cos\varphi_B  + f_{s1}l_s\cos\varphi_B &= 0 \quad /:\cos\varphi_B \\
+	-m_Bgl_B + f_{s1}l_s &= 0 \quad /+ m_Bl_B \\
+	f_{s1}l_s &= m_Bl_B \quad /:l_s\\
+	f_{s1} &= m_B\frac{l_B}{l_s}
+\end{align*}
+Die Seilkraft beträgt nun
+\begin{equation*}
+	f_{s1} = m_B\frac{l_B}{l_s}
+\end{equation*}
+Mit der Seilkraft $f_{s1}$ und der Gleichgewichtsbedingung $e_y$ schließt man:
+\begin{align*}
+	f_{B,y} - m_Bg + m_B\frac{l_B}{l_s} &= 0 \quad | + m_Bg - m_B\frac{l_B}{l_s} \\
+	f_{B,y} = + m_Bg - m_B\frac{l_B}{l_s} &= m_Bg \left(1 - \frac{l_B}{l_S}\right)
+\end{align*}
+Die Kraft in y-Richtung von Lager B beträgt nun:
+\begin{equation*}
+	f_{B,y} = m_Bg\left(1 - \frac{l_B}{l_S}\right)
+\end{equation*}
+Die Lagerkraft B $f_B$ setzt sich nun aus $f_{B,x}$ und $f_{B,y}$ zusammen.
+\begin{align*}
+	\textbf{f}_B = \left[ \begin{matrix}
+		0 \\
+		m_Bg\left(1 - \frac{l_B}{l_S}\right)
+	\end{matrix}\right]
+\end{align*}
 \end{document}
