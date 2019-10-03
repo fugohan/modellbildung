@@ -1,4 +1,4 @@
-           \documentclass[a4paper,12p]{article}
+\documentclass[a4paper,12p]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[a4paper, left=2.5cm, right=2.5cm]{geometry}
@@ -357,4 +357,37 @@ Mit der Gleichgewichtungbedingung $\textbf{e}_x$ kann man $f_{s2}$ bestimmen.
 	f_{s2}R = - mg\cos\varphi_B l_m + m_Tg\cos\varphi_Bl_T + m_B\cos\varphi_Bl_B \\
 	f_{s2} = \frac{- mg\cos\varphi_B l_m + m_Tg\cos\varphi_Bl_T + m_B\cos\varphi_Bl_B}{R}
 \end{align*}
+Die Lagerkraft A $f_A$ setzt sich nun aus $f_{A,x}$ und $f_{A,y}$ zusammen.
+\begin{align*}
+	\textbf{f}_A = \left[\begin{matrix}
+	0 \\
+	\frac{- mg\cos\varphi_B l_m + m_Tg\cos\varphi_Bl_T + m_B\cos\varphi_Bl_B}{R}
+	\end{matrix}\right]
+\end{align*}
+\subsection{Mechanisches Starrkörpersystem}
+Zuerst werden die Massen der einzelnen Teilkörper bestimmt. Allgemein wird die Masse mit der Formel \\
+\[
+	m_1 = \int_{\mathcal{V}}\rho dV
+\]
+Da es sich aber bei diesen Beispiel um einfache Quader handelt lässt sich das Volumen des Quaders einfach bestimmen.\\ \\
+- Teilkörper 1: \(m_1 = \rho l_2bd\) \\
+- Teilkörper 2: \(m_2 = \rho (l_1 2d)db \) \\
+- Teilkörper 3: \(m_3 = \rho l_2 bd\) \\ \\
+Im nächsten Schritt werden nun die Schwerpunkte der einzelnen Teilkörper bestimmt.\\ \\
+\noindent
+Teilkörper 1: 
+\begin{align*}
+	r_{Sm1,x} &= \frac{1}{m_1} \int_{\mathcal{V}}x\rho dV = \frac{1}{l_2bd\rho}\int_{-\frac{b}{2}}^{\frac{b}{2}} \int_{l_1+d}^{l_1+2d}\int_{-l_2}^{0} x\rho dxdydz = -\frac{l_2}{2} \\
+	r_{Sm1,y} &= \frac{1}{m_1} \int_{\mathcal{V}}y\rho dV = l_1 + \frac{3}{2}d \\
+	r_{Sm1,z} &= \frac{1}{m_1} \int_{\mathcal{V}}z\rho dV = 0 
+\end{align*}
+Daraus folgt:
+\[
+	\textbf{r}_{Sm1}^0 = \left[\begin{matrix}
+		-\frac{l_2}{2}\\
+		l_1 + \frac{3}{2}d \\ 
+		0
+	\end{matrix}\right]
+\]
+Analog zu Teilkörper 1 werden nun auch die Teilkörper 2 bestimmt
 \end{document}

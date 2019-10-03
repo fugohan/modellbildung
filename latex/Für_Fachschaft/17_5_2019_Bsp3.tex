@@ -1,0 +1,172 @@
+\textbf{Beispiel 3} \\ \\
+	a) \\ \\
+	Der Vektor vom Ursprung zum Schwerpunkt des Rades kann direkt aus Angabe abgelesen werden und lautet deshalb:
+	\begin{align*}
+		\textbf{r}_r = \left[ \begin{matrix}
+			p\cos\alpha - r\sin\alpha \\
+			p\sin\alpha + r\cos\alpha
+		\end{matrix}\right]
+	\end{align*}
+	Der translatorische Geschwindigkeitsvektor erhält man durch die Ableitung vom Ortsvektor nach den Freiheitsgraden.\\ \\
+	Translatorischer Geschwindigkeitsvektor:
+	\[
+			\textbf{v}_r = \dot{\textbf{r}_r} = \left[\begin{matrix}
+			\dot{p}\cos\alpha \\
+			\dot{p}\sin\alpha
+		\end{matrix}\right]
+	\]
+	Die rotatorische Geschwindigkeit lautet:
+	\[ \omega_r = \frac{\dot{p}}{r}\]
+	b)\\ \\
+	Der Vektor zum Schwerpunkt des Stabes kann ebenfalls aus der Angabe abgelesen werden und lautet deshalb:
+	\begin{align*}
+		\textbf{r}_S = \left[\begin{matrix}
+			p\cos\alpha - r\sin\alpha + l_s\sin\varphi \\
+			p\sin\alpha + r\cos\alpha + l_s\cos\varphi
+		\end{matrix}\right]
+	\end{align*}
+	Analog zu a) lautet der translatorische Geschwindigkeitsvektor:
+	\[
+		\textbf{v}_S = \dot{\textbf{r}_S} =\left[ \begin{matrix}
+			\dot{p}\cos\alpha + l_s\cos\varphi\dot{\varphi} \\
+			\dot{p}\sin\alpha - l_s\sin\varphi\dot{\varphi}
+		\end{matrix}\right]
+	\]
+	\newpage
+	\noindent
+	c) \\ \\
+	Als erstes wird die translatorische kinetische Energie des System wie folgt ermittelt:\\ \\
+	Vereinfachungen:
+	\begin{align*}
+		\dot{\textbf{r}_r}^T\dot{\textbf{r}_r} &= \left[ \begin{matrix}
+			\dot{p}\cos\alpha & \dot{p}\sin\alpha
+		\end{matrix}\right]
+		\left[\begin{matrix}
+			\dot{p}\cos\alpha \\
+			\dot{p}\sin\alpha
+		\end{matrix}\right] \\
+		&= \dot{p}^2\cos^2\alpha + \dot{p}^2\sin^2\alpha \\
+		&= \dot{p}^2\underbrace{\left( \cos^2\alpha + \sin^2\alpha\right)}_{=1} \\
+		&= \dot{p}^2 
+	\end{align*}
+	\begin{align*}
+		\dot{\textbf{r}_S}^T\dot{\textbf{r}_S} &= \left[\begin{matrix}
+		\dot{p}\cos\alpha + l_s\cos\varphi\dot{\varphi} & \dot{p}\sin\alpha - l_s\sin\varphi\dot{\varphi}
+		\end{matrix}\right] \left[\begin{matrix}
+		\dot{p}\cos\alpha + l_s\cos\varphi\dot{\varphi} \\
+		\dot{p}\sin\alpha - l_s\sin\varphi\dot{\varphi}
+		\end{matrix}\right] \\
+		&=\left(\dot{p}\cos\alpha + l_s\cos\varphi\dot{\varphi}\right)^2 + \left(\dot{p}\sin\alpha + l_s\sin\varphi\dot{\varphi}\right)^2 \\
+		&=\dot{p}^2\cos^2\alpha + 2l_s\dot{p}\dot{\varphi}\cos\alpha\cos\varphi + l_s^2\dot{\varphi}^2\cos^2\varphi + \dot{p}^2\sin^2\alpha - 2l_s\dot{p}\dot{\varphi}\sin\alpha\sin\varphi + l_s^2\sin^2\varphi\dot{\varphi}^2 \\
+		&=\dot{p}^2\underbrace{\left(\sin^2\alpha + \cos^2\alpha\right)}_{=1} + 2l_s\dot{p}\dot{\varphi}\underbrace{\left(\cos\varphi\cos\alpha - \sin\varphi\sin\alpha\right)}_{\cos\left(\varphi + \alpha\right)} + l_s^2\dot{\varphi}^2\underbrace{\left(\sin^2\varphi + \cos^2\varphi\right)}_{=1} \\
+		&= \dot{p}^2 + 2l_s\dot{p}\dot{\varphi}\cos\left(\varphi + \alpha\right) + l_s^2\dot{\varphi}^2
+	\end{align*}
+	Nun kann man schließlich die translatorische kinetischen Energie des Rades und des Stabes bestimmen.
+	\begin{align*}
+		T_{trans,r} &=  \frac{1}{2}m_r\dot{p}^2\\
+		T_{trans,s} &=  \frac{1}{2}m_s\left(\dot{p}^2 + l_s^2\dot{\varphi}^2 + 2l_s\dot{p}\dot {\varphi}\cos\left(\varphi + \alpha\right)\right)
+	\end{align*}
+	Die kinetische Energie besitzt jedoch auch einen rotatorischen Anteil. Dieser lautet für die beiden Teilsysteme:
+	\begin{align*}
+		T_{rot,r} &= \frac{1}{2} \Theta_r \frac{\dot{p}^2}{r^2} \\
+		T_{rot,s} &= \frac{1}{2} \Theta_s \dot{\varphi}^2
+	\end{align*}
+	Da wir nun sämtliche Teilenergien ermittelt haben, beträgt die gesamte kinetische Energie des vorliegenden Systems:
+	\begin{align*}
+		T &= T_{trans,r} + T_{rot,r} + T_{trans,s} + T_{rot,s}\\
+		  &= \frac{1}{2}m_r\dot{p}^2 + \frac{1}{2} \Theta_r \frac{\dot{p}^2}{r^2} + \frac{1}{2}m_s\left(\dot{p}^2 + l_s^2\dot{\varphi}^2 + 2l_s\dot{p}\dot{\varphi}\cos\left(\varphi + \alpha\right)\right) + \frac{1}{2} \Theta_s \dot{\varphi}^2
+	\end{align*}
+	\newpage
+	\noindent
+	Als nächstes wird nun die gesamte potentielle Energie des gegebenen System ermittelt. Zuerst berechnet man wieder die Energien der Teilsysteme und addiert dieser zum Schluss wieder zusammen.
+	\begin{align*}
+		V_r &= m_rg\left(p\sin\alpha + r\cos\alpha\right) \\
+		V_s &= m_sg\left(p\sin\alpha + r\cos\alpha + l_s\cos\varphi\right) \\
+		V = V_r + V_s &= m_rg\left(p\sin\alpha + r\cos\alpha\right) + m_sg\left(p\sin\alpha + r\cos\alpha + l_s\cos\varphi\right)
+	\end{align*}
+	d)\\ \\
+	Um den Vektor der generalisierten Kräfte zu bestimmen benötigt man zuerst den Richtungsvektor zu den Angriffspunkten der extern wirkenden Kräfte, hier $f_{ext}$. \\ \\
+	Angriffspunkt der Kraft:
+	\[
+		\textbf{r}_f = \left[\begin{matrix}
+			p\cos\alpha - r\sin\alpha + 2l_s\sin\varphi \\
+			p\sin\alpha + r\cos\alpha + 2l_s\cos\varphi
+		\end{matrix}\right]
+	\]
+	Weiters benötigt man auch den Vektor der externen Kräfte. \\ \\
+	Kraftvektor:
+	\[
+		\textbf{f}_{ext}^T = f_{ext}\left[\begin{matrix}
+			\cos\beta & \sin\beta
+		\end{matrix}\right]
+	\]
+	Nun werden die partiellen Ableitung nach $\textbf{q}$ vom Angriffspunkt der Kraft gebildet:
+	\begin{align*}
+		\frac{\partial\textbf{r}_f}{\partial\varphi} = \left[\begin{matrix}
+			2l_s\cos\varphi \\
+			-2l_s\sin\varphi
+		\end{matrix}\right] \qquad
+		\frac{\partial\textbf{r}_f}{\partial p} = \left[\begin{matrix}
+			\cos\alpha \\
+			\sin\alpha
+		\end{matrix}\right]
+	\end{align*}
+	Der Vektor der generalisierten Kräfte wird nun wie folgt ermittelt:
+	\begin{align*}
+		\textbf{f}_q = \textbf{f}_{ext}^T \frac{\partial \textbf{r}_f}{\partial \textbf{q}}
+	\end{align*}
+	generalisierte Kräfte:
+	\begin{align*}
+		f_{q,\varphi} &= f_{ext}\left[\begin{matrix}
+		\cos\beta & \sin\beta
+		\end{matrix}\right] \left[\begin{matrix}
+		2l_s\cos\varphi \\
+		-2l_s\sin\varphi
+		\end{matrix}\right] \\
+		&= f_{ext} \left(2l_s\cos\beta\cos\varphi - 2l_s\sin\beta\sin\varphi\right) \\
+		&= f_{fext}2l_s \underbrace{\left(\cos\beta\cos\varphi - 2l_s\sin\beta\sin\varphi\right)}_{\cos\left(\beta + \varphi\right)} \\
+		&= f_{ext}2l_s\cos\left(\beta + \varphi\right)
+	\end{align*}
+	\begin{align*}
+		f_{q,p} &= f_{ext} \left[\begin{matrix}
+		\cos\beta & \sin\beta
+		\end{matrix}\right] \left[\begin{matrix}
+			\cos\alpha \\
+			\sin\alpha
+		\end{matrix}\right] \\
+		&= f_{ext} \underbrace{\left(\cos\beta\cos\alpha + \sin\beta\sin\alpha\right)}_{\cos\left(\beta - \alpha\right)} \\
+		&= f_{ext} \cos\left(\beta - \alpha\right)
+	\end{align*}
+	gesamter Vektor:
+	\[
+		\textbf{f}_q = f_{ext} \left[\begin{matrix}
+			2l_s\cos\left(\beta + \varphi\right) \\
+			\cos\left(\beta - \alpha\right)
+		\end{matrix}\right]
+	\]
+	\newpage
+	\noindent
+	e) \\ \\
+	Zum Schluss sollen noch die Bewegungsgleichungen mithilfe des Euler-Lagrange-Formalismus bestimmt werden.
+	\begin{align*}
+		L &= T - V \\
+		 &= \frac{1}{2}m_r\dot{p}^2 + \frac{1}{2} \Theta_r \frac{\dot{p}^2}{r^2} + \frac{1}{2}m_s\left(\dot{p}^2 + l_s^2\dot{\varphi}^2 + 2l_s\dot{p}\dot{\varphi}\cos\left(\varphi + \alpha\right)\right) + \frac{1}{2} \Theta_s \dot{\varphi}^2 \\
+		 & - m_rg\left(p\sin\alpha + r\cos\alpha\right) - m_sg\left(p\sin\alpha + r\cos\alpha + l_s\cos\varphi\right)
+	\end{align*}
+	Bewegungsgleichungen:
+	\begin{align*}
+		\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi}}\right) - \left(\frac{\partial L}{\partial \varphi}\right) &= 2l_sf_{ext}\cos\left(\beta + \varphi\right) \\
+		\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{p}}\right) - \left(\frac{\partial L}{\partial p}\right) &= f_{ext}\cos\left(\beta - \alpha\right)
+	\end{align*}
+	Zwischenschritte:
+	\begin{align*}
+		\frac{\partial L}{\partial \dot{\varphi}} &= m_s\left(l_s^2\dot{\varphi} + l_s\dot{p}\cos\left(\varphi + \alpha\right)\right) + \Theta_s \dot{\varphi} \\
+		\frac{\partial L}{\partial \dot{p}} &= m_r\dot{p} + \frac{\Theta_r}{r^2}\dot{p} + m_s\left(\dot{p} + 2l_s\dot{\varphi}\cos\left(\varphi + \alpha\right)\right)
+	\end{align*}
+	auftretende Ableitungen:
+	\begin{align*}
+		\frac{\partial L}{\partial \varphi} &= -m_sl_s\sin\left(\varphi + \alpha\right)\dot{p}\dot{\varphi} + m_sgl_s\sin\varphi \\
+		\frac{\partial L}{\partial p} &= -g\left(m_s + m_r\right)\sin\alpha \\
+		\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi}}\right) &= m_sl_s\cos\left(\varphi + \alpha\right)\ddot{p} + \left(m_sl_s^2 + \Theta_s\right)\ddot{\varphi} - m_sl_s\dot{p}\sin\left(\varphi + \alpha\right)\dot{\varphi} \\
+		\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{p}}\right) &= \left(m_r + \frac{\Theta_r}{r^2} + m_s\right)\ddot{p} + m_sl_s\left(\ddot{\varphi}\cos\left(\varphi + \alpha\right) - \dot{\varphi}\sin\left(\varphi + \alpha\right)\dot{\varphi} \right)
+	\end{align*}
