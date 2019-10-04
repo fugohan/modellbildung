@@ -1,0 +1,174 @@
+\noindent
+\textbf{Beispiel 1} \\ \\
+a) \\ \\
+Der Richtungsvektor vom Urspung zum Schwerpunkt der Masse $m$ lautet:
+\[
+	\textbf{p}_m = \left[ \begin {array}{c} r\cos \left( \alpha \right) +b
+	\\ r\sin \left( \alpha \right) -h\end {array}
+	\right]	
+\]
+Mithilfe diesen Vektor kann ebenfalls auch der Geschwindigkeitsvektor bestimmt werden, indem man den Richtungsvektor nach der Zeit ableitet.
+\[
+	\dot{\textbf{p}}_m =\left[ \begin {array}{c} -r \dot{\alpha}
+	  \sin \left( \alpha 
+	\right) + \dot{b} \\ 
+	r \dot{\alpha} \cos \left( \alpha  \right) -
+		\dot{h} \end {array} \right] 
+\]
+b) \\ \\
+Um die kinetischen Energien zu berechnen, müssen zuerst einige Nebenrechnungen durchgeführt werden.\\
+Nebenrechnungen:
+\begin{align}
+	\dot{\textbf{p}}_m^T \dot{\textbf{p}}_m &= \left[ \begin{matrix}
+		-r\dot{\alpha}\sin \left( \alpha \right) + \dot{b} & r\dot{\alpha}\cos \left( \alpha \right) -\dot{h}
+	\end{matrix}\right] \left[ \begin {array}{c} -r \dot{\alpha}
+	\sin \left( \alpha 
+	\right) + \dot{b} \\ 
+	r \dot{\alpha} \cos \left( \alpha  \right) -
+	\dot{h} \end {array} \right] \\
+	&= r^2\dot{\alpha}^2\underbrace{\left(\cos \ \alpha  + \sin  \alpha\right)  }_{=1} -2r\dot{\alpha}\dot{b}\sin\alpha - 2r\dot{\alpha}\dot{h}\cos\alpha + \dot{b}^2 + \dot{h}^2 \\
+	&= r^2\dot{\alpha}^2 -2r\dot{\alpha}\dot{b}\sin\alpha - 2r\dot{\alpha}\dot{h}\cos\alpha + \dot{b}^2 + \dot{h}^2 \\
+	\varphi &= \arctan\left(\frac{h}{b}\right) \\
+	\dot{\varphi} &= \frac{\dot{h}b - h\dot{b}}{b^2 + h^2}
+\end{align}
+kinetische Energie des Systems:
+\begin{align*}
+	T_{tm} &= \frac{1}{2}m\dot{\textbf{p}}_m^T \dot{\textbf{p}}_m = \frac{1}{2} m \left( r^2\dot{\alpha}^2 -2r\dot{\alpha}\dot{b}\sin\left(\alpha\right) - 2r\dot{\alpha}\dot{h}\cos\left(\alpha\right) + \dot{b}^2 + \dot{h}^2\right) \\
+	T_{rm} &= \frac{1}{2} \Theta_m\dot{\varphi}^2 = \frac{1}{2} \Theta_m \left( \frac{\dot{h}b - h\dot{b}}{b^2 + h^2}\right)^2 \\
+	T_{rr} &= \frac{1}{2}\Theta_r\dot{\alpha}^2 \\
+	T &= T_{tm} + T_{rm} + T_{rr} \\
+	  &= \frac{1}{2}m\dot{\textbf{p}}_m^T \dot{\textbf{p}}_m = \frac{1}{2} m \left( r^2\dot{\alpha}^2 -2r\dot{\alpha}\dot{b}\sin\left(\alpha\right) - 2r\dot{\alpha}\dot{h}\cos\left(\alpha\right) + \dot{b}^2 + \dot{h}^2\right) 
+	  + \frac{1}{2} \Theta_m \left( \frac{\dot{h}b - h\dot{b}}{b^2 + h^2}\right)^2 + \frac{1}{2}\Theta_r\dot{\alpha}^2
+\end{align*}
+c) \\ \\
+potentielle Energie des Systems:
+\begin{align*}
+	V_m &= mg\left(r\sin\alpha - h\right) \\
+	V_c &= \frac{1}{2} c \left(\sqrt{b^2 + h^2} s_0\right)^2 \\
+	V &= V_m + V_c = mg\left(r\sin\alpha - h\right) + \frac{1}{2} c \left(\sqrt{b^2 + h^2} s_0\right)^2
+\end{align*}
+d) \\ \\
+viskose Reibkraft
+\[
+	\textbf{f}_V = \mu_V \frac{\dot{h}b - h\dot{b}}{b^2 + h^2} \left[ \begin{matrix}
+	b \\ -h
+	\end{matrix}\right]
+\]
+partielle Ableitungen:
+\[
+	\frac{\partial \dot{\textbf{p}}_m}{\partial \alpha}  = \left[ \begin{matrix}
+		-r\sin\alpha \\ r\cos\alpha
+	\end{matrix}\right] \qquad \frac{\partial \dot{\textbf{p}}_m}{\partial b} = \left[ \begin{matrix}
+	 1 \\ 0
+	\end{matrix}\right] \qquad \frac{\partial \dot{\textbf{p}}_m}{\partial h} = \left[ \begin{matrix}
+	0 \\ -1
+	\end{matrix}\right]
+\]
+\newpage
+\noindent
+generalisierte Kräfte:\\ \\
+Multipliziert man die viskose Reibungskraft mit allen partiellen Ableitungen erhält man
+\begin{align*}
+	\textbf{f}_{q,v} &= \mu_V \frac{\dot{h}b - h\dot{b}}{b^2 + h^2} \left[ \begin{matrix}
+		r\sin\alpha b + r\cos\alpha h \\
+		-b \\
+		-h
+	\end{matrix}\right]
+\end{align*}
+Die andere externe Kraft ist
+\[
+	\textbf{f}_x = \left[ \begin{matrix}
+		f_x \\
+		0
+	\end{matrix}\right]
+\]
+Multipliziert mit den partiellen Ableitungen erhält man
+\[
+	\textbf{f}_{q,x} = \left[ \begin{matrix}
+		-f_x r \sin\alpha \\
+		f_x \\
+		0
+	\end{matrix}\right]
+\]
+Der gesamte Vektor der generalisierten Kräfte beträgt
+\[
+	\textbf{f}_q = \mu_V \frac{\dot{h}b - h\dot{b}}{b^2 + h^2} \left[ \begin{matrix}
+	r\sin\alpha b + r\cos\alpha h \\
+	-b \\
+	-h
+	\end{matrix}\right] 
+	+ 
+	\left[ \begin{matrix}
+	-f_x r \sin\alpha \\
+	f_x \\
+	0
+	\end{matrix}\right]
+\]
+e) \\ \\
+Verwendet man aus der Formelsammlung im Punkt generalisierte Kräfte die 2.te Formel und passt man diese an den stationären Fall an erhält man
+\[
+	\frac{\partial V}{\partial \textbf{q}} = \left[ \begin{matrix}
+		mgr\cos\alpha\\
+		\frac{c\left( \sqrt{b^2 + h^2} - s_0\right)}{\sqrt{b^2 + h^2}} b \\
+		\frac{c\left( \sqrt{b^2 + h^2} - s_0\right)}{\sqrt{b^2 + h^2}} h - mg
+	\end{matrix}\right]
+	=
+	\left[ \begin{matrix}
+	-f_x r \sin\alpha \\
+	f_x \\
+	0
+	\end{matrix}\right]
+\]
+Nun wird $s_0$ mit 0 angenommen und anschließend werden die generalisierten Koordinaten bestimmt. \\ \\
+1.Koordinate:
+\begin{align*}
+	mgr\cos\alpha &= -f_xr\sin\alpha \\
+	-\frac{\cos\alpha}{\sin\alpha} &= \frac{mg}{f_x}  \\
+	-\tan\alpha &= \frac{mg}{f_x} \\
+	\alpha &= -\arctan\left( \frac{mg}{f_x}\right)
+\end{align*}
+2.Koordinate:
+\begin{align*}
+	\frac{c\left(\cancel{\sqrt{b^2 + h^2}}\right)}{\cancel{\sqrt{b^2 + h^2}}} b &= f_x \\
+	cb &= f_x \\
+	b &= \frac{f_x}{c}
+\end{align*}
+3.Koordinate
+\begin{align*}
+	\frac{c\left(\cancel{\sqrt{b^2 + h^2}}\right)}{\cancel{\sqrt{b^2 + h^2}}} h -mg &= 0 \\
+	ch - mg &= 0 \\
+	h &= \frac{mg}{c}
+\end{align*}
+f) \\ \\
+Die resultierende Reibkraft wird mithilfe der Formel 2.96 aus dem Vorlesungsskript berechnet und lautet hier:
+\[
+	\textbf{f}_F = -c_W A \frac{\rho}{2} |\dot{\textbf{p}}_m|\dot{\textbf{p}}_m
+\]
+\begin{align*}
+	|\dot{\textbf{p}}_m| &= \sqrt{\left( -r \dot{\alpha}
+		\sin \left( \alpha 
+		\right) + \dot{b}\right)^2 
+	+
+	\left( 	r \dot{\alpha} \cos \left( \alpha  \right) -
+	\dot{h}\right)^2} \\
+	&= \sqrt{r^2\dot{\alpha}^2\sin^2\alpha -2r\dot{\alpha}\dot{b}\sin\alpha + \dot{b}^2 + r^2\dot{\alpha}^2\sin^2\alpha - 2r\dot{\alpha}\dot{h}\cos\alpha + \dot{h}^2} \\
+	&= \sqrt{r^2\dot{\alpha}^2\underbrace{\left(\sin^2\alpha + \cos^2\alpha\right)}_{=1} - 2r\dot{\alpha}\dot{b}\sin\alpha - 2r\dot{\alpha}\dot{h}\sin\alpha + \dot{b}^2 + \dot{h}^2} \\
+	&= \sqrt{r^2\dot{\alpha}^2 - 2r\dot{\alpha}\dot{b}\sin\alpha - 2r\dot{\alpha}\dot{h}\sin\alpha + \dot{b}^2 + \dot{h}^2}
+\end{align*}
+Multipliziert man nun $\textbf{f}_F$ mit den partiellen Ableitungen aus d) und vereinfacht man so weit wi möglich erhält man
+\begin{align*}
+	\textbf{f}_{q,F} &= -c_W A \frac{\rho}{2}|\dot{\textbf{p}}_m|
+	\left[\begin{matrix}
+		r\dot{\alpha}\underbrace{\left( \sin^2\alpha + \cos^2\alpha \right)}_{=1} - r\dot{b}\sin\alpha - r\dot{h}\cos\alpha \\
+		-r\dot{\alpha}\sin \left( \alpha \right) + \dot{b} \\
+		-r\dot{\alpha}\cos \left( \alpha \right) +\dot{h}
+	\end{matrix}
+	\right] \\
+	&= -c_W A \frac{\rho}{2}|\dot{\textbf{p}}_m|
+	\left[\begin{matrix}
+	r\dot{\alpha} - r\dot{b}\sin\alpha - r\dot{h}\cos\alpha \\
+	-r\dot{\alpha}\sin \left( \alpha \right) + \dot{b} \\
+	-r\dot{\alpha}\cos \left( \alpha \right) +\dot{h}
+	\end{matrix}
+	\right]
+\end{align*}
