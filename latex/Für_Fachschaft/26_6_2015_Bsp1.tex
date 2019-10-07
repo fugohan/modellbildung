@@ -73,13 +73,59 @@ Nun können die kinetischen Energien des Systems bestimmt werden. Diese lauten h
 	T_{rot} &= 2 \frac{1}{2} \left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right)\dot{\varphi}^2 \\
 	T &= T_{tr} + T_{rot} \\
 	  &= \frac{1}{2} \left(m_2 + m_M\right) L_1^2\dot{\varphi}^2 + \frac{1}{2} m_K \left[ L_1^2\dot{\varphi}^2 + l^2\dot{\psi}^2 + 2L_1l\dot{\varphi}\dot{\psi}\left(\sin\varphi\sin\psi + \cos\varphi\cos\psi\right)\right] \\
-	  &+ \frac{1}{2} \left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right)\dot{\varphi}^2
+	  &+ 2\frac{1}{2} \left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right)\dot{\varphi}^2
 \end{align*}
 d) \\ \\
 Nun kann wie folgt die potentielle Energie bestimmt werden. Die potentielle Energie der Ruhelage lautet
 \begin{align*}
-	V &= 2m_1g\frac{L_1}{2}\left(1-\cos\varphi\right) + \left(m_1 + m_M\right)gL_1 \left(1 - \cos\varphi\right) \\
-	&+ m_Kg\left[L_1\left(1-\cos\varpi\right) +l\left(1 - \cos\psi\right)\right] 2 \frac{1}{2}c_1\varphi^2
+	V &= 2m_1g\frac{L_1}{2}\left(1-\cos\varphi\right) + \left(m_2 + m_M\right)gL_1 \left(1 - \cos\varphi\right) \\
+	&+ m_Kg\left[L_1\left(1-\cos\varphi\right) +l\left(1 - \cos\psi\right)\right] + 2 \frac{1}{2}c_1\varphi^2
 \end{align*}
 \textit{Hinweis}: \\
-Die Ruhelage befindet sich bei \(\varphi = 0\), d.h. das Maximum der potentiellen Energie tritt bei \(\varphi = \pm \frac{\pi}{2}\) und deswegen wird \(\cos\varphi\) durch \(\left(1-\cos\varphi\right)\) ersetzt.
+Die Ruhelage befindet sich bei \(\varphi = 0\), d.h. das Maximum der potentiellen Energie tritt bei \(\varphi = \pm \frac{\pi}{2}\) und deswegen wird \(\cos\varphi\) durch \(\left(1-\cos\varphi\right)\) ersetzt. \\ \\
+e) \\ \\
+Um die Bewegungsgleichungen zu bestimmen, benötigt man als erstes aller erstes die Langrange-Funktion die wie folgt lautet
+\begin{align*}
+	L &= T - V \\
+	  &= \frac{1}{2} \left(m_2 + m_M\right) L_1^2\dot{\varphi}^2 + \frac{1}{2} m_K \left[ L_1^2\dot{\varphi}^2 + l^2\dot{\psi}^2 + 2L_1l\dot{\varphi}\dot{\psi}\left(\sin\varphi\sin\psi + \cos\varphi\cos\psi\right)\right] 
+	  + 2\frac{1}{2} \left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right)\dot{\varphi}^2 \\
+	  &- 2m_1g\frac{L_1}{2}\left(1-\cos\varphi\right) - \left(m_2 + m_M\right)gL_1 \left(1 - \cos\varphi\right) - m_Kg\left[L_1\left(1-\cos\varphi\right) - l\left(1 - \cos\psi\right)\right] - 2 \frac{1}{2}c_1\varphi^2
+\end{align*}
+Als nächstes benötigt man die generalisierten Kräfte die hier wie folgt lauten
+\[
+	\textbf{f}_q = \left[\begin{matrix}
+		-2d_1\varphi \\
+		\tau
+	\end{matrix}\right]
+\]
+Nun wertet man den Euler-Lagrange-Formalismus aus, der hier folgendermaßen aussieht
+\begin{align*}
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi}}\right) - \left(\frac{\partial L}{\partial \varphi}\right) &= -2d_1\dot{\varphi}\\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\psi}}\right) - \left(\frac{\partial L}{\partial \psi }\right) &= \tau
+\end{align*}
+\newpage
+\noindent
+partiellen Ableitungen \\ \\
+1. generalisierte Koordinate:
+\begin{align*}
+	\frac{\partial L}{\partial \dot{\varphi}} &= \left(m_2 + m_M\right)L_1^2\dot{\varphi} + m_K \left( L_1^2\dot{\varphi} + L_1l\dot{\psi}\left(\sin\varphi \sin\psi + \cos \varphi \cos\psi\right)\right) + 2\left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right)\dot{\varphi} \\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi}}\right) &= \left(m_2 + m_M\right)L_1^2 \ddot{\varphi} + m_K \left( L_1^2\ddot{\varphi} + L_1l\frac{d}{dt}\left(\dot{\psi}\left(\sin\varphi \sin\psi + \cos \varphi \cos\psi\right)\right)\right) + 2\left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right)\ddot{\varphi}\\
+	&= \left( 2\left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right) + \left( m_2 + m_M + m_K\right)\right)\ddot{\varphi} + m_K L_1 \frac{d}{dt}\left(\psi\left(\sin\varphi \sin\psi + \cos\varphi \cos\psi\right)\right) \\
+	\frac{\partial L}{\partial \varphi} &= m_KL_1l\dot{\varphi}\dot{\psi}\left(\cos\varphi \sin\psi + \sin\varphi \cos\psi\right)-m_1gL_1\sin\varphi - \left(m_2 + m_M\right)L_1g - m_KgL_1\sin\varphi - 2c_1\varphi \\
+	&= m_KL_1l\dot{\varphi}\dot{\psi}\left(\cos\varphi \sin\psi + \sin\varphi \cos\psi\right) - \left(m_1 + m_M + m_2 + m_K\right)gL_1 - 2c_1\varphi
+\end{align*}
+2. generalisierte Koordinate:
+\begin{align*}
+	\frac{\partial L}{\partial \dot{\psi}} &= m_Kl^2\dot{\psi} + m_KL_1 \dot{\varphi}\left(\sin\varphi \sin\psi + \cos\varphi \cos\psi\right) \\
+	\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{\psi} }\right) &= m_Kl^2\ddot{\psi} + m_KL_1 \frac{d}{dt}\left(\dot{\varphi}\left(\sin\varphi \sin\psi + \cos\varphi \cos\psi\right)\right) \\
+	\frac{\partial L}{\partial \psi} &= m_KL_1l\dot{\varphi}\dot{\psi}\left(\sin\varphi \cos\psi - \cos\varphi \sin\psi\right) - m_Kgl\sin\psi
+\end{align*}
+Somit lauten die Bewegungsgleichungen
+\begin{align*}
+	\left(2\left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right) + \left( m_2 + m_M + m_K\right)\right)\ddot{\varphi} + m_K L_1 \frac{d}{dt}\left(\psi\left(\sin\varphi \sin\psi + \cos\varphi \cos\psi\right)\right) \\
+	- m_KL_1l\dot{\varphi}\dot{\psi}\left(\cos\varphi \sin\psi + \sin\varphi \cos\psi\right) + \left(m_1 + m_M + m_2 + m_K\right)gL_1 + 2c_1\varphi = -2d_1\dot{\varphi}
+\end{align*}
+\begin{align*}
+	m_Kl^2\ddot{\psi} + m_KL_1 \frac{d}{dt}\left(\dot{\varphi}\left(\sin\varphi \sin\psi + \cos\varphi \cos\psi\right)\right) \\
+	- m_KL_1l\dot{\varphi}\dot{\psi}\left(\sin\varphi \cos\psi - \cos\varphi \sin\psi\right) + m_Kgl\sin\psi = \tau
+\end{align*}
