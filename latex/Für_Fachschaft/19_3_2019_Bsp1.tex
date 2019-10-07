@@ -1,0 +1,61 @@
+%\documentclass{article}
+%\usepackage{tikz}
+%\usepackage{amsmath}
+%\begin{document}
+\noindent
+\textbf{Beispiel 1} \\ \\
+a) 
+	\begin{figure}[h]
+		\centering
+		\input{tikz/schnitt1}
+	\end{figure} \\
+%\noindent
+Um die Kräfte in den Lagern zu bestimmten, stellen wir zuerst das Kräftegleichgewicht und die Momenten Gleichung im Punkt B auf. 
+\begin{align*}\label{key}
+x&: 0=f_{B,x} \\
+y&: 0 = f_A + f_{B,y} -f_g\\
+M_B&:0=b f_g-2L \cos(\alpha)  
+\end{align*}
+
+\noindent
+Formt man nun die Momenten Gleichung nach \(f_A\) um folgt: 
+\begin{align*}
+f_A = \frac{b f_g}{2L \cos(\alpha)} \qquad f_{B_x}=0 \qquad f_{B,y} = \left(1-\frac{b}{2L \cos(\alpha)}\right) f_g
+\end{align*}
+\begin{figure}[h]
+	\centering
+	\input{tikz/schnitt2}
+\end{figure}
+b) \\
+%\noindent
+Um die Kräfte in den Punkten D und E zu bestimmen, stellen wir das Kräftegleichgewicht in den Trägern auf, daraus folgt: 
+\begin{align*}
+ f_{D,y} = m2 g + f_{B,y}\qquad	f_{E,y} = m_2 g + f_A 
+\end{align*}
+
+\begin{figure}[h]
+	\centering
+	\input{tikz/schnitt3}
+\end{figure}
+\noindent
+c)\\  \\ %\noindent
+Um die Kräfte in den Lagern D und E in horizontaler (x-Richtung) zu bestimmen schneiden wir die Hubstangen getrennt voneinander frei und stellen die Kraftgleichungen und die Momenten Gleichung auf. 
+
+\begin{align*}
+	x&:  0 = f_{E,x} - f_{D,x}\\
+	y&:  \text{wurde bereits bestimmt} \\ 
+	M_D&: 0 = m_2 g \cos(\alpha) +f_{B,x} \sin(\alpha) + f_{B,y} \cos(\alpha)
+\end{align*}
+Aus der Momenten Gleichung  folgt: 
+\begin{align*}
+	f_{B,x} = \frac{m_2 g- f_{B,y}}{\tan{\alpha}} =f_{E,x} \qquad  F(\alpha) = f_{D,x} = -f_{E,x}
+\end{align*}
+\noindent 
+d) \\ \\ 	
+	Um die Haftbedingung zu berechnen formt man \(F(\alpha) = \mu_H f_{D,y}\) um und setzt für \(\alpha=\frac{\pi}{4}\) ein: 
+	
+	\begin{align*}
+		\mu_H \geq \frac{F(\alpha)}{f_{D,y}} = \frac{m_1+m_2}{m_2+\frac{m_1 b}{\sqrt2L}}
+	\end{align*}
+	
+%\end{document}
