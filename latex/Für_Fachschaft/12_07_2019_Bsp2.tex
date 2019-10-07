@@ -1,0 +1,81 @@
+\newpage
+\noindent
+\textbf{Beispiel 2} \\ \\
+a) \\ \\
+Da es sich hier um ein Problem mit Zylinderkoordinaten hält, verwendet man nun einfach die Wärmeleitgleichung für Zylinderkoordinaten aus Formelsammlung und adaptiert diese entsprechend der Angabe. \\
+\newline
+Wärmeleitgleichung:
+\[
+	0 = \lambda \left( \frac{1}{r} \frac{d}{dr}\left( \frac{d}{dr} T_i\left( r\right)\right)\right)
+\]
+Die 0 auf der linken Seite beruht darauf, das es sich hier um ein stationäres Problem handelt und die Terme für $\varphi$ und $z$ fallen ebenfalls weg. \\
+\newline
+Lösung der DGL:
+\begin{align*}
+	\lambda_i \left( \frac{1}{r} \frac{d}{dr}\left( r \frac{d}{dr} T_i\left( r\right)\right)\right) &= 0
+	\\
+	\frac{d}{dr}\left( r \frac{d}{dr} T_i\left( r\right)\right) &= 0
+	\\
+	\int \frac{d}{dr}\left( r \frac{d}{dr} T_i\left( r\right)\right) dr &= \int 0 dr
+	\\
+	r \frac{d}{dr} T_i\left( r\right) &= C_3
+	\\
+	\frac{d}{dr} T_i\left( r\right) &= \frac{C_3}{r}
+	\\
+	\int \frac{d}{dr} T_i\left( r\right) dr &= \int \frac{C_3}{r} dr
+	\\
+	T_i\left( r\right) &= C_3 ln\left(r \right) + C_4
+\end{align*}
+Randbedingungen:
+\begin{align*}
+	T_i\left(2R\right) &= C_3 ln\left( 2R\right) + C_4 = T_2 \\
+	T_i\left(2R\right) &= C_3 ln\left( 3R\right) + C_4 = T_3
+\end{align*}
+Integrationskonstanten: \\
+\newline
+Ausgehend von dem Gleichungssystem der Randbedingung kann man die Integrationskonstanten sehr leicht bestimmen. Als ersten formt man die 2.te Gleichung auf $C_4$ um.
+\begin{align*}
+	T_3 &= C_3 ln\left( 3R\right) + C_4\\
+	C_4 &= T_3 - C_3 ln\left( 3R\right)
+\end{align*}
+Dann wird in Gleichung 1 eingesetzt
+\begin{align*}
+	T_2 &= C_3 ln\left( 2R\right) + T_3 - C_3 ln\left( 3R\right) \\
+	T_2 - T_3 &= C_3 \underbrace{\left( ln\left( 2R\right) - ln\left( 3R\right) \right)}_{ln\left( \frac{2}{3}\right)} \\
+	C_3 &= \frac{T_2 - T_3}{ln\left( \frac{2}{3}\right)}
+\end{align*}
+Nun setzt man $C_3$ in $C_4$ ein
+\begin{align*}
+	C_4 &= T_3 -  \frac{T_2 - T_3}{ln\left( \frac{2}{3}\right)} ln\left( 3R\right) \\
+	C_4 &= \frac{T_3 \left( ln\left( 2R\right) - ln\left( 3R\right) \right)}{ln\left( \frac{2}{3}\right)} - \frac{T_2 - T_3}{ln\left( \frac{2}{3}\right)} ln\left( 3R\right) \\
+	C_4 &= \frac{T_3 ln\left( 2R \right) - T_2 ln\left( 3R\right)}{ln\left( \frac{2}{3}\right)}
+\end{align*}
+b) \\ \\	
+Die Leistungsdichte $g$ wird wie folgt berechnet
+\[
+	g = \rho_e |\textbf{J}|^2 = \rho_e \left( \frac{I}{A}\right)^2
+\]
+mit
+\[
+	A = \left(4R^2 - R^2\right)\pi
+\]
+Dies ist die Fläche eine Hohlleiters. Setzt man nun diese in $g$ ein, erhält man
+\[
+	g = \rho_e \left( \frac{I}{\left(4R^2 - R^2\right)\pi}\right)^2
+\]
+c) \\ \\
+DGL:
+\begin{align*}
+	\lambda_l \left( \frac{1}{r}\frac{d}{dr}\left( r\frac{d}{dr} T_l\left(r\right)\right)\right) + g = 0 \\
+	\frac{d}{dr}\left( r\frac{d}{dr} T_l\left(r\right)\right) = -\frac{gr}{\lambda_l} \\
+	\int \frac{d}{dr}\left( r\frac{d}{dr} T_l\left(r\right)\right) dr = \int -\frac{gr}{\lambda_l} dr \\
+	 r\frac{d}{dr} T_l\left(r\right) = -\frac{gr^2}{2\lambda_l} + C_1 \\
+	 \frac{d}{dr} T_l\left(r\right) = -\frac{gr}{2\lambda_l} + \frac{C_1}{r} \\
+	 \int \frac{d}{dr} T_l\left(r\right) dr = \int -\frac{gr}{2\lambda_l} + \frac{C_1}{r} dr \\
+	 T_l\left(r\right) = -\frac{gr^2}{4\lambda_l} + C_1\ln\left( r \right) + C_2
+\end{align*}
+Randbedingungen
+\begin{align*}
+	T_l\left(R\right) = -\frac{gR^2}{4\lambda_l} + C_1\ln\left(R\right) + C_2 = T_1 \\
+	T_l\left(2R\right) = -\frac{g4R^2}{4\lambda_l} + C_1 \ln\left(2R\right) + C_2 = T_2
+\end{align*}
