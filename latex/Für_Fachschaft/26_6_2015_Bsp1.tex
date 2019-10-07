@@ -1,0 +1,85 @@
+\textbf{Beispiel 1} \\ \\
+a)\\ \\
+Die generalisierten Koordinaten lauten
+\[
+	\textbf{q} = \left[ \begin{matrix}
+		\varphi \\
+		\psi
+	\end{matrix}\right]
+\]
+Die beiden Ortsvektoren $\textbf{r}_2$ und $\textbf{r}_K$ werden direkt aus Angabe abgelesen.
+\[
+	\textbf{r}_2 = \left[\begin{matrix}
+		\frac{1}{2} L_2 + L_1 \sin\varphi \\
+		-L1\cos\varphi
+	\end{matrix}\right] , 
+	\textbf{r}_K = \left[\begin{matrix}
+		\frac{1}{2} L_2 + L_1\sin\varphi + l\sin\psi \\
+		-L_1\cos\varphi - l\cos\psi
+	\end{matrix}\right]
+\]
+b) \\ \\
+Den translatorische Geschwindigkeitsvektor erhält man durch die zeitliche Ableitung des entsprechenden Ortsvektors.
+\[
+	\dot{\textbf{r}}_K = \underbrace{L_1\dot{\varphi}\left[\begin{matrix}
+		\cos\varphi \\
+		\sin\varphi
+	\end{matrix}\right]}_{\dot{\textbf{r}}_2}
+	+
+	l\dot{\psi}\left[\begin{matrix}
+		\cos\psi\\
+		\sin\psi
+	\end{matrix}\right]
+\]
+c) \\ \\
+Zwischenrechnungen für die Ermittlung der kinetischen Energie:
+\begin{align*}
+	\dot{\textbf{r}}_2^T\textbf{r}_2 &= L_1^2 \dot{\varphi}^2 \left[\begin{matrix}
+	 \cos\varphi & \sin\varphi
+	\end{matrix}\right]
+	\left[\begin{matrix}
+		\cos\varphi \\
+		\sin\varphi
+	\end{matrix}\right] \\
+	&= L_1^2\dot{\varphi}^2\underbrace{\left(\cos^2\varphi + \sin^2\varphi\right)}_{=1} \\
+	&= L_1^2\dot{\varphi}^2
+\end{align*}
+\begin{align*}
+	\dot{\textbf{r}}_K^T\textbf{r}_K &= \left(L_1\dot{\varphi}\left[\begin{matrix}
+		\cos\varphi &
+		\sin\varphi
+		\end{matrix}\right]
+	+
+	l\dot{\psi}\left[\begin{matrix}
+	\cos\psi &
+	\sin\psi
+	\end{matrix}\right]\right)
+	\left(L_1\dot{\varphi}\left[\begin{matrix}
+		\cos\varphi \\
+		\sin\varphi
+		\end{matrix}\right]
+	+
+	l\dot{\psi}\left[\begin{matrix}
+	\cos\psi\\
+	\sin\psi
+	\end{matrix}\right]\right) \\
+	&= L_1^2\dot{\varphi}^2\underbrace{\left(\cos^2\varphi + \sin^2\varphi\right)}_{=1} + l^2\dot{\psi}^2\underbrace{\left( \cos^2\psi + \sin^2\psi\right)}_{=1} + 2L_1l\left(\sin\varphi\sin\psi + \cos\varphi\cos\psi\right) \\
+	&= L_1^2\dot{\varphi}^2 + l^2\dot{\psi}^2 + 2L_1l\dot{\varphi}\dot{\psi}\left(\sin\varphi\sin\psi + \cos\varphi\cos\psi\right)
+\end{align*}
+\newpage
+Nun können die kinetischen Energien des Systems bestimmt werden. Diese lauten hier
+\begin{align*}
+	T_{tr} &= \frac{1}{2} \left(m_2 + m_M\right) L_1^2\dot{\varphi}^2 + \frac{1}{2} m_K \left[ L_1^2\dot{\varphi}^2 + l^2\dot{\psi}^2 + 2L_1l\dot{\varphi}\dot{\psi}\left(\sin\varphi\sin\psi + \cos\varphi\cos\psi\right)\right] \\
+	T_{rot} &= 2 \frac{1}{2} \left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right)\dot{\varphi}^2 \\
+	T &= T_{tr} + T_{rot} \\
+	  &= \frac{1}{2} \left(m_2 + m_M\right) L_1^2\dot{\varphi}^2 + \frac{1}{2} m_K \left[ L_1^2\dot{\varphi}^2 + l^2\dot{\psi}^2 + 2L_1l\dot{\varphi}\dot{\psi}\left(\sin\varphi\sin\psi + \cos\varphi\cos\psi\right)\right] \\
+	  &+ \frac{1}{2} \left(\frac{1}{12}m_1L_1^2 + m_1\left(\frac{L_1}{2}\right)^2\right)\dot{\varphi}^2
+\end{align*}
+d) \\ \\
+Nun kann wie folgt die potentielle Energie bestimmt werden. Die potentielle Energie der Ruhelage lautet
+\begin{align*}
+	V &= 2m_1g\frac{L_1}{2}\left(1-\cos\varphi\right) + \left(m_1 + m_M\right)gL_1 \left(1 - \cos\varphi\right) \\
+	&+ m_Kg\left[L_1\left(1-\cos\varpi\right) +l\left(1 - \cos\psi\right)\right] 2 \frac{1}{2}c_1\varphi^2
+\end{align*}
+\textit{Hinweis}: \\
+Die Ruhelage befindet sich bei \(\varphi = 0\), d.h. das Maximum der potentiellen Energie tritt bei \(\varphi = \pm \frac{\pi}{2}\) und deswegen wird \(\cos\varphi\) durch \(\left(1-\cos\varphi\right)\) ersetzt.
