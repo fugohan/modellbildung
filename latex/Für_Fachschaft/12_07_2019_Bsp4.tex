@@ -4,9 +4,9 @@
 a) \\ \\
 Die zu berechnenden Wärmestromdichten können mit der Formel für Konvektion aus der Formelsammlung des ACIN bestimmt werden. Diese lauten
 \begin{align*}
-	&\dot{\textbf{q}}_0 = \alpha_0 \left(T_M - T_L\right) , \qquad \dot{\textbf{q}}_{L,2} = \alpha_L \left(T_2 - T_L\right) \\
-	&\dot{\textbf{q}}_M = \alpha_M \left(T_M - T_1\right) , \qquad \dot{\textbf{q}}_{L,3} = \alpha_L \left(T_3 - T_L\right) \\
-	&\dot{\textbf{q}}_B = \alpha_B \left(T_4 - T_B\right)
+	&\dot{q}_O = \alpha_O \left(T_M - T_L\right) , \qquad \dot{q}_{L,2} = \alpha_L \left(T_2 - T_L\right) \\
+	&\dot{q}_M = \alpha_M \left(T_M - T_1\right) , \qquad \dot{q}_{L,3} = \alpha_L \left(T_3 - T_L\right) \\
+	&\dot{q}_B = \alpha_B \left(T_4 - T_B\right)
 \end{align*}
 Bei den Ausdrücken, wo laut Formel sich eigentlich ein \(-\) ergibt, wird das Vorzeichen vertauscht, damit keine negativen Wärmestromdichten mehr vorkommen. \\ \\
 b) \\ \\
@@ -66,3 +66,17 @@ Die folgenden Ausdrücke kann man einfach aus der Formelsammlung herauslesen.
 	\end{matrix}\right] \\
 	\textbf{P} = diag\{\varepsilon\}\left(\textbf{E} - \left(\textbf{E} - diag\{\varepsilon\}\right)^{-1}\right)\left(\textbf{E}-\textbf{F}\right)\sigma\textbf{T}^4
 \end{align*}
+d) \\ \\
+Die Differentialgleichung für den Zeitverlauf von \(T_M\left(t\right)\) lautet
+\[
+	1m^2\rho c_p \frac{dT_M\left(t\right)}{dt} = -1m\underbrace{\alpha_O\left(T_M\left(t\right) - T_L\left(t\right)\right)}_{\dot{q}_O} -3m\dot{q}_M\left(T_M\left(t\right),T_B\left(t\right),T_L\left(t\right)\right)
+\]
+Die Unbekannten sind \(\dot{q}_O,\dot{q}_M,\dot{q}_{L,2},\dot{q}_{L,3},T_1,T_2,T_3,T_4\), die alle durch Umformen der Gleichung von a) und c) berechnet werden können. \\ \\
+e) \\ \\
+Nun kann laut Formelsammlung die Gleichung aus d) diskretisiert werden.
+\[
+	t_k = k\Delta t
+\]
+\[
+	1m^2\rho c_p \frac{T_M\left(t_{k+1}\right) - T_M\left(t_k\right)}{\Delta t} = -1m\alpha_O\left(T_M\left(t_k\right) - T_L\left(t_k\right)\right) -3m\dot{q}_M\left(T_M\left(t_k\right),T_B\left(t_k\right),T_L\left(t_k\right)\right)
+\]
