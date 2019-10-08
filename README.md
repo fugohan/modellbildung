@@ -18,4 +18,5 @@ Prüfung|Bsp|Status| Gerechnet | Kommentar
 12.07.2019 | 1 | f | y |
 12.07.2019 | 2 | f | y |
 12.07.2019 | 3 | f | y |
+12.07.2019 | 4 | w | y |
 26.06.2015 | 1 | f | y | 
