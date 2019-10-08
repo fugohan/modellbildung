@@ -1,0 +1,75 @@
+\newpage
+\noindent
+\textbf{Beispiel 3} \\ \\
+a)
+\vspace{-15pt}
+\input{tikz/schnitta}
+\\ 
+Nun müssen die Gleichgewichtsbedingungen für diesen Schnitt bestimmt werden. Diese lauten hier
+\begin{align*}
+	&\sum M_E = 0: \\
+	&\tau -F_{s,2}r + F_{s,1}r = 0 \\
+	\\
+	&\sum F_x = 0: \\
+	&F_{E,x} + F_{s,2}\sin\left(\frac{\pi}{4}\right) = 0 \\
+	&F_{E,x} + \frac{F_{s,}}{\sqrt{2}}= 0 \\
+	\\
+	&\sum F_y = 0:\\
+	&F_{E,y} - F_{s,1} - F_{s,2}\sin\left(\frac{\pi}{4}\right) - m_sg = 0\\
+	&F_{E,y} - F_{s,1} - \frac{F_{s,2}}{\sqrt{2}} - m_sg = 0
+\end{align*}
+\newpage
+Nun werden die Kräfte im Punkt E und die Seilkräfte berechnet.
+\begin{align*}
+	&F_{s,1} = mg \\
+	\\
+	&\tau -F_{s,2}r + F_{s,1}r = 0 \\
+	& F_{s,2} r = \tau + m g r \\
+	& F_{s,2} = mg + \frac{\tau}{r} \\
+	\\
+	&F_{E,x} + \frac{F_{s,2}}{\sqrt{2}}= 0 \\
+	&F_{E,x} + \frac{mg}{\sqrt{2}} + \frac{\tau}{r\sqrt{2}} = 0 \\
+	&F_{E,x} = - \frac{mg}{\sqrt{2}} - \frac{\tau}{r\sqrt{2}} \\
+	\\
+	&F_{E,y} - F_{s,1} - \frac{F_{s,2}}{\sqrt{2}} - m_sg = 0 \\
+	&F_{E,y} - mg - \frac{mg}{\sqrt{2}} - \frac{\tau}{r\sqrt{2}} - m_sg = 0 \\
+	&F_{E,y} = mg \frac{\sqrt{2} + 1}{\sqrt{2}} + \frac{\tau}{r\sqrt{2}} + m_sg
+\end{align*}
+b)
+\input{tikz/schnittb}
+\newpage
+Nun werden analog wie in a) die Gleichgewichtsbedingungen aufgestellt.
+\begin{align*}
+	&\sum M_A = 0: \\
+	& F_{B,x}h + F_{E,y} \left(a + b\right) -fa = 0 \\
+	& F_{B,x} = - F_{E,y}\frac{a+b}{h} + f\frac{a}{h} \\%Fehler in der Musterlösung
+	\\
+	&\sum F_x = 0:\\
+	&F_{B,x} + F_A +F_{E,x} = 0\\
+	&-F_{E,y}\frac{a + b}{h} + f \frac{a}{h} + F_A + F_{E,x} = 0 \\
+	&F_A = F_{E,y}\frac{a + b}{h} - f\frac{a}{h} - F_{E,x}  \\
+	\\
+	&\sum F_y = 0: \\
+	&F_{B,y} + F_{E,y} - f = 0 \\
+	&F_{B,y} = f - F_{E,y}
+\end{align*}
+\textbf{ACHTUNG}: Die Ergebnisse in der Musterlösung vom ACIN sind nicht korrekt.\\ \\
+c)
+\input{tikz/schnittc}
+\newpage
+Es müssen wieder die Gleichgewichtsbedingungen aufgestellt werden. Diese lauten hier
+\begin{align*}
+	&\alpha = \arctan\left(\frac{h}{a}\right) \\
+	&\sum M_B = 0: \\
+	&F_Aa + F_2 a = 0 \\
+	&F_2 = -F_A \\
+	\\
+	&\sum F_y = 0: \\
+	&F_{B,y} - F_3 \sin\alpha = 0 \\
+	&F_3 = \frac{F_{B,y}}{\sin\alpha} \\
+	\\
+	&\sum F_x = 0: \\
+	&F_2 + F_4 + F_3 \cos\alpha + F_{E,x}= 0 \\
+	&F_4 = - F_2 - F_{B,y}\frac{\cos\alpha}{\sin\alpha} - F_{E,x}\\
+	&F_4 = F_A - \frac{F_{B,y}}{\tan\alpha} - F_{E,x}
+\end{align*}

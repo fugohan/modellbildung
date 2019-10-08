@@ -79,3 +79,49 @@ Randbedingungen
 	T_l\left(R\right) = -\frac{gR^2}{4\lambda_l} + C_1\ln\left(R\right) + C_2 = T_1 \\
 	T_l\left(2R\right) = -\frac{g4R^2}{4\lambda_l} + C_1 \ln\left(2R\right) + C_2 = T_2
 \end{align*}
+\newpage
+\noindent
+Integrationskonstanten: \\ \\
+Die beiden Konstanten werden wie in a) bestimmt.
+\begin{align*}
+	-\frac{gR^2}{4\lambda_l} + C_1\ln\left(R\right) + C_2 = T_1 \\
+	C_2 = T_1 + \frac{gR^2}{4\lambda_l} - C_1\ln\left(R\right)
+\end{align*}
+Diese Gleichung wird nun in die andere eingesetzt und man erhält
+\begin{align*}
+	-\frac{g4R^2}{4\lambda_l} + C_1 \ln\left(2R\right) + T_1 + \frac{gR^2}{4\lambda_l} - C_1\ln\left(R\right) = T_2 \\
+	\frac{g}{4\lambda_l}\left(R^2 - 4R^2\right) 
+	+ T_1 - T_2 = C_1 \underbrace{\left( ln\ln\left(1\right) - \ln\left(2\right)\right)}_{\ln\left( \frac{1}{2}\right)} \\
+	C_1 = \frac{\frac{g}{4\lambda_l}\left(R^2 - 4R^2\right) + T_1 - T_2}{\ln\left( \frac{1}{2}\right)}
+\end{align*}
+Rückeingesetzt erhält man
+\begin{align*}
+	C_2 &= T_1 + \frac{gR^2}{4\lambda_l} - \frac{\frac{g}{4\lambda_l}\left(R^2 - 4R^2\right) + T_1 - T_2}{\ln\left( \frac{1}{2}\right)}\ln\left(R\right) \\
+	&= \frac{T_1\left(\ln\left(R\right) - \ln\left(2R\right)\right)}{ln\left(\frac{1}{2}\right)} + 
+	\frac{\frac{gR^2}{4\lambda_l}\left(\ln\left(R\right) - \ln\left(2R\right)\right)}{\ln\left( \frac{1}{2}\right)} \\
+	&- \frac{\frac{g}{4\lambda_l}\left(R^2\ln\left(R\right) - 4R^2\ln\left(R\right)\right) + T_1\ln\left(R\right) - T_2\ln\left(R\right)}{\ln\left( \frac{1}{2}\right)} \\
+	&= \frac{\frac{g}{4\lambda_l}\left(4R^2\ln\left(R\right) - R^2\ln\left(2R\right)\right) + T_2\ln\left(R\right) - T_1\ln\left(2R\right)}{\ln\left(\frac{1}{2}\right)}
+\end{align*}
+d) \\ \\
+Zur eindeutigen Bestimmung der Temperaturen \(T_1 , T_2 , T_3\) muss einfach nur die Gleichungen für die Wärmeübergänge aufstellen. Diese lauten für \\ \\
+\(T_2:\)
+\[
+	\lambda_i\frac{d}{dr}T_i\left(r\right)|_{r = 2R} = \lambda_l \frac{d}{dr}T_l\left(r\right)|_{r = 2R}
+\]
+\(T_3:\)
+\[
+	\alpha_0\left(T_\infty - T_3\right) = \lambda_i\frac{d}{dr}T_i\left(r\right)|_{r = 3R}
+\]
+\(T_1:\)
+\[
+	\alpha_f\left(T_f - T_1\right) = -\lambda_l\frac{d}{dr}T_l\left(r\right)|_{r = R}
+\]
+\newpage
+\noindent
+e) \\ \\
+1) Temperatur der Kühlflüssigkeit senken \\
+2) Oberfläche der Isolierung vergrößern (z.B. durch Kühlrippen) \\
+3) Wärmeleitfähigkeit der Isolierung vergrößern \\
+\\
+\textit{Hinweis}:\\
+\textit{Die Lösung in diesen Punkt erhält man durch logisch denken.}

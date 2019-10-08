@@ -1,0 +1,20 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=temp_header 2019.10.8)  8 OCT 2019 16:25
+entering extended mode
+**C:/Users/PC/Dropbox/LATEX-Docs/modellbildung/latex/Für_Fachschaft/tikz/schni
+tt1.tex.preview.tex
+
+! Emergency stop.
+<to be read again> 
+                   \unhbox 
+<*> .../Dropbox/LATEX-Docs/modellbildung/latex/Fü
+                                                  r_Fachschaft/tikz/schnitt1...
+ 
+Here is how much of TeX's memory you used:
+ 4 strings out of 478194
+ 70 string characters out of 2809407
+ 379946 words of memory out of 3000000
+ 18398 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 5i,0n,4p,107b,6s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
