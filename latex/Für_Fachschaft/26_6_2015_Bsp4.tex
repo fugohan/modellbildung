@@ -1,0 +1,53 @@
+\textbf{Beispiel 4} \\ \\
+a) \\ \\
+Die Wärmestromdichte $\dot{q}$ über die Schichtdicke $d_m$ lautet
+\[
+	\dot{q} = \frac{\lambda \left(T_K - T_O\right)}{d_m}
+\]
+b) \\ \\
+Hier verwendet man die Formel für die Wärmestromdichte bei Konvektion. Diese lautet
+\[
+	\dot{q} = \alpha \left(T - T_\infty\right)
+\]
+Auf dieses Beispiel angewandt folgt
+\[
+	\dot{q} = \alpha \left(T_O - T_U\right)
+\]
+c) \\ \\
+Die Zeichnung kann mit Abbildung 6 in der Angabe verglichen werden. Das erste thermische Widerstandspaar in Abbildung 6 ist die zu zeichnende Schaltung.\\
+Analog zum spezifischen elektrischen Widerstand
+\[
+	R_{el}= \frac{1}{\gamma}\frac{l}{A}
+\]
+lässt sich der thermische Wiederstand eines Körpers wie folgt bestimmen.
+\[
+	R_{th} = \frac{1}{\lambda}\frac{l}{A}
+\]
+Daraus folgt
+\[
+	R_M = \frac{d_M}{\lambda A}
+\]
+und
+\[
+	R_A = \frac{1}{\alpha A}
+\]
+d) \\ \\
+Aus Abbildung 6 lassen sich sämtliche Gleichungen aufstellen die man benötigt um $B_0$ zu berechnen.\\
+Gleichungen:
+\begin{align*}
+	\dot{Q} &= \dot{Q}_1 + \dot{Q}_2 \\
+	\left(R_K + R_S + R_F\right) \dot{Q}_2 &= T_{OS} - T_U \\
+	R_A\dot{Q}_1 &= T_{OS} - T_U \\
+	R_M\dot{Q} + R_A\dot{Q}_1 &= T_K - T_U
+\end{align*}
+Durch Umformen folgt schließlich der Kopplungsfaktor:
+\begin{align*}
+R_A\dot{Q}_1 = T_{OS} - T_U \\
+	\dot{Q}_1 = \frac{T_{OS} - T_U}{R_M} \\
+	\left(R_K + R_S + R_F\right) \dot{Q}_2 = T_{OS} - T_U \\
+	\dot{Q}_2 = \frac{T_{OS} - T_U}{R_K + R_S + R_F} \\
+	R_M\dot{Q} + R_A\dot{Q}_1 = T_K - T_U \\
+	R_M\left(\dot{Q}_1 + \dot{Q}_2\right) + R_A\dot{Q}_1 = T_K - T_U \\
+	\left(\frac{R_M}{R_A} + \frac{R_M}{R_K + R_S + R_F}\right)\left(T_{OS} - T_U\right) = T_K - T_U \\
+	B_0 = \frac{T_{OS} - T_U}{T_K - T_U} = \frac{R_A(R_K + R_S + R_F)}{R_M(R_K + R_S + R_F) + R_AR_M}
+\end{align*}

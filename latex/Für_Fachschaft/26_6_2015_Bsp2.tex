@@ -2,4 +2,90 @@
 \noindent
 \textbf{Beispiel 2} \\ \\
 a) \\ \\
-Mit der Formel der Cross-String-Methode
+Zuerst soll der Sichtfaktor $F_{B-D_1}$ berechnet werden. Um diesen zu bestimmen, nimmt man die Formel bezüglich der vierten Anordnung aus der Formelsammlung.
+\begin{align*}
+	F_{B-D_1} &= \frac{1}{2L_B}\left(L_B + L_{D_1} - \sqrt{L^2_B + L^2_{D_1} - 2L_BL_{D_1}\cos\varphi}\right)
+\end{align*}
+Mit der gleichen Formel kann nun auch der Sichtfaktor für Boden-Fenster mit dem Dachstück ermittelt werden.
+\begin{align*}
+	F_{B-D_1F} &= \frac{1}{2L_B}\left(L_B + L_{D_1} + L_F - \sqrt{L^2_B + \left(L_{D_1} + L_F\right)^2 - 2L_B\left(L_{D_1} + L_F\right)\cos\varphi}\right)
+\end{align*}
+Mit der Summationsregel kann nun der Sichtfaktor $F_{B-F}$ bestimmt werden.
+\begin{align*}
+	F_{B-F} &= F_{B-D_1F} - F_{B-D_1}
+\end{align*}
+Zum Schluss wendet man noch das Reziprozitätsgesetz an und man erhält damit den gesuchten \newline Sichtfaktor.
+\begin{align*}
+	F_{F-B} &= \frac{L_B}{L_F}\left(F_{B-D_1F} - F_{B-D_1}\right)
+\end{align*}
+b) \\ \\ 
+Allgemein gilt \[\alpha + \rho + \tau = 1\] für den Apsorptionsgrad $\alpha$, den Reflexionsgrad $\rho$ und den Transmissionsgrad $\tau$. Laut Angabe benötigt man den Transmissionsgrad und dieser lautet
+\[
+	\tau_F = 1 - \alpha_F - \rho_F
+\]
+Um die eintretende Wärmestromdichte $G_B$ zu ermitteln, benötigt man zuerst die vom Fenster abgehende Ausstrahlung $J_F$. Dies wird über die Komponente von $G_S$, welche normal auf das Fenster eintrifft und über den Transmissionsgrad des Fensters bestimmt. Daher lautet $J_F$:
+\begin{align*}
+	J_F &= \tau_FG_S\cos\varphi \\
+		&= \left(1 - \alpha_F - \rho_F\right) G_S\cos\varphi
+\end{align*}
+Mit dem Sichtfaktor zwischen dem Fenster und dem Boden kann nun $G_B$ bestimmt werden.
+\begin{align*}
+	G_B &= F_{F-B} J_F \\
+		&=  F_{F-B} \left(1 - \alpha_F - \rho_F\right) G_S\cos\varphi 
+\end{align*}
+\newpage
+\noindent
+c) \\ \\
+Die Wärmeleitgleichung für dieses Problem wird mit
+\[
+	\rho c_p \frac{\partial T}{\partial t} = \lambda\left(\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial T}{\partial r}\right)\right) + g(t,r,T)
+\]
+aufgestellt. Hier wurde die Gleichung aus der Formelsammlung schon an das Beispiel angepasst.
+Oberfläche an der $\dot{q}_A$ eintritt lautet
+\[
+	O_A = 4 \pi R^2
+\]
+Wasservolumen:
+\[
+	V_W = \frac{4}{3}\pi \left(R^3 - r^2\right)
+\]
+\[
+	g(t,r,T) = \frac{O_A}{V_W} \dot{q}_A = \frac{3R^2}{R^3 - r^3} \dot{q}_A
+\]
+Somit lautet hier die Wärmeleitgleichung
+\[
+	\rho c_p \frac{\partial}{\partial t} T(\overline{r},t) = \lambda\left(\frac{1}{\overline{r}^2}\frac{\partial}{\partial \overline{r}}\left(\overline{r}^2\frac{\partial}{\partial \overline{r}}T(\overline{r},t)\right)\right) + \underbrace{\frac{3R^2}{R^3 - r^3} \dot{q}_A}_{:= c}
+\]
+mit den beiden Randbedingungen
+\begin{align*}
+	T(R,t) = T_L \\
+	-\lambda\frac{\partial}{\partial \overline{r}} T(\overline{r},t)|_{\overline{r} = r} = \frac{\dot{Q}}{4\pi r^2}
+\end{align*}
+Dadurch das das stationäre Wärmeprofil benötigt wird fällt die zeitliche Ableitung weg.
+\begin{align*}
+	\lambda\left(\frac{1}{\overline{r}^2}\frac{\partial}{\partial \overline{r}}\left(\overline{r}^2\frac{\partial}{\partial \overline{r}}T(\overline{r},t)\right)\right) + c = 0 \\
+	\frac{\partial}{\partial \overline{r}}\left(\overline{r}^2\frac{\partial}{\partial \overline{r}}T(\overline{r},t)\right) = - \frac{c}{\lambda} \overline{r}^2 \\
+	\frac{\partial}{\partial \overline{r}}T(\overline{r},t) = -\frac{c}{\lambda}\frac{1}{3}\overline{r} + \frac{C_1}{\overline{r}^2} \\
+	T(\overline{r},t) = -\frac{c}{\lambda}\frac{1}{6}\overline{r}^2 - \frac{C_1}{\overline{r}} + C_2
+\end{align*}
+Ermittlung der Konstanten $C_1$ und $C_2$:\\
+Setzt man die zweite Randbedingung in die Gleichung ein erhält man $C_1$.
+\begin{align*}
+	- \cancel{r^2} \frac{\dot{Q}}{4\pi \cancel{r^2} \lambda} = -\frac{c}{\lambda}\frac{1}{3} r^3 + C_1 \\
+	C_1 = \frac{c}{\lambda}\frac{1}{3} r^3 - \frac{\dot{Q}}{4\pi\lambda}
+\end{align*}
+\newpage
+\noindent
+Um $C_2$ zu erhalten muss man die erste Randbedingung und $C_1$ in die Gleichung einsetzen.
+\begin{align*}	
+T_L = - \frac{c}{\lambda}\frac{1}{6} R^2 - \left(\frac{c}{\lambda}\frac{1}{3} r^3 - \frac{\dot{Q}}{4\pi\lambda}\right)\frac{1}{R} + C_2 \\
+C_2 = \frac{c}{\lambda}\frac{1}{6} R^2 + \left(\frac{c}{\lambda}\frac{1}{3} r^3 - \frac{\dot{Q}}{4\pi\lambda}\right)\frac{1}{R} + T_L
+\end{align*}
+Abschließend wird nun $C_2$ eingesetzt und somit erhält man das stationäre Temperaturprofil des  Wassers im Aquarium. 
+\[
+	T_{stat}(\overline{r}) = \frac{1}{6}\frac{c}{\lambda}\left(R^2 - \overline{r}^2\right) + \left(\frac{1}{3}\frac{c}{\lambda} r^3 - \frac{\dot{Q}}{4\pi\lambda}\right)\left(\frac{1}{R} - \frac{1}{\overline{r}}\right) + T_L
+\]
+Betrachtet man nun dieses Profil mit dem Radius des Heizkörpers erhält man:
+\[
+	T_{stat}(r) = \frac{1}{6}\frac{c}{\lambda}\left(R^2 - r^2\right) + \left(\frac{1}{3}\frac{c}{\lambda} r^3 - \frac{\dot{Q}}{4\pi\lambda}\right)\left(\frac{1}{R} - \frac{1}{r}\right) + T_L
+\]

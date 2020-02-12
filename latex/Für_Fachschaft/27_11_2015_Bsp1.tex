@@ -1,0 +1,82 @@
+\textbf{Beispiel 1} \\ \\
+a)\\ \\
+Um das Bremsmoment ermitteln zu können benötigt man zu aller erst einmal die Wirkfläche. In diesem  Beispiel beträgt diese Fläche
+\[
+	A = \int_{R_i}^{R_a}\int_{0}^{\frac{\pi}{3}}rd\varphi dr = \frac{\pi}{6}\left(R_a^2 - R_i^2\right)
+\]
+Das Bremsmoment lässt sich mit 
+\[
+	M_R = \int_{R_i}^{R_a}\int_{0}^{\frac{\pi}{3}} r^2\mu\frac{F_B}{A}d\varphi dr
+\]
+zu 
+\begin{align*}
+	M_R &= \int_{R_i}^{R_a}\int_{0}^{\frac{\pi}{3}} r^2\mu F_B \frac{6}{\pi \left(R_a^2 - R_i^2\right)}d\varphi dr = \\
+	M_R &= \int_{R_i}^{R_a} r^2 \mu F_B \frac{\cancelto{2}{6}}{\cancel{\pi} \left(R_a^2 - R_i^2\right)} \frac{\cancel{\pi}}{\cancel{3}} dr = \\
+	M_R &= \mu F_B \frac{2}{3}\frac{R_a^3 - R_i^3}{R_a^2 - R_i^2}
+\end{align*}
+Da zwei Bremsbacken zum Abbremsen verwendet werden lautet das gesamte Bremsmoment 
+\[
+	M_{ges} = 2M_R = \mu F_B \frac{4}{3}\frac{R_a^3 - R_i^3}{R_a^2 - R_i^2}
+\]
+b) \\ \\
+Die Bewegungsdifferenzialgleichung der Schwungscheibe lautet
+\[
+	\ddot{\varphi} = - \frac{M_{ges}}{\Theta_{zz}}
+\]
+Das "$-$" vor dem Brauch kommt daher, dass die $\ddot{\varphi}$ mit der Zeit immer kleiner werden soll, da ja ein Bremsvorgang stattfindet.
+Die Anfangsbedingungen für dieses Problem lauten
+\[
+	\varphi(0) = 0
+\]
+kann aber beliebig gewählt werden, und 
+\[
+	\omega(0) = \overline{\omega}
+\]
+\newpage
+\noindent
+Als nächstes muss man diese Differenzialgleichung lösen. Dies erreicht man durch 2-maliges Integrieren.
+\begin{align*}
+	\omega(t) = \dot{\varphi}(t) &= - \frac{M_{ges}}{\Theta_{zz}}t + \overline{\omega} \\
+	\varphi(t) &= - \frac{M_{ges}}{\Theta_{zz}} \frac{t^2}{2} + \overline{\omega}t
+\end{align*}
+Damit ergibt sich die Bremsdauer $t_B$ zu
+\begin{align*}
+	0 &= \overline{\omega} - \frac{M_{ges}}{\Theta_{zz}}t_B \\ 
+	\overline{\omega} &= \frac{M_{ges}}{\Theta_{zz}}t_B \\
+	t_B &= \frac{\Theta_{zz}\overline{\omega}}{M_{ges}}
+\end{align*}
+Um die Bremskraft $F_B$ zu bestimmen setzt man $M_{ges}$ ein und formt einfach auf $F_H$ um und man erhält
+\[
+	F_B = \frac{3}{4}\frac{R_a^2 - R_i^2}{R_a^3 - R_i^3}\frac{\Theta_{zz}\overline{\omega}}{t_B\mu}
+\]
+c) \\ \\
+Die Bremsleistung lässt sich mit $\dot{W}_R = -M_{ges}\omega$ ermitteln. In diesem Fall lautet somit die Bremsleistung
+\[
+	\dot{W}_R = \frac{M_{ges}^2}{\Theta_{zz}}t - M_{ges}\overline{\omega}
+\]
+Integriert man nun diese Leistung über die Bremsdauer erhält man die Energie
+\begin{align*}
+	E_B &= \int_{0}^{t_B}\frac{M_{ges}^2}{\Theta_{zz}}t - M_{ges}\overline{\omega} dt = \\
+	&= \frac{1}{2}\frac{M_{ges}^2}{\Theta_{zz}}\frac{\Theta_{zz}^2\overline{\omega}^2}{M_{ges}^2} - M_{ges}\overline{\omega}\frac{\Theta_{zz}\overline{\omega}}{M_{ges}} \\
+	&= -\frac{1}{2}\Theta_{zz}\overline{\omega}
+\end{align*}
+Dies entspricht der im Schwungrad gespeicherten Energie.\\ \\
+d) \\ \\
+Aus dem ersten Hauptsatz der Thermodynamik ergibt sich die Differenzialgleichung 
+\[
+	m_Bc_B\frac{dT_B(t)}{dt} = \frac{1}{2}\left(M_{ges}\overline{\omega} - \frac{M_{ges}^2}{\Theta_{zz}}t\right)
+\]
+Löst man diese Gleichung durch einfaches Integrieren erhält man
+\begin{align*}
+	T_B(t) = \frac{1}{2m_Bc_B}\left(M_{ges}\overline{\omega}t - \frac{1}{2}\frac{M_{ges}^2}{\Theta_{zz}}t^2\right) + C
+\end{align*}
+Setzt man die AB $T_B(0) = T_{B,0}$ ein erhält man
+\[
+	T_B(t) = T_{B,0} + \frac{1}{2m_Bc_B}\left(M_{ges}\overline{\omega}t - \frac{1}{2}\frac{M_{ges}^2}{\Theta_{zz}}t^2\right)
+\]
+Zum Zeitpunkt $t_B$ ergibt sich nun folgende Temperatur
+\begin{align*}
+		T_B(t) &= T_{B,0} + \frac{1}{2m_Bc_B}\left(M_{ges}\overline{\omega}t_B - \frac{1}{2}\frac{M_{ges}^2}{\Theta_{zz}}t_B^2\right) = \\
+		&= T_{B,0} + \frac{\Theta_{zz}\overline{\omega}^2}{4m_Bc_B} = \\
+		&= T_{B,0} - \frac{1}{m_Bc_B}\frac{E_B}{2} 
+\end{align*}

@@ -1,0 +1,80 @@
+\textbf{Beispiel 3} \\ \\
+a) \\ \\
+Um die Gleichgewichtsbedingungen zu bestimmen, stellt man einfach das Kräftegleichgewicht und die Momentengleichung für die relevanten Teile auf. \\
+Gleichgewichtsbedingungen für Teil 1:
+\begin{align*}
+	\textbf{e}_x &: F_{Ax} + F_{Bx} + F_{Qx} = 0 \\
+	\textbf{e}_y &: F_{Ay} - F_{Qy} = 0 \\
+\end{align*}
+Für die Momentengleichung wird der Punkt A als Drehpunkt festgelegt.
+\[
+	\textbf{e}_z : \left(l_1 - a\right)F_{Qx} - 2aF_{Bx} + (b_2 - b_1)F_{Qy} = 0
+\]
+Gleichgewichtsbedingungen für Teil 2:
+\begin{align*}
+	\textbf{e}_x &: F_{Ax} - F_{Bx} - F_{Cx} - F_{Hx} = 0 \\
+	\textbf{e}_y &: F_{Ay} + F_{Cy} - F_{Hy} = 0
+\end{align*}
+Für die Momentengleichung wird der Punkt C als Drehpunkt festgelegt.
+\[
+	\textbf{e}_z : aF_{Ax} + aF_{Bx} + l_2F_{Hx} + b_2F_{Ay} + b_3F_{Hy} = 0
+\]
+Gleichgewichtsbedingungen für den Körper:
+\begin{align*}
+	\textbf{e}_x &: F_{Qx} - F_{Qx} = 0 \\
+	\textbf{e}_y &: 2F_{Qy} - G = 2F_{Qy} - mg = 0
+\end{align*}
+\newpage
+\noindent
+b) \\ \\
+Aus Symmetriegründen ist aus der Angabe ersichtlich das 
+\[
+	F_{Cy} = 0
+\]
+gilt. \\
+Mit sämtlichen Gleichungen aus Punkt a lassen sich die gesuchten Kräfte bestimmen.
+\begin{align*}
+	aF_{Ax} + aF_{Bx} + l_2F_{Hx} + b_2F_{Ay} + b_3F_{Hy} = 0 \\
+	\underbrace{F_{Ax} + F_{Bx}}_{-F_{Qx}} + \frac{l_2}{a}F_{Hx} + \frac{b_3 + b_2}{a} F_{Hy} = 0 \\
+	F_{Qx} =  \frac{l_2}{a}F_{Hx} + \frac{b_3 + b_2}{a} F_{Hy} \\
+	F_{Qy} = F_{Hy} = \frac{1}{2} mg
+\end{align*}
+Um $F_{Cx}$ zu bestimmen müssen einmal zuerst $F_{Ax}$ und $F_{Bx}$ bestimmt werden. \\
+$F_{Bx}$:
+\begin{align*}
+	\left(l_1 - a\right)F_{Qx} - 2aF_{Bx} + (b_2 - b_1)F_{Qy} = 0 \\
+	F_{Bx} = \frac{1}{2}\left(\frac{l_1}{a} - 1\right)F_{Qx} + \frac{1}{2}\frac{b_2 - b_1}{a}F_{Hy} \\
+	F_{Bx} = \frac{1}{2}\left(\frac{l_1l_2}{a^2} - \frac{l_2}{a}\right)F_{Hx} + \frac{1}{2}\left(\frac{b_3l_1 + b_2l_1}{a^2} - \frac{b_3 + b_2}{a} + \frac{b_2 - b_1}{a}\right) F_{Hy} \\
+\end{align*}
+$F_{Ax}$:
+\begin{align*}
+	aF_{Ax} + aF_{Bx} + l_2F_{Hx} + b_2F_{Ay} + b_3F_{Hy} = 0 \\
+	F_{Ax} = - F_{Bx} - \frac{l_2}{a}F_{Hx} - \frac{b_3 + b_2}{a}F_{Hy} \\
+	F_{Ax} = -\frac{l_1l_2}{a^2}F_{Hx} - \frac{b_3l_1 + b_2l_1}{a^2}F_{Hy} \\
+\end{align*}
+$F_{Cx}$:
+\begin{align*}
+	F_{Ax} - F_{Bx} - F_{Cx} - F_{Hx} = 0 \\
+	F_{Cx} = F_{Ax} - F_{Bx} - F_{Hx} 
+\end{align*}
+Setzt man nun $F_{Ax}$ und $F_{Bx}$ ein und vereinfacht man soweit wie möglich erhält man
+\[
+	F_{Cx} = -\left(1 + \frac{l_1l_2}{a^2}\right)f_{Hx} - \left(\frac{b_2 - b_1}{a} + \frac{b_3l_1 + b_2l_1}{a^2}\right)\frac{F_{Hy}}{2}
+\]
+\newpage
+\noindent
+c) \\ \\
+Da es sich hier um eine Haftreibung handelt, lässt sich die Haftkraft in der Form
+\[
+	F_H = \mu_H F_N
+\]
+darstellen. \\
+Hier:
+\[
+	F_H = \underbrace{2F_{Qy}}_{F_H}  = \underbrace{2F_{Qx}}_{F_N}\mu
+\]
+Nun setzt man $F_{Qx}$ und $F_{Qy}$ ein und formt auf $F_{Hx}$ um erhält man
+\begin{align*}
+	\mu &> \frac{F_{Qy}}{F_{Qx}} \\
+	F_{Hx} &> \frac{mg}{2l_2}\left(\frac{a}{\mu} - b_2 - b_3\right)
+\end{align*}

@@ -1,0 +1,140 @@
+\\ \\
+\textbf{Beispiel 3} \\ \\
+a)\\ \\
+Zur Beschreibung der Bewegung des Schlittens reicht ein einziger Freiheitsgrad aus, da sich sich dieser nur in horizontaler Richtung bewegt. Die geeignete Minimalkoordinate lautet
+\[
+	q = \varphi_1(t)
+\]
+b) \\ \\
+Die Kniehebelpresse muss folgende Zwangsbedingung erfüllen.
+\[
+	L_1\sin\varphi_1 - L_2\sin\varphi_2 = 0
+\]
+Aus dieser kann nun leicht $\varphi_2$ bestimmen.
+\begin{align*}
+	L_1\sin\varphi_1 - L_2\sin\varphi_2 = 0  \\
+	L_2\sin\varphi_2 = L_1\sin\varphi_1 \\
+	\varphi_2 = \arcsin\left(\frac{L_1}{L_2}\sin\varphi_1\right)
+\end{align*}
+c) \\ \\
+Die Ortsvektoren können direkt aus der Angabe abgelesen werden.
+\begin{align*}
+	\textbf{r}_1 &= \frac{L_1}{2}\begin{bmatrix}
+		\cos(q) \\
+		\sin(q)
+	\end{bmatrix} 
+	\\
+	\textbf{r}_2 &= L_1\begin{bmatrix}
+	\cos(q) \\
+	\sin(q)
+	\end{bmatrix} 
+	+ 
+	\frac{L_2}{2}\begin{bmatrix}
+		\cos(\varphi_2(q)) \\
+		-\sin(\varphi_2(q))
+	\end{bmatrix}
+\end{align*}
+d) \\ \\
+Die Schwerpunktsgeschwindigkeiten der Schenkel lauten
+\begin{align*}
+	\textbf{v}_1 &= \frac{L_1}{2}\begin{bmatrix}
+		-\sin(q) \\
+		 \cos(q)
+	\end{bmatrix} \dot{q}
+	\\
+	\textbf{v}_2 &= L_1 \begin{bmatrix}
+	-\sin(q) \\
+	\cos(q)
+	\end{bmatrix} \dot{q}
+	+
+	\frac{L_2}{2}\begin{bmatrix}
+		-\sin(\varphi_2(q)) \\
+		-\cos(\varphi_2(q))
+	\end{bmatrix}
+	\frac{\partial \varphi_2(q)}{\partial q} \dot{q}
+\end{align*}
+Die Drehwinkelgeschwindigkeiten lauten
+\begin{align*}
+	\omega_1 &= \dot{q} \\
+	\omega_2 &= - \frac{\partial \varphi_2(q)}{\partial q} \dot{q}
+\end{align*}
+e) \\ \\
+Anfangs müssen einige Zwischenrechnungen durchgeführt werden.
+\begin{align*}
+	v_1^2 &= \frac{L_1^2}{4}\dot{q}^2(\cos^2(q) + \sin^2(q)) \\
+		  &= \frac{L_1^2}{4}\dot{q}^2
+\end{align*}
+\begin{align*}
+	v_2^2 &= \left(-L_1\sin(q)\dot{q} - \frac{L_2}{2}\sin(\varphi_2(q))\frac{\partial \varphi_2(q)}{\partial q}\dot{q}\right)^2 + \left(L_1\cos(q)\dot{q} - \frac{L_2}{2}\cos(\varphi_2(q))\frac{\partial \varphi_2(q)}{\partial q}\dot{q}\right)^2 \\
+	&= L_1^2\dot{q}^2\sin^2(q) + L_1L_2\dot{q}^2\sin(q)\sin(\varphi_2(q))\frac{\partial \varphi_2(q)}{\partial q} + \frac{L_2^2}{4}\dot{q}^2\left(\frac{\partial \varphi_2(q)}{\partial q}\right)^2\sin^2(\varphi_2(q)) + \\
+	&+ L_1^2\dot{q}^2\cos^2(q) - L_1L_2\dot{q}^2\cos(q)\cos(\varphi_2(q))\frac{\partial \varphi_2(q)}{\partial q} + \frac{L_2^2}{4}\dot{q}^2\left(\frac{\partial \varphi_2(q)}{\partial q}\right)^2\cos^2(\varphi_2(q)) \\
+	&= L_1^2\dot{q}^2 + \frac{L_2^2}{4}\dot{q}^2\left(\frac{\partial \varphi_2(q)}{\partial q}\right)^2 - L_1L_2\dot{q}^2\frac{\partial \varphi_2(q)}{\partial q}(\cos(q)\cos(\varphi_2(q)) - \sin(q)\sin(\varphi_2(q))) \\
+	&= L_1^2\dot{q}^2 + \frac{L_2^2}{4}\dot{q}^2\left(\frac{\partial \varphi_2(q)}{\partial q}\right)^2 - L_1L_2\dot{q}^2\frac{\partial \varphi_2(q)}{\partial q}\cos(q + \varphi_2(q))
+\end{align*}
+Die kinetische Energie lässt sich mit den Formeln aus der Formelsammlung bestimmen und lautet daher:
+\begin{align*}
+	T &= \frac{1}{2} m_1v_1^2 + \frac{1}{2}m_2v_2^2 + \frac{1}{2} \Theta_1 \omega_1^2 + \frac{1}{2}\Theta_2\omega_2^2 \\
+	&= \frac{1}{8}m_1L_1^2\dot{q}^2 + \frac{1}{2}m_2L_1^2\dot{q}^2 + \frac{1}{8}m_2L_2^2\left(\frac{\partial \varphi_2(q)}{\partial q}\right)^2\dot{q}^2 - \frac{1}{2}m_2L_1L_2\cos(q + \varphi_2(q))\left(\frac{\partial \varphi_2(q)}{\partial q}\right)\dot{q}^2 + \\
+	&+ \frac{1}{2}\Theta_1\dot{q}^2 + \frac{1}{2}\Theta_2\left(\frac{\partial \varphi_2(q)}{\partial q}\dot{q}\right)^2
+\end{align*}
+f) \\ \\
+Die potenzielle Energie der Schenkel zufolge der Schwerkraft lautet
+\begin{align*}
+	V_q &= \frac{1}{2}m_1gL_1\sin(q) + m_2gL_1\sin(q) - \frac{1}{2}m_2gL_2\sin(\varphi_2(q)) \\
+	V_F  &= \frac{1}{2}c_F\left(L_1\cos(q) + \frac{1}{2}L_2\cos(\varphi_2(q)) - x_{F,0}\right)^2
+\end{align*}
+\newpage
+\noindent
+g) \\ \\
+Angriffspunkte der beiden externen Kräfte:
+\begin{align*}
+	\textbf{r}_F &= L_1\begin{bmatrix}
+		\cos(q) \\
+		\sin(q)
+	\end{bmatrix}
+	\\
+	\textbf{r}_{F_L} &= L_1\begin{bmatrix}
+	\cos(q) \\
+	\sin(q)
+	\end{bmatrix}
+	+
+	L_2 \begin{bmatrix}
+		\cos(\varphi_2(q)) \\
+		-\sin(\varphi_2(q))
+	\end{bmatrix}
+\end{align*}
+Deren Ableitungen nach der generalisierten Koordinate lautet
+\begin{align*}
+	\frac{\partial \textbf{r}_F}{\partial q} &= L_1 \begin{bmatrix}
+		-\sin(q) \\
+		\cos(q)
+	\end{bmatrix}
+	\\
+	\frac{\partial \textbf{r}_{F_L}}{\partial q} &= L_1\begin{bmatrix}
+	-\sin(q) \\
+	\cos(q)
+	\end{bmatrix}
+	+
+	L_2\begin{bmatrix}
+	-\sin(\varphi_2(q)) \\
+	-\cos(\varphi_2(q))
+	\end{bmatrix}
+	\frac{\partial \varphi_2(q)}{\partial q}
+\end{align*}
+Die Vektoren der externen Kräfte lauten hier
+\begin{align*}
+	\textbf{F} &= \begin{bmatrix}
+	0 \\
+	- F
+	\end{bmatrix}
+	\\
+	\textbf{F}_L &= \begin{bmatrix}
+		-F_L \\
+		0
+	\end{bmatrix}
+\end{align*}
+Mit der Formel für die generalisierten Kräfte aus der Formelsammlung diese folgendermaßen aussehen.
+\begin{align*}
+	f_F &= \textbf{F}^T\frac{\partial \textbf{r}_F}{\partial q} = -FL_1\cos(q) \\
+	f_{F_L} &= \textbf{F}_L^T \frac{\partial \textbf{r}_{F_L}}{\partial q} = F_L \left(L_1\sin(q) + L_2\sin(\varphi_2(q))\frac{\partial \varphi_2(q)}{\partial q}\right)
+\end{align*}

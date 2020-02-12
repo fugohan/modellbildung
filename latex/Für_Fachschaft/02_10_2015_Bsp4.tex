@@ -1,0 +1,107 @@
+\textbf{Beispiel 4} \\ \\
+a) \\ \\
+Aus der Zeichnung kann man direkt 
+\[
+	\textbf{p}_L = \begin{bmatrix}
+		s + \sin\varphi \\
+		- l \cos\varphi
+	\end{bmatrix}
+\]
+ablesen. Um $\dot{\textbf{p}}_L$ zu bestimmen, muss man $\textbf{p}_L$ nach den Freiheitsgraden $s$ und $\varphi$ ableiten.\\
+Geschwindigkeit der Lastposition
+\[
+	\dot{\textbf{p}}_L = \begin{bmatrix}
+		\dot{s} + l\cos\varphi\dot{\varphi} \\
+		l\sin\varphi\dot{\varphi}
+	\end{bmatrix}
+\]
+Der Betrag dieses Vektors lautet
+\[
+	||\dot{\textbf{p}}_L||^2 = \dot{s}^2 + l^2\dot{\varphi}^2 + 2\dot{s}l\dot{\varphi}\cos\varphi
+\]
+Die kinetische Energie ergibt sich zu
+\[
+	T = \frac{1}{2} m_K \dot{s}^2 + \frac{1}{2}m_L||\dot{\textbf{p}}_L||^2 + \frac{1}{2} \Theta_{zz}\dot{\varphi}^2
+\]
+und die potentielle Energie
+\[
+	V = -m_lgl\cos\varphi + V_0
+\]
+mit 
+\[
+	V_0 = m_Lgl
+\]
+zu
+\[
+	V = m_Lgl(1 - \cos\varphi) 
+\]
+b) \\ \\
+Um die Bewegungsgleichungen zu bestimmen wird als erstes die Lagrange-Funktion benötigt welche lautet
+\begin{align*}
+	L &= T - V = \frac{1}{2} m_K \dot{s}^2 + \frac{1}{2}m_L||\dot{\textbf{p}}_L||^2 + \frac{1}{2} \Theta_{zz}\dot{\varphi}^2 - m_Lgl(1 - \cos\varphi) \\
+	&=  \frac{1}{2} m_K \dot{s}^2 + \frac{1}{2}m_L (\dot{s}^2 + l^2\dot{\varphi}^2 + 2\dot{s}l\dot{\varphi}\cos\varphi)  + \frac{1}{2} \Theta_{zz}\dot{\varphi}^2 - m_Lgl(1 - \cos\varphi)
+\end{align*}
+Euler-Lagrange-Formalismus
+\[
+	\frac{d}{dt}\frac{\partial L}{\partial \dot{\textbf{q}}} - \frac{\partial L}{\partial \textbf{q}} = \textbf{f}_{np}
+\]
+\newpage
+\noindent
+Die seperaten Ableitungen
+\begin{align*}
+	\frac{\partial L}{\partial \textbf{q}} &= \begin{bmatrix}
+		0 \\
+		-m_Ll\sin\varphi(\dot{s}\dot{\varphi} + g)
+	\end{bmatrix}
+	\\
+	\frac{\partial L}{\partial \dot{\textbf{q}}} &= \begin{bmatrix}
+		(m_K + m_L)\dot{s} + m_Ll\dot{\varphi}\cos\varphi \\
+		(\Theta_{zz} + m_L)\dot{\varphi} + m_Ll\dot{s}\cos\varphi
+	\end{bmatrix}
+	\\
+	\frac{d}{dt}\frac{\partial L}{\partial \dot{\textbf{q}}} &= \begin{bmatrix}
+		(m_k + m_L)\ddot{s} + m_Ll\ddot{\varphi}\cos\varphi - m_Ll\dot{\varphi}^2\sin\varphi \\
+		(\Theta_{zz} + m_L)\ddot{\varphi} + m_Ll\ddot{s}\cos\varphi - m_Ll\dot{s}^2\sin\varphi
+	\end{bmatrix}
+\end{align*}
+Die externen Kräfte können direkt aus der Angabe ablesen werden und lauten
+\[
+	\textbf{f}_{np} = \begin{bmatrix}
+		-d_K\dot{s} + F \\ 
+		0
+	\end{bmatrix}
+\]
+c) \\ \\
+Aus der zweiten Zeile der Bewegungsgleichungen aus Punkt b) erhält man die Bewegungsgleichung der haftenden Laufkatze. Dadurch lautet diese
+\[
+	(\Theta_{zz} + m_L)\ddot{\varphi} + m_Llg\sin\varphi = 0
+\]
+d) \\ \\
+Als erstes müssen die externen Kräfte um die Haftkraft $F_H$ erweitert werden. Daher lauten diese dann
+\[
+	\textbf{f}_{np} = \begin{bmatrix}
+	-d_K\dot{s} + F + F_H\\ 
+	0
+	\end{bmatrix}
+\]
+Betrachtet man laut Hinweis nur die erste Zeile der Bewegungsgleichungen aus Punkt b) mit $\dot{s} = \ddot{s} = 0$ erhält man
+\[
+	m_Ll\ddot{\varphi}\cos\varphi - m_Ll\dot{\varphi}^2\sin\varphi = F + F_H
+\] 
+Formt nun auf $F_H$ um und ermittelt man den Betrag erhält man
+\[
+	|F_H| = |m_Ll\ddot{\varphi}\cos\varphi - m_Ll\dot{\varphi}^2\sin\varphi - F|
+\]
+Bringt man nun schließlich diese Gleichung auf die Form der Haftreibung erhält man schlussendlich die Haftbedingung
+\[
+	|F_H| = |m_Ll\ddot{\varphi}\cos\varphi - m_Ll\dot{\varphi}^2\sin\varphi - F| \leq \mu F_N
+\]
+Mit
+\[
+	\ddot{\varphi} = - \frac{m_Llg\sin\varphi}{\Theta_{zz} + m_Ll^2}
+\]
+aus Punkt c), erhält man die vereinfachte Haftbedingung
+\begin{align*}
+	\biggl|m_Ll\frac{m_Llg\sin\varphi}{\Theta_{zz} + m_Ll^2}\cos\varphi - m_Ll\dot{\varphi}^2\sin\varphi - F\biggl| \leq \mu F_N \\ \\
+	\biggl|\frac{gm^2_Ll^2\sin\varphi\cos\varphi}{\Theta_{zz} + m_Ll^2} + m_Ll\dot{\varphi}^2\sin\varphi + F\biggl| \leq \mu F_N
+\end{align*}

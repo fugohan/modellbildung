@@ -1,0 +1,39 @@
+\textbf{Beispiel 2} \\ \\
+Die Wärmestromdichte $\dot{q}_{1-\infty}^I$ ohne der Rettungsdecke lässt sich mit der Formel für die Wärmestromdiche bei Konvektion bestimmen. Diese lautet
+\[
+	\dot{q}_{1-\infty}^I = \varepsilon_1\sigma(T_1^4 - T_\infty^4)
+\]
+Um den Wärmestrom zu erhalten muss die Wärmestromdichte einfach mit der betreffenden Fläche multipliziert werden.
+\[
+	Q_{1-\infty}^I = \varepsilon_1A_1\sigma(T_1^4 - T_\infty^4)
+\]
+Die Sichtfaktormatrix für dieses Wärmeproblem lautet
+\begin{align*}
+	\textbf{F} = \begin{bmatrix}
+		0 & 1 \\
+		1 & 0	
+	\end{bmatrix}
+	\\
+	diag(\varepsilon) = \begin{bmatrix}
+		\varepsilon_1 & 0 \\
+		0 & \varepsilon_2
+	\end{bmatrix}
+\end{align*}
+Mit der Formel für die Nettowärmestromdichte kann der Wärmestrom zwischen den beiden Körpern bestimmt werden zu
+\[
+	Q_{1-2}^{II} = \sigma A_1 \frac{\varepsilon_1 \varepsilon_2}{\underbrace{1 - (1 - \varepsilon_1)(1 - \varepsilon_2)}_{K}}(T_1^4 - T_2^4 )
+\]
+Der Wärmestrom zwischen Rettungsdecke und Umgebung lautet
+\[
+	Q_{2-\infty}^{II} = \varepsilon_2 A_1\sigma(T_2^4 - T_\infty^4)
+\]
+Da $Q_{1-2}^{II} = Q_{2-\infty}^{II}$ gilt, kann man $T_2^4$ bestimmen zu
+\[
+	T_2^4 = \frac{K}{K + \varepsilon_2}T_1^4 + \frac{\varepsilon_2}{K + \varepsilon_2}T_\infty^4
+\]
+Setzt man dies nun in $Q_{1-2}^{II}$ ein erhält man
+\[
+	Q_{1-2}^{II} = \sigma A_1 \frac{K\varepsilon_2}{K + \varepsilon_2}(T_1^4 - T_\infty^4)
+\]
+welcher mit $Q_{1-\infty}^{II}$ gleichzusetzen ist.
+Nun kann man das Verhältnis zwischen den Wärmeströmen mit und ohne Decke bestimmen und man erhält ein Verhältnis von $2/5$. Daraus kann man schließen, dass durch die Decke $3/5$ weniger Wärme an die Umgebung verloren geht.

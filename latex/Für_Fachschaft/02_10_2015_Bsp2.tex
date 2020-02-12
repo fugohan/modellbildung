@@ -1,0 +1,48 @@
+\newpage
+\noindent
+\textbf{Beispiel 2} \\ \\
+a)\\ \\
+Der Anteil durch die freie Konvektion lautet
+\[
+	\alpha_1(T_1)(T_1 - T_\infty)
+\]
+Mit der thermischen Strahlung  ergibt sich eine Leistung von
+\[
+	P = 2r_oL(\alpha_1(T_1)(T_1 - T_\infty) + \dot{q}_1)
+\]
+b) \\ \\
+Dadurch das es sich bei den Oberflächen des Zylinders und des Maschinenbettes um konvexe Flächen handelt sind die Sichtfaktoren $F_{11}$ und $F_{22}$ gleich 0. Mit 
+\[
+	F_{11} + F_{12} + F_{1\infty} = 1
+\]
+und bekannten $F_{12}$ folgt
+\[
+	F_{1\infty} = 1 - F_{12}
+\]
+Aus dem Reziprozitätsgesetz schließt man
+\begin{align*}
+	CF_{21} = 2r_o\pi F_{12} \\
+	F_{21} = \frac{2r_o\pi}{C}F_{12}
+\end{align*}
+Verwendet man das gleiche Gesetzt noch einmal an kann man daraus schließen das $F_{\infty1}$ und $F_{\infty2}$ gleich 0 ist, da $A_\infty \rightarrow \infty$. Mithilfe der Summationsregel kann man auf den Sichtfaktor $F_{\infty \infty}$ schlussfolgern, welcher den Wert 1 haben muss.\\ \\
+c) \\ \\
+Nettowärmestromdichte
+\[
+	\dot{\textbf{q}} = (\textbf{E} - \textbf{F})(\textbf{E} - (\textbf{E} - diag (\varepsilon))\textbf{F})^{-1}diag(\varepsilon)\sigma\textbf{T}^4
+\]
+mit
+\[
+	\dot{\textbf{q}} = [\dot{q}_1,\dot{q}_2,\dot{q}_\infty]^T , \textbf{T} = [T_1,T_2,T_\infty]^T, \varepsilon = [\varepsilon_1,\varepsilon_2,\varepsilon_\infty]^T
+\]
+der Einheitsmatrix \textbf{E} und dadurch das die Halle ein schwarzer Strahler ist, gilt
+\[
+	\varepsilon_\infty = 1
+\]
+Die Sichtfaktormatrix lautet
+\[
+	\textbf{F} = \begin{bmatrix}
+	0 & F_{12} & F_{1\infty} \\
+	F_{21} & 0 & F_{2\infty} \\
+	0 & 0 & F_{\infty \infty}
+	\end{bmatrix}
+\]
