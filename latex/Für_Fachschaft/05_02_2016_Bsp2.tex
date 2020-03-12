@@ -1,0 +1,108 @@
+\textbf{Beispiel 2} \\ \\
+a)\\ \\
+Die einzelnen Koordinaten der Position des Stabschwerpunktes können direkt aus der Angabe abgelesen werden und lauten daher
+\begin{align*}
+	x_s &= r\cos\alpha + l_s\sin\beta \\
+	y_s &= r\sin\alpha - l_s\cos\beta
+\end{align*}
+Dessen Ableitungen lauten
+\begin{align*}
+	\dot{x}_s &= -r\dot{\alpha}\sin\alpha + l_s\dot{\beta}\cos\beta \\
+	\dot{y}_s &= r\dot{\alpha}\cos(\alpha) + l_s\dot{\beta}\sin\beta
+\end{align*}
+b) \\ \\
+Anfangs werden die beiden abgeleiteten Koordinaten zu einem Vektor zusammengefasst.
+\[
+	\textbf{v}_s = \begin{bmatrix}
+		-r\dot{\alpha}\sin\alpha + l_s\dot{\beta}\cos\beta \\
+		r\dot{\alpha}\cos(\alpha) + l_s\dot{\beta}\sin\beta
+	\end{bmatrix}
+\]
+Bevor nun aber die kinetische Energie des Systems bestimmt werden kann muss aber vorher noch ein kleine Zwischenrechnung durchgeführt werden.
+\begin{align*}
+	v_s^2 &= \textbf{v}_s^T\textbf{v}_s \\
+		  &= (-r\dot{\alpha}\sin\alpha + l_s\dot{\beta}\cos\beta)^2 + (r\dot{\alpha}\cos(\alpha) + l_s\dot{\beta}\sin\beta)^2 \\
+		  &= r^2\dot{\alpha}^2\sin^2\alpha - 2rl_s\dot{\alpha}\dot{\beta}\sin\alpha\sin\beta + l_s^2\dot{\beta}^2\cos^2\beta + \\
+		  &+ r^2\dot{\alpha}^2\cos^2\alpha + 2rl_s\dot{\alpha}\dot{\beta}\cos\alpha\cos\beta + l_s^2\dot{\beta}^2\sin^2\beta \\
+		  &= r^2\dot{\alpha}^2 + l_s^2\dot{\beta}^2 - 2rl_s\dot{\alpha}\dot{\beta}(\sin\alpha\sin\beta - \cos\alpha\cos\beta) \\
+		  &= r^2\dot{\alpha}^2 + l_s^2\dot{\beta}^2 - 2rl_s\dot{\alpha}\dot{\beta}\sin(\alpha - \beta)
+\end{align*}
+Die kinetische Energie hier lautet
+\begin{align*}
+	T &= \frac{1}{2}m_sv_s^2 + \frac{1}{2}\Theta_T\dot{\alpha} + \frac{1}{2}\Theta_s\dot{\beta} + \frac{1}{2}m_L(r\dot{\alpha} + \dot{l}_c)
+\end{align*}
+Der letzte Klammerausdruck setzt sich aus der Rotationsgeschwindigkeit $r\dot{\alpha}$ und der Translationsgeschwindigkeit $\dot{l}_c$ zusammen.
+\newpage
+\noindent
+c) \\ \\
+Die potentielle Energie setzt sich aus 2 Komponenten zusammen, die Energie bezüglich der Gewichtskraft
+\[
+	V_g = m_Lg(c - l_c - r\alpha) + m_sgy_s
+\]
+mit der wählbaren Länge $c$ und der in den Federn gespeicherten Energie
+\[
+	V_f = c_1\frac{(\beta - \alpha)^2}{2} + c_2 \frac{(l_c - l_{c,0})^2}{2}
+\]
+Die Summe der beiden ergibt die gesamte potentielle Energie
+\begin{align*}
+	V &= V_g + V_f \\
+	  &= m_Lg(c - l_c - r\alpha) + m_sgy_s + c_1\frac{(\beta - \alpha)^2}{2} + c_2 \frac{(l_c - l_{c,0})^2}{2}
+\end{align*}
+d) \\ \\
+Die einzige externe Kraft ist jene Kraft $F_e$, die an der Last angreift. Der Vektor zum Angriffspunkt dieser Kraft lautet
+\[
+	\textbf{p}_f = \begin{bmatrix}
+		-r \\
+		-r\alpha - l_c - c
+	\end{bmatrix}
+\]
+Dessen Ableitungen nach den gewünschten generalisierten Koordinaten lauten
+\begin{align*}
+	\frac{\partial \textbf{p}_f}{\partial \alpha} &= \begin{bmatrix}
+		0 \\
+		-r
+	\end{bmatrix}
+	\\
+	\frac{\partial \textbf{p}_f}{\partial \beta} &= \begin{bmatrix}
+		0 \\
+		0
+	\end{bmatrix}
+	\\
+	\frac{\partial \textbf{p}_f}{\partial l_c} &= \begin{bmatrix}
+		0 \\
+		-1
+	\end{bmatrix}
+\end{align*}
+Mit dem Vektor
+\[
+	\textbf{F}_e = \begin{bmatrix}
+		0 \\
+		-F_e
+	\end{bmatrix}
+\]
+kann mit der Formel
+\[
+	\tau = \textbf{F}^T \frac{\partial \textbf{p}}{\partial \textbf{q}}
+\]
+die generalisierten Kräfte bestimmt werden.
+Diese lauten
+\begin{align*}
+	\tau_\alpha &= rF_e \\
+	\tau_\beta &= 0 \\
+	\tau_{l_c} &= F_e
+\end{align*}
+\newpage
+\noindent
+e) \\ \\
+Die Lagrange-Funktion sieht hier folgendermaßen aus.
+\begin{align*}
+	L &= T - V \\
+	  &= \frac{1}{2}m_sv_s^2 + \frac{1}{2}\Theta_T\dot{\alpha} + \frac{1}{2}\Theta_s\dot{\beta} + \frac{1}{2}m_L(r\dot{\alpha} + \dot{l}_c) - \\
+	  &- m_Lg(c - l_c - r\alpha) - m_sgy_s - c_1\frac{(\beta - \alpha)^2}{2} - c_2 \frac{(l_c - l_{c,0})^2}{2}
+\end{align*}
+Die Euler-Lagrange-Gleichungen lauten daher hier
+\begin{align*}
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\alpha}}\right) - \frac{\partial L}{\partial \alpha} &= \tau_\alpha \\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\beta}}\right) - \frac{\partial L}{\partial \beta} &= \tau_\beta \\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{l}_c}\right) - \frac{\partial L}{\partial l_c} &= \tau_{l_c}
+\end{align*}

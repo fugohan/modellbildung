@@ -1,0 +1,127 @@
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Aufgrund der ebenen Oberflächen strahlen die drei Schienen nicht auf sich selbst ab daher kann man daraus für die Sichtfaktoren
+\[
+	F_{11} = F_{22} = F_{33} = 0
+\]
+schließen. Aufgrund der Symmetrie kann man außerdem 
+\[
+	F_{12} = F_{13} = F_{21} = F_{31} = \overline{F}
+\]
+sagen.
+Aufgrund der gegebenen Anordnung folgt
+\[
+	F_{23} = F_{32} = 0
+\]
+Die übrigen Faktoren werden mithilfe der Summationsregel bestimmt. Diese lauten daher
+\begin{align*}
+	F_{1\infty} &= 1 - 2\overline{F} \\
+	F_{2\infty} &= 1 - \overline{F} \\
+	F_{3\infty} &= 1 - \overline{F}
+\end{align*}
+Damit lautet die Sichtfaktormatrix
+\begin{align*}
+	\textbf{F} = \begin{bmatrix}
+		0 & \overline{F} & \overline{F} & 1 - 2\overline{F} \\
+		\overline{F} & 0 & 0 & 1 - \overline{F} \\
+		\overline{F} & 0 & 0 & 1 - \overline{F} \\
+		0 & 0 & 0 & 1
+	\end{bmatrix}
+\end{align*}
+b)\\ \\
+Geometrische Zusammenhänge
+\begin{align*}
+	\sin(\varTheta_{2,0}) &= \frac{L - x}{\sqrt{a^2 + (L - x)^2}} \\
+	\sin(\varTheta_{2,1}) &= \frac{2L - x}{\sqrt{a^2 + (2L - x)^2}}
+\end{align*}
+Nun kann man den Sichtfaktor exakt bestimmen durch
+\begin{align*}
+	F_{21} &= \frac{1}{2L}\int_{0}^{L} \sin(\varTheta_{2,1}) - \sin(\varTheta_{2,0}) \text{d}x \\
+	       &= \frac{1}{2L}\int_{0}^{L} \frac{2L - x}{\sqrt{a^2 + (2L - x)^2}} - \frac{L - x}{\sqrt{a^2 + (L - x)^2}} \\
+	       &= \frac{1}{2L}\left(\int_{0}^{L} \frac{2L - x}{\sqrt{a^2 + (2L - x)^2}} \text{d}x - \int_{0}^{L}\frac{L - x}{\sqrt{a^2 + (L - x)^2}}\text{d}x\right)
+\end{align*}
+Mit der Substitution für das erste Integral 
+\begin{align*}
+	\sigma &= a^2 + (2L - x)^2 \\
+	\text{d}\sigma &= - 2(2L - x) \text{d}x \\
+	\text{d}x &= -\frac{\text{d}\sigma}{2(2L - x) }
+\end{align*}
+und für das zweite Integral
+\begin{align*}
+	\sigma &= a^2 + (L - x)^2 \\
+	\text{d}\sigma &= -2(L - x) \\
+	\text{d}x &= -\frac{\text{d}\sigma}{2(L - x)}
+\end{align*}
+Nun folgt
+\begin{align*}
+	F_{21} &= \frac{1}{4L}\left( \int_{a^2 + L^2}^{a^2 + 4L^2} \sigma^{-\frac{1}{2}}\text{d}\sigma -  \int_{a^2}^{a^2 + L^2}\sigma^{-\frac{1}{2}}\text{d}\sigma\right) \\
+	&= \frac{1}{2L} \left(\sqrt{a^2 + 4L^2} +  a - 2\sqrt{a^2 + L^2}\right)
+\end{align*}
+c)\\ \\
+Aufgrund der Symmetrie folgt 
+\[
+	A_4 = A_2 + A_3
+\]
+woraus man 
+\[
+	\frac{1}{2}A_4 = A_2 = A_3
+\]
+schließen kann.
+Da die Schienen 2 und 3 zu einem Körper zusammengefasst werden, folgt für den Sichtfaktor des zusammengefassten Körper zur Schiene 1
+\[
+	F_{41} = \overline{F}
+\]
+Mit dem Reziprozitätsgesetz folgt
+\[
+	F_{14} = 2\overline{F}
+\]
+Damit lautet die Sichtfaktormatrix
+\[
+	\textbf{F} = \begin{bmatrix}
+		0 & 2\overline{F} \\
+		\overline{F} & 0
+	\end{bmatrix}
+\]
+d)\\ \\
+Die Wärmeleitgleichung hier lautet
+\[
+	\frac{\partial^2}{\partial z^2}T_S(z) = 0
+\]
+Die Randbedingungen für dieses Wärmeleitproblem lauten
+\begin{align*}
+	-\lambda\frac{\partial}{\partial z}T_S(0) &= \dot{q}_4 \\
+	 T_S(b) &= T_\infty
+\end{align*}
+Lösungsweg der Wärmeleitgleichung:
+\begin{align*}
+	\frac{d^2}{d z^2}T_S(z) &= 0 \\
+	dT_S(z) &= C_1 dz \\
+	T_S(z) &= C_1 z + C_2
+\end{align*}
+Setzt man nun beide Randbedingungen ein folgt für die Konstanten
+\begin{align*}
+	C_1 &= -\frac{\dot{q}_4}{\lambda} \\
+	C_2 &= T_\infty + \frac{\dot{q}_4}{\lambda}b
+\end{align*}
+Nun lautet die vollständige Lösung der Wärmeleitgleichung
+\[
+	T_S(z) = T_\infty + \frac{\dot{q}_4}{\lambda}(b - z)
+\]
+e)\\ \\
+Im stationären Fall müssen sich die Leistungen zu Null bilanzieren. Aus der längenbezogenen Leistungsbilanz für die Schiene 1
+\[
+	\int_{0}^{L}\dot{q}_1\text{d}x = \int_{0}^{L}\int_{0}^{c}\rho_1\left(\frac{I}{cL}\right)^2\text{d}x\text{d}z
+\]
+folgt schließlich der Wärmestrom
+\[
+	\dot{q}_1 = \frac{\rho_1}{cL^2}I^2
+\]
+Da die Oberflächentemperatur $T_4$ der Schienen 2 und 3 der stationären Lösung am Rand entsprechen muss lautet das nichtlineare Gleichungssystem
+\begin{align*}
+	\dot{q}_1(T_1,T_4) - \frac{\rho_1}{cL^2}I^2 &= 0 \\
+	T_4 - T_\infty - \frac{\dot{q}_4(T_1,T_4)}{\lambda}b &= 0
+\end{align*}
+Alternativ kann auch die eine Randbedingung aus Punkt d) angepasst werden. Diese lautet damit
+\[
+	-\lambda\frac{\partial}{\partial z}T_S(0) = \dot{q}_4(T_1,T_4)
+\]

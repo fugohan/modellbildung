@@ -1,0 +1,91 @@
+\newpage
+\noindent
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Die gesuchte Verlustwärmestromdichte wird aus der Formelsammlung entnommen lautet
+\[
+	\dot{q} = k(T_i - T_a)
+\]
+mit dem Vorfaktor (aus der Formelsammlung)
+\[
+	k = \frac{1}{\frac{1}{\alpha_i} + \frac{\delta_w + \delta_p}{\lambda_w} + \frac{1}{\alpha_a}}
+\]
+b)\\ \\
+Dadurch das ein unveränderter Wärmeverlust gefordert ist folgt
+\[
+	\dot{q} = \dot{q}_{neu}
+\]
+Wegen der Dirichlet'schen Randbedingung zufolge der integrierten Wandheizung folgt
+\[
+	\dot{q}_{neu} = k_{neu}(T_p - T_a)
+\]
+und dadurch
+\[
+	k(T_i - T_a) = k_{neu}(T_p - T_a)
+\]
+mit
+\[
+	k_{neu} = \frac{1}{\frac{\delta_d}{\lambda_d} + \frac{\delta_w}{\lambda_w} + \frac{1}{\alpha_a}}
+\]
+Aus den letzten beiden Gleichungen folgt schließlich
+\[
+	\delta_d = \lambda_d\left(\frac{T_h - T_a}{k(T_i - T_a)} - \frac{\delta_w}{\lambda_w} - \frac{1}{\alpha_a}\right)
+\]
+c)\\ \\
+Der Temperaturverlauf lautet
+\[
+	T(x) = \left\{
+	\begin{array}{lll}
+	T_h & \text{für} \quad 0 \leq x \leq \delta_p \\
+	T_h - \dot{q}\frac{x - \delta_p}{\lambda_d} & \text{für} \quad \delta_p \leq x \leq \delta_p + \delta_d\\
+	T_h - \dot{q}\left(\frac{\delta_d}{\lambda_d} + \frac{x - \delta_p - \delta_d}{\lambda_w}\right) & \text{für} \quad \delta_p + \delta_d \leq x \leq \delta_p + \delta_d + \delta_w
+	\end{array}
+	\right.
+\]
+d)\\ \\
+Durch Zusammenfassen der Konturen b und w folgt aus der Summationsregel
+\[
+	F_{h,d} = 1 - F_{h,b+w} - F-{h,h}
+\]
+Da die Kontur h eine ebene Wand ist, gilt $F_{h,h} = 0$. Der andere Sichtfaktor kann mittels der Tabelle aus der Formelsammlung ermittelt werden und somit folgt
+\[
+	F_{h,d} = 1 - \frac{1}{2l_H}\left(l_H + \sqrt{l_b^2 + l_w^2} - \sqrt{l_b^2 + (l_w - l_h)^2}\right)	
+\]
+\newpage
+\noindent
+e)\\ \\
+Da es sich bei der Kontur b ebenfalls um eine ebene Wand handelt gilt $F_{b,b} = 0$. Mit der Summationsregel und dem Reziprozitätsgesetz folgt für die restlichen Sichtfaktoren
+\begin{align*}
+	F_{b,h} &= \frac{l_h}{l_b}F_{b,u} \\
+	F_{u,h} &= \frac{l_h}{l_1 + l_2 + l_w}F_{h,u} \\
+	F_{u,b} &= \frac{l_b}{l_1 + l_2 + l_w}F_{b,u} \\
+	F_{u,u} &= 1 - \frac{1}{l_1 + l_2 + l_w}(l_bF_{b,u} + l_hF_{h,u})
+\end{align*}
+f)\\ \\
+Die gesuchte Gleichung lautet 
+\[
+	\varepsilon(\textbf{E} - \textbf{F}(1 - \varepsilon))^{-1}(\textbf{E} - \textbf{F})\sigma\begin{bmatrix}
+	T_h^4\\ T_u^4 \\ T_b^4
+	\end{bmatrix}
+	+
+	\begin{bmatrix}
+		\dot{q}_h \\ 0 \\ 0
+	\end{bmatrix}
+	-
+	\begin{bmatrix}
+		k_2(T-h - T_a) \\ 0 \\ 0
+	\end{bmatrix}
+	= \textbf{\text{0}}
+\]
+mit
+\[
+	\textbf{F} = \begin{bmatrix}
+		0 & F_{h,u} & F_{h,b} \\
+		F_{u,h} & F_{u,u} & F_{u,b} \\
+		F_{b,h} & F_{b,u} & 0  
+	\end{bmatrix}
+	,
+	\qquad
+	k_2 = \frac{1}{\frac{\delta_w}{\lambda_w} + \frac{\delta_d}{\lambda_d} + \frac{1}{\alpha_a}}
+\]
+Der genaue Rechenweg ist im Vorlesungsskript aus dem Jahr 2019 nachzulesen.

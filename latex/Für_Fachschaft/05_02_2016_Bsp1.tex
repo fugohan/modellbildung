@@ -1,34 +1,47 @@
 \textbf{Beispiel 1} \\ \\
+Bei diesen Beispiel muss man den physikalischen Hintergrund von Seilrollen genau beachten. \\ \\
 a)\\ \\
-Die einzelnen Koordinaten der Position des Stabschwerpunktes können direkt aus der Angabe abgelesen werden und lauten daher
+Um die kinetische Energie T zu bestimmen, benötigt man sämtliche im System auftretenden Geschwindigkeiten.
 \begin{align*}
-	x_s &= r\cos\alpha + l_s\sin\beta \\
-	y_s &= r\sin\alpha - l_s\cos\beta
+	\omega_{R_1} &= \frac{v}{r_1} \\
+	v_{R_2} &= v \frac{r_1}{2r_2} \\
+	\omega_{R_2} &= v\frac{r_1}{2r_2^2}
 \end{align*}
-Dessen Ableitungen lauten
-\begin{align*}
-	\dot{x}_s &= -r\dot{\alpha}\sin\alpha + l_s\dot{\beta}\cos\beta \\
-	\dot{y}_s &= r\dot{\alpha}\cos(\alpha) + l_s\dot{\beta}\sin\beta
-\end{align*}
-b) \\ \\
-Anfangs werden die beiden abgeleiteten Koordinaten zu einem Vektor zusammengefasst.
+Somit ergibt sich die kinetische Energie zu
 \[
-	\textbf{v}_s = \begin{bmatrix}
-		-r\dot{\alpha}\sin\alpha + l_s\dot{\beta}\cos\beta \\
-		r\dot{\alpha}\cos(\alpha) + l_s\dot{\beta}\sin\beta
-	\end{bmatrix}
+	T = \frac{m_Lv^2}{2} + \frac{\Theta_1\omega_{R_1}^2}{2} + \frac{\Theta_2\omega_{R_2}^2}{2} + \frac{m_2v_{R_2}^2}{2}
 \]
-Bevor nun aber die kinetische Energie des Systems bestimmt werden kann muss aber vorher noch ein kleine Zwischenrechnung durchgeführt werden.
+b) \\ \\
+Die Energie 
+\[
+	W = F \cdot s
+\]
+die beim Verschieben benötigt wird lautet
+\[
+	W = \mu_cm_Lg\cos\phi s
+\]
+c) \\ \\
+Zum Zeitpunkt $t_0$ soll
+\[
+	V(t_0) = 0
+\]
+gültig sein.
+Zum Zeitpunkt $t_1$ sieht die potentielle Energie folgendermaßen aus
+\[
+	V(t_1) = m_Lgs\sin\phi - m_2g\frac{r_1}{2r_2}
+\]
+d) \\ \\
+Die aufzuwendende Arbeit durch die Kraft $\textbf{F}$ lautet
+\[
+	W = Fs\frac{r_1}{2r_2}
+\]
+e) \\ \\
+Aus der Energieerhaltung ergibt sich
+\[
+	T(t_0) + V(t_0) + W_F - W = T(t_1) + V(t_1)
+\]
+Bei den Termen mit $t_0$ müssen für $v$ und $\omega$, $v_0$ und $\omega(t_0)$ und bei $t_1$, $v_1$ und $\omega(t_1)$ eingesetzt werden. Schreibt man nun die obige Gleichung komplett aus und formt dieses dann auf die gesuchte Kraft um erhält man
 \begin{align*}
-	v_s^2 &= \textbf{v}_s^T\textbf{v}_s \\
-		  &= (-r\dot{\alpha}\sin\alpha + l_s\dot{\beta}\cos\beta)^2 + (r\dot{\alpha}\cos(\alpha) + l_s\dot{\beta}\sin\beta)^2 \\
-		  &= r^2\dot{\alpha}^2\sin^2\alpha - 2rl_s\dot{\alpha}\dot{\beta}\sin\alpha\sin\beta + l_s^2\dot{\beta}^2\cos^2\beta + \\
-		  &+ r^2\dot{\alpha}^2\cos^2\alpha + 2rl_s\dot{\alpha}\dot{\beta}\cos\alpha\cos\beta + l_s^2\dot{\beta}^2\sin^2\beta \\
-		  &= r^2\dot{\alpha}^2 + l_s^2\dot{\beta}^2 - 2rl_s\dot{\alpha}\dot{\beta}(\sin\alpha\sin\beta - \cos\alpha\cos\beta) \\
-		  &= r^2\dot{\alpha}^2 + l_s^2\dot{\beta}^2 - 2rl_s\dot{\alpha}\dot{\beta}\sin(\alpha - \beta)
+	F &=  \frac{2r_2}{sr_1}\left( m_L\frac{v_1^2 - v_0^2}{2} + \Theta_1 \frac{\omega_{R_1}(t_1)^2 - \omega_{R_1}(t_0)^2}{2} + \Theta_2 \frac{\omega_{R_2}(t_1)^2 - \omega_{R_2}(t_0)^2}{2}\right) + \\
+	&+\frac{2r_2}{sr_1}  \left(m_2\frac{v_{R_2}(t_1)^2 - v_{R_2}(t_0)^2}{2} + m_Lgs(\sin\phi + \mu_c\cos\phi) - m_2gs\frac{r_1}{2r_2}\right)
 \end{align*}
-Die kinetische Energie hier lautet
-\begin{align*}
-	T &= \frac{1}{2}m_sv_s^2 + \frac{1}{2}\Theta_T\dot{\alpha} + \frac{1}{2}\Theta_s\dot{\beta} + \frac{1}{2}m_L(r\dot{\alpha} + \dot{l}_c)
-\end{align*}
-Der letzte Klammerausdruck setzt sich aus der Rotationsgeschwindigkeit $r\dot{\alpha}$ und der Translationsgeschwindigkeit $\dot{l}_c$ zusammen.

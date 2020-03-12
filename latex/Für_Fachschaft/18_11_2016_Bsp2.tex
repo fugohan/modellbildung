@@ -1,0 +1,155 @@
+\newpage
+\noindent
+\textbf{Beispiel 2}\\ \\
+a) \\ \\
+Ersatzfederelement:
+\[
+	\tilde{c} = \frac{c_3c_4}{c_3 + c_4}
+\]
+Ersatzdämpferelement:
+\[
+	\tilde{d} = d_3 + d_4
+\]
+entspannte Länge der Ersatzfeder:
+\[
+	\tilde{s}_0 = s_{03} + s_{04}
+\]
+b) \\ \\
+Wendet man den Impulserhaltungssatz auf beide Massen an, erhält man
+\[
+	m_1\ddot{s}_1 = -m_1 g - c_1(s_1 - s_{01}) - d\dot{s}_1 + c_2(s_2 - s_1 - s_{02}) + d_2(\dot{s}_2 - \dot{s}_1)
+\]
+und
+\[
+	m_2\ddot{s} = -m_2 g - c_2(s_2 - s_1 - s_{02}) - d_2(\dot{s}_2 - \dot{s}_1) - \tilde{c}(s_2 - \tilde{s}_0) - \tilde{d}\dot{s}_2 - f_L
+\]
+c)\\ \\
+Zuerst müssen die gerade ermittelten Differentialgleichungen so umgeformt werden, dass diese die gesuchte Form besitzen. Die gesuchte Form lautet
+\[
+	\textbf{M}\ddot{\textbf{q}} + \textbf{D}\dot{\textbf{q}} + \textbf{C}\textbf{q} = \textbf{k} + \textbf{b}f_L
+\]
+umgeformte Gleichungen:
+\begin{align*}
+	m_1\ddot{s}_1 + (d_1 + d_2)\dot{s}_1 - d_2\dot{s}_2 + (c_1 + c_2)s_1 - c_2 s_2 &= -m_1g + c_1s_{01} - c_2s_{02} \\
+	m_2\ddot{s}_2 - d_2s_1 + (\tilde{d} + d_2)\dot{s}_2 - c_2s_1 +(c_2 + \tilde{c})s_2 &= -m_2g + \tilde{c}\tilde{s}_0 + c_2s_{02} - f_L
+\end{align*}
+Hieraus folgt das System
+\[
+	\underbrace{\begin{bmatrix}
+			m_1 & 0 \\
+			0 & m_2
+		\end{bmatrix}}_{\textbf{M}}\ddot{\textbf{q}}
+	+
+	\underbrace{\begin{bmatrix}
+			d_1 + d_2 & -d_2 \\
+			-d_2 & \tilde{d} + d_2
+		\end{bmatrix}}_{\textbf{D}} \dot{\textbf{q}}
+	+
+	\underbrace{\begin{bmatrix}
+			c_1 + c_2 & -c_2 \\
+			-c_2 & \tilde{c} + c_2
+		\end{bmatrix}}_{\textbf{C}}\textbf{q}
+	=
+	\underbrace{\begin{bmatrix}
+			-m_1g + c_1s_{01} - c_2s_{02} \\
+			-m_2g + \tilde{c}\tilde{s}_0 + c_2s_{02}
+		\end{bmatrix}}_{\textbf{k}}
+	+ 
+	\underbrace{\begin{bmatrix}
+			0 \\
+			-1
+		\end{bmatrix}}_{\textbf{b}} f_L
+\]
+d)\\ \\
+Im stationären Fall fallen aus den obigen System die zeitlichen Ableitungen weg und die Postion der von $m_2$ beträgt nun $h$. Daraus folgt nun das System
+\[
+	\underbrace{\begin{bmatrix}
+		c_1 + c_2 & -c_2 \\
+		-c_2 & \tilde{c} + c_2
+		\end{bmatrix}}_{\textbf{C}}
+	\begin{bmatrix}
+		s_1 \\
+		h
+	\end{bmatrix}
+	=
+	\underbrace{\begin{bmatrix}
+		-m_1g + c_1s_{01} - c_2s_{02} \\
+		-m_2g + \tilde{c}\tilde{s}_0 + c_2s_{02}
+		\end{bmatrix}}_{\textbf{k}}
+	+ 
+	\underbrace{\begin{bmatrix}
+		0 \\
+		-1
+		\end{bmatrix}}_{\textbf{b}} f_L
+\]
+mit dem Gleichungssystem
+\begin{align*}
+	(c_1 + c_2)s_1 - c_2 h &= k_1 \\
+	-c_2 s_1 + (\tilde{c} + c_2) h &= k_2 - f_L
+\end{align*}
+\newpage
+\noindent
+Formt man nun beide Gleichungen um, erhält man schließlich die gesuchten Größen $f_L$ und $s_1$.\\
+Erste Gleichung:
+\[
+	s_1 = \frac{k_1 + c_2 h }{c_1 + c_2}
+\]
+Zweite Gleichung:
+\[
+	f_L = k_2 + c_2 s_1 - (\tilde{c} + c_2)h
+\]
+Nun wird noch $s_1$ eingesetzt und schließlich erhält man dadurch
+\[
+	f_L = k_2 + \frac{c_2 (k_1 + c_2 h) }{c_1 + c_2} - (\tilde{c} + c_2)h
+\]
+e) \\ \\
+Aufgrund von Abbildung 3 in der Angabe ergibt sich folgende Form der Geschwindigkeit $v(t)$:
+\[
+	v(t) = \left\{
+		\begin{array}{lll}
+			\frac{v_{max}}{t_1}t & \text{für} \quad 0 \leq t \leq t_1 \\
+			v_{max} & \text{für} \quad t_1 \leq t \leq t_2 \\
+			\frac{-v_{max} t }{t_3 - t_2} + \underbrace{\left(\frac{v_{max}t_2}{t_3 - t_2}\right) + v_{max}}_{n} & \text{für} \quad t_2 \leq t \leq t_3
+		\end{array}
+		\right.
+\]
+Durch Integration dieser Funktion erhält man schließlich die gesuchten Verlauf des Weges $l(t)$. Dieser lautet
+\[
+	l(t) = \left\{
+		\begin{array}{lll}
+			\frac{v_{max}t^2}{2t_1} & \text{für} \quad 0 \leq t \leq t_1 \\
+			\underbrace{\frac{v_{max}t_1}{2}}_{l(t_1)} + v_{max}(t - t_1) & \text{für} t_1 \leq t \leq t_2 \\
+			\underbrace{\frac{v_{max}t_1}{2} + v_{max}(t_2 - t_1)}_{l(t_2)} + \frac{-v_{max}(t^2 - t_2^2)}{2(t_3 - t_2)} + n(t - t_2) & \text{für} \quad t_2 \leq t \leq t_3
+		\end{array}
+	\right.
+\]
+Setzt man nun $n$ ein und vereinfacht man dann schließlich so weit wie möglich erhält man mit der Nebenrechnung
+\begin{align*}
+	\frac{-v_{max}(t^2 - t_2^2)}{2(t_3 - t_2)} + \left(\frac{v_{max}t_2}{t_3 - t_2} + v_{max}\right)(t - t_2) \\
+	\frac{-v_{max}(t^2 - t_2^2)}{2(t_3 - t_2)} + \frac{v_{max}(t t_2 - t_2)}{t_3 - t_2} + v_{max}(t - t_2) \\
+	\frac{-v_{max}t^2 + v_{max}t_2^2}{3(t_3 - t_2)} + \frac{2v_{max}t t_2 - 2v_{max}t_2^2}{3(t_3 - t_2)} + v_{max}(t - t_2) \\
+	-\frac{v_{max}(t^2 - 2tt_2 + t_2^2)}{3(t_3 - t_2)} + v_{max}(t - t_2) \\
+	-\frac{v_{max}(t - t_2)^2}{3(t - t_2)} + v_{max}(t - t_2)
+\end{align*}
+\newpage
+\noindent
+schließlich
+\[
+	l(t) = \left\{
+	\begin{array}{lll}
+	\frac{v_{max}t^2}{2t_1} & \text{für} \quad 0 \leq t \leq t_1 \\
+	\underbrace{\frac{v_{max}t_1}{2}}_{l(t_1)} + v_{max}(t - t_1) & \text{für} t_1 \leq t \leq t_2 \\
+	\underbrace{\frac{v_{max}t_1}{2} + v_{max}(t_2 - t_1)}_{l(t_2)} - \frac{v_{max}(t- t_2)^2}{2(t_3 - t_2)} + v_{max}(t - t_2) & \text{für} \quad t_2 \leq t \leq t_3
+	\end{array}
+	\right.
+\]
+f) \\ \\
+Hier muss man einfach den Ausdruck
+\[
+	\text{d}f_L = q(\xi)\text{d}\xi
+\]
+integrieren und man erhält die gesuchte Kraft $f_L$.
+\begin{align*}
+	f_L(l(t)) &= \int_{0}^{l} q(\xi) \text{d}\xi = \int_{0}^{l} (1 + \cos(\xi))\text{d}\xi = (\xi + \sin(\xi))|_0^{l = l(t)} \\
+	&= l(t) + \sin(l(t))
+\end{align*}

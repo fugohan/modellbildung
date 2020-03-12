@@ -1,0 +1,71 @@
+\textbf{Beispiel 1}\\ \\
+a) \\ \\
+Die Differentialgleichung kann einfach durch die Energieerhaltung aufgestellt werden und lautet daher
+\[
+	\rho c_p b^2 h \frac{\text{d}}{\text{d}t}T_s = P - Q 
+\]
+Der linke Teil der Gleichung entspricht der gespeicherten Energie im Satelliten und der rechte Teil entspricht dem Teil der den Satelliten erwärmt und dem Teil den der Satellit durch Wärmestrahlung an die Umgebung abgibt.\\ \\
+b)\\ \\
+Sowie der Satellit und der Planet strahlen nicht aus sich selbst. Deswegen lauten daher die entsprechenden Sichtfaktoren
+\[
+	F_{SS} = F_{PP} = 0
+\] 
+Da schon der Faktor $F_{SP}$ bekannt ist kann mittels der Summationsregel der letzte Sichtfaktor ausgehend vom Satelliten bestimmt werden. Dieser lautet
+\[
+	F_{S\infty} = 1 - F_{SP}
+\]
+Mithilfe des Reziprozitätsgesetz und der Summationsregel können schließlich alle anderen notwendigen Sichtfaktoren bestimmt werden.
+\begin{align*}
+	F_{PS} &= \frac{A_S}{A_P}F_{SP} \\
+	F_{P\infty} &= 1 - F_{PS} = 1 - \frac{A_S}{A_P}F_{SP} \\
+\end{align*}
+Da die Fläche der Umgebung mit $\infty$ angenommen wird lauten zwei Sichtfaktoren folgendermaßen
+\[
+	F_{\infty S} = F_{\infty P} = 0
+\]
+Mit der Summationsregel lautet schließlich der letzte Sichtfaktor
+\[
+	F_{\infty \infty} = 1 
+\]
+Die Sichtfaktormatrix lautet daher
+\[
+	\textbf{F} = \begin{bmatrix}
+		0 & F_{SP} & 1 - F_{SP} \\
+		\frac{A_S}{A_P}F_{SP} & 0 & 1 - \frac{A_S}{A_P}F_{SP} \\
+		0 & 0 & 1
+	\end{bmatrix}
+\]
+\newpage
+\noindent
+c)\\ \\
+Der Nettowärmestrom kann direkt aus der Angabe abgelesen werden und lautet
+\[
+	Q^{'}_o = \sigma a_1 (T_S^4 - T_\infty^4)
+\]
+d)\\ \\
+Aufgrund des Aufbaues von Abbildung 1b folgt
+\[
+	F_{11} = F_{33} = 0 \qquad F_{32} = 1
+\]
+Über das Reziprozitätsgesetz folgt
+\[
+	F_{22} = 1 - \frac{a_3}{a_2}
+\]
+Außerdem folgt aufgrund des Aufbaues
+\[
+	F_{12} = F_{21} = 0
+\]
+und 
+\[
+	F_{1\infty} = 1 \qquad F_{2\infty} = 1 - F_{22} = \frac{a_3}{a_2}
+\]
+Aus der Gleichung
+\[
+	\dot{\textbf{q}} = \sigma(\textbf{E} - \textbf{F})\textbf{T}^4	
+\]
+die beiden gesuchten Nettowärmestromdichten bestimmt werden. Durch Aufsummieren sämtlicher Wärmeströme des Satelliten lautet dieser 
+\[
+	Q^{'}_k = \sigma a_1 (T_S^4 - T_\infty^4)
+\]
+e)\\ \\
+Das Ergebnis $Q^{'}_o = Q^{'}_k$ zeigt, dass sich der abgegebene Wärmestrom des Satelliten nicht durch eine Kühlnut ändert.\\ \\

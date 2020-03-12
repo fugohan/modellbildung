@@ -1,0 +1,84 @@
+\textbf{Beispiel 2}\\ \\
+a)\\ \\
+Die beiden gesuchten Vektoren lauten
+\begin{align*}
+	\textbf{s}_m = \begin{bmatrix}
+		l\sin(\alpha)\cos(\varphi) \\
+		l\sin(\alpha)\sin(\varphi) \\
+		L - l\cos(\alpha)
+	\end{bmatrix}
+	\qquad
+	\textbf{s}_A = \begin{bmatrix}
+		0 \\
+		0 \\
+		L - 2b\cos(\alpha)
+	\end{bmatrix}
+\end{align*}
+b)\\ \\
+Durch Ableiten nach der Zeit erhält man den gesuchten Geschwindigkeitsvektor und dieser lautet
+\[
+	\textbf{v}_m = l \begin{bmatrix}
+			\dot{\alpha}\cos(\alpha)\cos(\varphi) - \dot{\varphi}\sin(\alpha)\sin(\varphi) \\
+			\dot{\alpha}\cos(\alpha)\sin(\varphi) + \dot{\varphi}\sin(\alpha)\cos(\varphi) \\
+			\dot{\alpha}\sin(\alpha)
+	\end{bmatrix}
+\]
+\newpage
+\noindent
+c)\\ \\
+Die potentielle Energie des Systems lautet
+\[
+	V = 2 m g (L - l\cos(\alpha))
+\]
+Der Ansatz für die kinetische Energie lautet
+\[
+	T = 2 \frac{1}{2} m \textbf{v}_m^T\textbf{v}_m = m \textbf{v}_m^T\textbf{v}_m
+\]
+d)\\ \\
+Anfangs muss die Lagrange-Funktion bestimmt werden. Diese lautet hier
+\[
+	L = T - V = ml^2\left(\dot{\alpha}^2 + \dot{\varphi}^2\sin^2(\alpha)\right) - 2 m g (L - l\cos(\alpha))
+\]
+Die Form des Euler-Lagrange-Formalismus kann der Formelsammlung entnommen werden. Die notwendigen Ableitung lauten
+\begin{align*}
+	\frac{\partial L}{\partial \alpha} &= 2ml^2\dot{\varphi}^2\sin(\alpha)\cos(\alpha) - 2mgl\sin(\alpha) \\
+	\frac{\partial L}{\partial \varphi} &= 0 \\
+	\frac{\partial L}{\partial \dot{\alpha}} &= 2ml^2\dot{\alpha} \\
+	\frac{\partial L}{\partial \dot{\varphi}} &= 2ml^2\dot{\varphi}\sin^2(\alpha)
+\end{align*}
+und
+\begin{align*}
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\alpha}}  &= 2ml^2\ddot{\alpha} \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\varphi}} &= 2ml^2\ddot{\varphi} + 4ml^2\dot{\varphi}\sin(\alpha)\cos(\alpha)\dot{\alpha}
+\end{align*}
+Die beiden Euler-Lagrange-Gleichungen lauten
+\begin{align*}
+	2ml^2\ddot{\alpha} - 2ml^2\dot{\varphi}^2\sin(\alpha)\cos(\alpha) + 2mgl\sin(\alpha) &= 0 \\
+	2ml^2\ddot{\varphi} + 4ml^2\dot{\varphi}\sin(\alpha)\cos(\alpha)\dot{\alpha} &= \tau
+\end{align*}
+Vereinfacht man diese beiden Gleichungen soweit wie möglich erhält man die Bewegungsgleichungen
+\begin{align*}
+	\ddot{\alpha} &= \frac{\sin(\alpha)(l\dot{\varphi}^2\cos(\alpha) - g)}{l} \\
+	\ddot{\varphi} &= \frac{\tau - 4ml^2\dot{\alpha}\dot{\varphi}\sin(\alpha)\cos(\alpha)}{2ml^2\sin^2(\alpha)}
+\end{align*}
+\newpage
+\noindent
+e)\\ \\
+Im stationären Fall mit konstanter Winkelgeschwindigkeit existieren die Bedingungen
+\[
+	\dot{\alpha} = \ddot{\alpha} = \ddot{\varphi} = 0
+\]
+Aus der ersten Bewegungsgleichung kann man auf die Gleichung
+\[
+	0 = \frac{\sin(\alpha)(l\dot{\varphi}^2\cos(\alpha) - g)}{l}
+\]
+schließen und daraus folgt
+\[
+	   \alpha \in \left\{0, \arccos\left(\frac{q}{l\dot{\varphi}^2}\right)
+	  \right\}
+\]
+f)\\ \\
+Die gesuchte Funktion kann einfach durch die z-Komponente des zweiten Vektors aus Punkt a) bestimmt werden und lautet deswegen
+\[
+	h(\dot{\varphi}) = L - \frac{2bg}{l\dot{\varphi}^2}
+\]

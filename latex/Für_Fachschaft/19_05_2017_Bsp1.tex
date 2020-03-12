@@ -1,0 +1,94 @@
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+Die geeigneten generalisierten Koordinaten für dieses Beispiel sind
+\[
+	\textbf{q} = \begin{bmatrix}
+		\varphi_1 & \varphi_2 & \varphi_3
+	\end{bmatrix}^T
+\]
+Die Ortsvektoren zu den 3 Schwerpunkten lauten
+\begin{align*}
+	\textbf{r}_1 &= \begin{bmatrix}
+	 0 \\
+	 h
+	\end{bmatrix}
+	+
+	\frac{l_1}{6}
+	\begin{bmatrix}
+		\cos(\varphi_1) \\
+		\sin(\varphi_1)
+	\end{bmatrix} \\
+	\textbf{r}_2 &= \begin{bmatrix}
+	 	0 \\
+	 	h
+	\end{bmatrix}
+	+
+	\frac{2l_1}{3}
+	\begin{bmatrix}
+		\cos(\varphi_1) \\
+		\sin(\varphi_1)
+	\end{bmatrix}
+	+
+	\frac{l_2}{2}
+	\begin{bmatrix}
+		\cos(\varphi_2) \\
+		\sin(\varphi_2)
+	\end{bmatrix} \\
+	\textbf{r}_3 &= \begin{bmatrix}
+	0 \\
+	h
+	\end{bmatrix}
+	+
+	\frac{l_1}{3}
+	\begin{bmatrix}
+		-\cos(\varphi_1) \\
+		-\sin(\varphi_1)
+	\end{bmatrix}
+	+
+	\frac{l_3}{2}
+	\begin{bmatrix}
+		-\cos(\varphi_3) \\
+		-\sin(\varphi_3)
+	\end{bmatrix}
+\end{align*}
+\newpage
+\noindent
+b) \\ \\
+Die entsprechenden Geschwindigkeitsvektoren lauten
+\begin{align*}
+	\dot{\textbf{r}}_1 &= \frac{l_1}{6}\begin{bmatrix}
+		-\sin(\varphi_1) \\
+		\cos(\varphi_1)
+	\end{bmatrix} \dot{\varphi_1} \\
+	\dot{\textbf{r}}_2 &= \frac{2l_1}{3}\begin{bmatrix}
+	-\sin(\varphi_1) \\
+	\cos(\varphi_1)
+	\end{bmatrix} \dot{\varphi_1}
+	+ \frac{l_2}{2}\begin{bmatrix}
+		-\sin(\varphi_2) \\
+		\cos(\varphi_2)
+	\end{bmatrix}\dot{\varphi_2} \\
+	\dot{\textbf{r}}_3 &= \frac{l_1}{3}\begin{bmatrix}
+		\sin(\varphi_1) \\
+		-\cos(\varphi_1)
+	\end{bmatrix}\dot{\varphi_1}
+	+ \frac{l_3}{2}\begin{bmatrix}
+		\sin(\varphi_3) \\
+		-\cos(\varphi_3)
+	\end{bmatrix}\dot{\varphi_3}
+\end{align*}
+Und deren Betragbeträge lauten
+\begin{align*}
+	||\dot{\textbf{r}}_1||_2^2 &= \left(\frac{l_1}{6}\right)^2 (\sin^2(\varphi_1) + \cos^2(\varphi))\dot{\varphi}^2\\ 
+	&= \left(\frac{l_1}{6}\right)^2\dot{\varphi}^2 \\
+	||\dot{\textbf{r}}_2||_2^2 &= \left(-\frac{2l_1}{3}\sin(\varphi_1)\dot{\varphi_1} - \frac{l_2}{2}\sin(\varphi_2)\dot{\varphi_2}\right)^2
+	+
+	\left(\frac{2l_1}{3}\cos(\varphi_1)\dot{\varphi_1} + \frac{l_2}{2}\cos(\varphi_2)\dot{\varphi_2}\right)^2 \\
+	&= \left(\frac{2l_1}{3}\right)^2\dot{\varphi_1}^2\sin^2(\varphi_1) + \frac{2}{3}l_1l_2\sin(\varphi_1)\sin(\varphi_2)\dot{\varphi_1}\dot{\varphi_2} + \left(\frac{l_2}{2}\right)^2\dot{\varphi_2}^2\sin^2(\varphi_2) \\
+	&+ \left(\frac{2l_1}{3}\right)^2\dot{\varphi_1}^2\cos^2(\varphi_1) + \frac{2}{3}l_1l_2\dot{\varphi_1}\dot{\varphi_2}\cos(\varphi_1)\cos(\varphi_2) + \left(\frac{l_2}{2}\right)^2\dot{\varphi_2}^2\cos^2(\varphi_2) \\
+	&= \left(\frac{2l_1}{3}\right)^2\dot{\varphi_1}^2\left(\sin^2(\varphi) + \cos^2(\varphi_1)\right) + \left(\frac{l_2}{2}\right)^2\dot{\varphi_2}^2\left(\sin^2(\varphi_2) + \cos^2(\varphi_2)\right) \\
+	&+ \frac{2}{3}l_1l_2\dot{\varphi_1}\dot{\varphi_2}\left(\cos(\varphi_1)\cos(\varphi_2) + \sin(\varphi_1)\sin(\varphi_2)\right) \\
+	&=  \left(\frac{2l_1}{3}\right)^2\dot{\varphi_1}^2 + \left(\frac{l_2}{2}\right)^2\dot{\varphi_2}^2 + \frac{2}{3}l_1l_2\cos(\varphi_1 - \varphi_2)\dot{\varphi_1}\dot{\varphi_2} \\
+	\text{analog dazu}: \\
+	||\dot{\textbf{r}}_3||_2^2 &= \left(\frac{l_1}{3}\right)^2\dot{\varphi_1}^2 + \left(\frac{l_3}{2}\right)^2\dot{\varphi_3}^2 + \frac{1}{3}l_1l_3\cos(\varphi_1 - \varphi_3)\dot{\varphi_1}\dot{\varphi_3}
+\end{align*}

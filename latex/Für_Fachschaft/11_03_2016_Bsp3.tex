@@ -1,0 +1,84 @@
+\textbf{Beispiel 3} \\ \\
+a) \\ \\
+Die hier geeigneten generalisierten Koordinaten sind
+\[
+	\textbf{q} = \begin{bmatrix}
+		\varphi_1 \\
+		\varphi_2 \\
+		s
+	\end{bmatrix}
+\]
+b)\\ \\
+Die kinetische Energie dieses Systems lautet
+\[
+	T = \frac{1}{2}m_s\dot{s}^2 + \frac{1}{2} \Theta_1 \dot{\varphi_1}^2 + \frac{1}{2} \Theta_2 \dot{\varphi_2}^2
+\]
+c) \\ \\
+Die potentielle Energie dieses Systems lautet
+\[
+	V = \frac{1}{2} c_1 (s - r\varphi_1)^2 + \frac{1}{2} c_2 (r\varphi_2 - s)^2 + \frac{1}{2} c_3 r^2(\varphi_1 - \varphi_2)^2
+\]
+d) \\ \\
+Um den Euler-Lagrange-Formalimus anwenden zu können benötigt man sowohl die Lagrange-Funktion L und die generalisierten Kräfte. \\
+Lagrange-Funktion
+\[
+	L = T - V = \frac{1}{2}m_s\dot{s}^2 + \frac{1}{2} \Theta_1 \dot{\varphi_1}^2 + \frac{1}{2} \Theta_2 \dot{\varphi_2}^2 - \frac{1}{2} c_1 (s - r\varphi_1)^2 - \frac{1}{2} c_2 (r\varphi_2 - s)^2 - \frac{1}{2} c_3 r^2(\varphi_1 - \varphi_2)^2
+\]
+Die generalisierten Kräfte können direkt aus der Angabe abgelesen werden.
+\[
+	f_{np} = \begin{bmatrix}
+		M_1 \\
+		0 \\
+		-\mu_V\dot{s}
+	\end{bmatrix}
+\]
+Euler-Lagrange-Formalimus:
+\begin{align*}
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi_1}}\right) - \left(\frac{\partial L}{\partial\varphi_1}\right) &= M_1\\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi_2}}\right) - \left(\frac{\partial L}{\partial \varphi_2}\right) &= 0\\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{s}}\right) - \left(\frac{\partial L}{\partial s}\right) &= -\mu_V\dot{s}
+\end{align*}
+Einzelne Ableitungen nach $\textbf{q}$:
+\begin{align*}
+	\frac{\partial L}{\partial \varphi_1} &= c_1r(s - r\varphi_1) - c_3r^2(\varphi_1 - \varphi_2) \\
+	\frac{\partial L}{\partial \varphi_2} &= - c_2r(r\varphi_2 - s) + c_3r^2(\varphi_1 - \varphi_2) \\
+	\frac{\partial L}{\partial s} &= -c_1(s - r\varphi_1) + c_2(r\varphi_2 - s)
+\end{align*}
+Einzelne Ableitungen nach $\dot{\textbf{q}}$:
+\begin{align*}
+	\frac{\partial L}{\partial \dot{\varphi_1}} &= \Theta_1\dot{\varphi_1} \\
+	\frac{\partial L}{\partial \dot{\varphi_2}} &= \Theta_1\dot{\varphi_2} \\
+	\frac{\partial L}{\partial \dot{s}} &= m_s\dot{s}
+\end{align*}
+Deren zeitliche Ableitungen:
+\begin{align*}
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi_1}} \right) &= \Theta_1\ddot{\varphi_1} \\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi_2}} \right) &= \Theta_1\ddot{\varphi_2} \\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{s}} \right) &= m_s\ddot{s}
+\end{align*}
+Der Euler-Lagrange-Formalismus lautet ausgeschrieben
+\begin{align*}
+	\Theta_1\ddot{\varphi_1} - c_1r(s - r\varphi_1) + c_3r^2(\varphi_1 - \varphi_2) &= M_1 \\
+	\Theta_1\ddot{\varphi_2} + c_2r(r\varphi_2 - s) - c_3r^2(\varphi_1 - \varphi_2) &= 0 \\
+	m_s\ddot{s} + c_1(s - r\varphi_1) - c_2(r\varphi_2 - s) &= -\mu_V\dot{s}
+\end{align*}
+\newpage
+\noindent
+Somit lauten die Bewegungsgleichungen
+\begin{align*}
+	\ddot{\varphi_1} &= \frac{1}{\Theta_1}(M_1 + c_1r(s - r\varphi_1) - c_3r^2(\varphi_1 - \varphi_2))\\
+	\ddot{\varphi_2} &= \frac{1}{\Theta_2}(-c_2(r\varphi_2 - s) + c_3r^2(\varphi_1 - \varphi_2)) \\
+	\ddot{s} &= \frac{1}{m_s}(-c_1(s - r\varphi_1) + c_2(r\varphi_2 - s) - \mu_V\dot{s})
+\end{align*}
+e) \\ \\
+Die Feder 1 ist parallel zu Federn 2 und 3, die Serie zu sehen sind. Daraus folgt eine Gesamtsteifigkeit von
+\[
+	c = c_1 + \frac{c_2c_3}{c_2 + c_3}
+\]
+Hier muss nur beachtet werden wie sich Federn verhalten wenn sie in Serie oder parallel verbaut sind. \\ \\
+f) \\ \\
+Die Bewegungsgleichungen des vereinfachten Systems können anhand der Gleichungen aus Punkt d) leicht bestimmt werden.
+\begin{align*}
+	\ddot{\varphi_1} &= \frac{1}{\Theta_1}(M_1 + cr(s - r\varphi_1)) \\
+	\ddot{s} &= \frac{1}{m_s}(-c(s - r\varphi_1) - \mu_V\dot{s})
+\end{align*}

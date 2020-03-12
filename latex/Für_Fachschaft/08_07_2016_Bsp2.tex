@@ -1,0 +1,89 @@
+\textbf{Beispiel 2}\\ \\
+a)\\ \\
+Der Winkel $\varphi$ und die Position des Zylinder $s_Z$ sind durch ein Rollbewegung miteinander verknüpft. Diese beiden stehen durch 
+\[
+	\dot{s}_Z - \dot{s}_W = -R\dot{\varphi}
+\]
+mit den gegebenen generalisierten Koordinaten in Verbindung.\\ \\
+b)\\ \\
+Schwerpunktsvektoren:
+\begin{align*}
+	\textbf{r}_W &= s_W\begin{bmatrix}
+		\cos\alpha \\
+		-\sin\alpha
+	\end{bmatrix}
+	\\
+	\textbf{r}_Z &= s_Z\begin{bmatrix}
+	 \cos\alpha \\
+	 -\sin\alpha
+	\end{bmatrix}
+	+
+	\left(\frac{h_W}{2} + R\right)\begin{bmatrix}
+		\sin\alpha \\
+		\cos\alpha
+	\end{bmatrix}
+\end{align*}
+c)\\ \\
+Um die kinetische Energie des Gesamtsystemes bestimmen zu können benötigt man zuerst einmal die entsprechenden Geschwindigkeiten.
+\begin{align*}
+	T_W &= \frac{1}{2}m_W\dot{s}_W^2 \\
+	T_Z &= \frac{1}{2}m_Z\dot{s}_Z^2 + \frac{1}{2}\Theta_{zz}\dot{\varphi} \\
+		&= \frac{1}{2}m_Z\dot{s}_Z^2 + \frac{1}{2}\frac{\Theta_{zz}}{R^2}(\dot{s}_W - \dot{s}_Z)^2
+\end{align*}
+Für $\varphi$ wurde die Bedingung aus Punkt a) verwendet.\\ \\
+d)\\ \\
+Die potentiellen Energien von Wagen und Zylinder lauten
+\begin{align*}
+	V_W &= -m_W g \sin\alpha s_W \\
+	V_Z &= -m_Z g \sin\alpha s_Z
+\end{align*}
+\newpage
+\noindent
+e)\\ \\
+Die potentiellen Energien der Federn lauten
+\begin{align*}
+	V_{f1} &= \frac{1}{2} c (l_{f1} - l_0)^2 = \frac{1}{2} c \left(s_W - \frac{l_W}{2} - l_0\right)^2 \\
+	V_{f2} &= \frac{1}{2} c (l_{f2} - l_0)^2 = \frac{1}{2} c \left(L - s_W - \frac{l_W}{2} - l_0\right)^2
+\end{align*}
+f) \\ \\
+Zuerst wird einmal die Lagrange-Funktion bestimmt.
+\begin{align*}
+	L &= T - V = T_W + T_Z - V_W - V_Z - V_{f1} - V_{f2} \\
+	  &= \frac{1}{2}m_W\dot{s}_W^2 + \frac{1}{2}m_Z\dot{s}_Z^2 + \frac{1}{2}\frac{\Theta_{zz}}{R^2}(\dot{s}_W - \dot{s}_Z)^2 + m_W g \sin\alpha s_W + m_Z g \sin\alpha s_Z -\\
+	  &- \frac{1}{2} c \left(s_W - \frac{l_W}{2} - l_0\right)^2 - \frac{1}{2} c \left(L - s_W - \frac{l_W}{2} - l_0\right)^2
+\end{align*}
+Euler-Lagrange-Gleichungen:
+\begin{align*}
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{s}_W}\right) - \frac{\partial L}{\partial s_W} &= 0 \\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{s}_Z}\right) - \frac{\partial L}{\partial s_Z} &= 0
+\end{align*}
+Einzelne Ableitungen:
+\begin{align*}
+	\frac{\partial L}{\partial s_W} &= m_W g \sin\alpha - c\left(s_W - \frac{l_W}{2} - l_0\right) + c\left(L - s_W - \frac{l_W}{2} - l_0\right) \\
+	&= m_W g \sin\alpha - c(2s_W - L) \\
+	\frac{\partial L}{\partial s_Z} &= m_Z g \sin\alpha \\
+	\frac{\partial L}{\partial \dot{s}_W} &= m_W \dot{s}_W + \frac{\Theta_{zz}}{R^2}(\dot{s}_W - \dot{s}_Z) \\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{s}_W}\right) &= m_W \ddot{s}_W + \frac{\Theta_{zz}}{R^2}(\ddot{s}_W - \ddot{s}_Z) \\
+	\frac{\partial L}{\partial \dot{s}_Z} &= m_Z\dot{s}_Z - \frac{\Theta_{zz}}{R^2}(\dot{s}_W - \dot{s}_Z) \\
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{s}_Z}\right) &= m_Z\ddot{s}_Z - \frac{\Theta_{zz}}{R^2}(\ddot{s}_W - \ddot{s}_Z)
+\end{align*}
+Somit lauten die ausgewerteten Bewegungsgleichungen
+\begin{align*}
+	 m_W \ddot{s}_W + \frac{\Theta_{zz}}{R^2}(\ddot{s}_W - \ddot{s}_Z) -  m_W g \sin\alpha + c(2s_W - L) &= 0 \\
+	 m_Z\ddot{s}_Z - \frac{\Theta_{zz}}{R^2}(\ddot{s}_W - \ddot{s}_Z) -  m_Z g \sin\alpha &= 0
+\end{align*}
+\newpage
+\noindent
+Bewegungsgleichungen für die entsprechenden Bereiche
+\begin{align*}
+	 m_W \ddot{s}_W + \frac{\Theta_{zz}}{R^2}(\ddot{s}_W - \ddot{s}_Z) &= m_W g \sin\alpha - c(2s_W - L) \\
+	 m_Z\ddot{s}_Z - \frac{\Theta_{zz}}{R^2}(\ddot{s}_W - \ddot{s}_Z) &=  m_Z g \sin\alpha
+\end{align*}
+Bereich der ersten Gleichung
+\[
+	\frac{l_W}{2} \leq s_W \leq L - \frac{l_W}{2}
+\]
+Bereich der zweiten Gleichung
+\[
+	s_W - \frac{l_W}{2} + R \leq s_Z \leq s_W + \frac{l_W}{2} - R
+\]

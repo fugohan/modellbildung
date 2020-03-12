@@ -1,0 +1,76 @@
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Da sich hier um konvexe Flächen handelt lauten die jeweiligen Sichtfaktoren auf sich selbst
+\begin{align*}
+	F_{aa} &= 0 \\
+	F_{bb} &= 0 \\
+	F_{xx} &= 0
+\end{align*}
+b) \\ \\
+Hier lauten die gesuchten Sichtfaktoren
+\begin{align*}
+	F_{a1} &= 1 \\
+	F_{1a} &= \frac{l_a}{l_1}
+\end{align*}
+Der zweite Sichtfaktor wurde mithilfe des Reziprozitätsgesetz bestimmt.\\ \\
+c) \\ \\
+Aus der Summationregel folgen die drei Gleichungen
+\begin{align*}
+	1 &= F_{ab} + F_{ax} \\
+	1 &= F_{ba} + F_{bx} \\
+	1 &= F_{xa} + F_{xb}
+\end{align*}
+\newpage
+\noindent
+d) \\ \\
+Nun kann das Gleichungssystem aufgestellt werden und dieses lautet
+\[
+	\begin{bmatrix}
+		1 \\
+		1 \\
+		1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		1 & 1 & 0 \\
+		\frac{l_a}{l_b} & 0 & 1 \\
+		0 & \frac{l_a}{l_x} & \frac{l_b}{l_x}
+	\end{bmatrix}
+	\begin{bmatrix}
+		F_{ab} \\
+		F_{ax} \\
+		F_{bx}
+	\end{bmatrix}
+\]
+Beweis:
+\begin{align*}
+	1 &= F_{ab} + F_{ax} \\
+	1 &= F_{ab}\frac{l_a}{l_b} + F_{bx} \\
+	1 &= F_{ax}\frac{l_a}{l_x} + F_{bx}\frac{l_b}{l_x} \\
+	F_{bx} &= \left(1 - F_{ax}\frac{l_a}{l_x}\right) \frac{l_x}{l_b} \\
+	       &= \frac{l_x}{l_b} - F_{ax}\frac{l_a}{l_b} 
+\end{align*}
+Durch einsetzen in die zweite Gleichung folgt
+\begin{align*}
+	1 &= F_{ab}\frac{l_a}{l_b} + \frac{l_x}{l_b} - F_{ax}\frac{l_a}{l_b} \\
+	F_{ax} &= \left(F_{ab}\frac{l_a}{l_b} + \frac{l_x}{l_b} - 1\right) \frac{l_b}{l_a} \\
+	&= F_{ab} + \frac{l_x}{l_a} - \frac{l_b}{l_a}
+\end{align*} 
+Jetzt muss man noch in die erste Gleichung einsetzten und daraus folgt
+\begin{align*}
+	1 &= F_{ab} + F_{ab} + \frac{l_x}{l_a} - \frac{l_b}{l_a} \\
+	2F_{ab} &= 1 - \frac{l_x}{l_a} + \frac{l_b}{l_a} \\
+	2F_{ab} &= \frac{l_a + l_b - l_x}{l_a} \\
+	F_{ab} &= \frac{l_a + l_b - l_x}{2l_a}
+\end{align*}
+e) \\ \\
+Der Sichtfaktor $F_{ac}$ kann auch mit der Cross-String-Methode bestimmt und lautet daher
+\[
+	F_{ac} = \frac{l_x + l_y - l_b - l_d}{2l_a}
+\]
+Der Lösungsweg von $F_{ad}$ ist analog zum dem in Punkt d und daher lautet der Sichtfaktor
+\[
+	F_{ad} = \frac{l_a + l_d - l_y}{2l_a}
+\]
+f) \\ \\
+Der Lösungsweg in der Musterlösung scheint nicht korrekt zu sein. Daher wurde keine Berechnung durchgeführt die man mit dieser hätte vergleichen können.

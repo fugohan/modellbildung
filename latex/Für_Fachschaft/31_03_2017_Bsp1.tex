@@ -1,0 +1,146 @@
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+i)\\ \\
+Die Masse des Aufbaues lautet
+\[
+	m_a = (l + l_1)bh\rho
+\]
+Um den gesuchten Vektor zu ermitteln, müssen zuerst die Schwerpunktsvektoren der Einzelvolumina bestimmt werden. Anschließend kann dann der gtesuchte Vektor bestimmt werden und dieser lautet
+\[
+	\textbf{s}_a = \frac{1}{l + l_1}\begin{bmatrix}
+		bl_1 \\
+		\frac{l^2}{2} + ll_1 - \frac{l_1^2}{2}
+	\end{bmatrix}
+\]
+ii)\\ \\
+Sämtliche Formel die zur Berechnung benötigt werden stehen in der Formelsammlung. Durch die korrekte Anwendung dieser Formel ergeben sich für die Trägheitsmomente der seperaten Volumina
+\begin{align}
+	\varTheta_{\overline{y}\,\overline{y},Q1}^{(S)} &= h\rho\frac{b^3l + bl^3}{12} \\
+	\varTheta_{\overline{y}\,\overline{y},Q2}^{S} &= h\rho\frac{b^3l_1 + bl_1^3}{12}
+\end{align}
+Mithilfe des Satz von Steiner kann nun das gesuchte Massenträgheitsmoment bestimmt werden.
+\[
+	\varTheta_{\overline{y}\,\overline{y},a} = \varTheta_{\overline{y}\,\overline{y},Q1} + m_{Q1}(\textbf{s}_{Q1} - \textbf{s}_a)^T(\textbf{s}_{Q1} - \textbf{s}_a) + \varTheta_{\overline{y}\,\overline{y},Q2} + m_{Q2}(\textbf{s}_{Q2} - \textbf{s}_a)^T(\textbf{s}_{Q2} - \textbf{s}_a) 
+\]
+mit den Massen
+\[
+	m_{Q1} = lbh\rho \qquad m_{Q2} = l_1bh\rho
+\]
+und den Vektoren
+\[
+	\textbf{s}_{Q1} = \begin{bmatrix}
+		0 \\
+		\frac{l}{2}
+	\end{bmatrix}
+	\qquad
+	\textbf{s}_{Q2} = \begin{bmatrix}
+		b \\
+		l - \frac{l_1}{2}
+	\end{bmatrix}
+\]
+b)\\ \\
+Der Schwerpunktsvektor des Rades lautet
+\[
+	\textbf{r}_r = \begin{bmatrix}
+		\alpha R \\
+		0
+	\end{bmatrix}
+\]
+und der des Aufbaues lautet
+\[
+	\textbf{r}_a = \begin{bmatrix}
+		\alpha R + s_{ax}\cos(\beta) + s_{az}\sin(\beta) \\
+		- s_{ax}\sin(\beta) + s_{az}\cos(\beta)
+	\end{bmatrix}
+\]
+Die jeweiligen Geschwindigkeitsvektoren lauten
+\begin{align*}
+	\textbf{v}_r &= \begin{bmatrix}
+		\dot{\alpha}R \\
+		0
+	\end{bmatrix} \\
+	\textbf{v}_a &= \begin{bmatrix}
+		\dot{\alpha}R + \dot{\beta}(-s_{ax}\sin(\beta) + s_{az}\cos(\beta)) \\
+		\dot{\beta}(- s_{ax}\cos(\beta) - s_{az}\sin(\beta))
+	\end{bmatrix}
+\end{align*}
+c)\\ \\
+Die beiden gewünschten Energien lauten hier
+\begin{align*}
+	V = mgs_{az}\cos(\beta) \\
+\end{align*}
+Um die kinetische Energie zu bestimmen müssen zuerst wieder einmal Nebenrechnungen durchgeführt werden.
+\begin{align*}
+	\textbf{v}_r^T\textbf{v}_r &= \dot{\alpha}^2R^2 \\
+	\textbf{v}_a^T\textbf{v}_a &= (\dot{\alpha}R + \dot{\beta}(-s_{ax}\sin(\beta) + s_{az}\cos(\beta)))^2 + (\dot{\beta}(-s_{ax}\cos(\beta) - s_{az}\sin(\beta)))^2 \\
+	&= \dot{\alpha}^2R^2 + \dot{\beta}^2s^2_{az} + 2\dot{\alpha}R\dot{\beta}s_{az}\cos(\beta)
+\end{align*}
+Die kinetische Energie lautet
+\[
+	T = \frac{1}{2}m_a\left(\dot{\alpha}^2R^2 + \dot{\beta}^2s^2_{az} + 2\dot{\alpha}R\dot{\beta}s_{az}\cos(\beta)\right) + \frac{1}{2}m_r\dot{\alpha}^2R^2 + \frac{1}{2}\Theta_{yy,a}\dot{\beta}^2 + \frac{1}{2}\Theta_{yy,r}\dot{\alpha}^2
+\]
+d)\\ \\
+Der Vektor für die generalisierten Kräfte kann unmittelbar aus der Angabe ermittelt werden und lautet daher
+\[
+	\textbf{f} = \begin{bmatrix}
+		\tau_a + FR \\
+		Fl\cos(\beta)
+	\end{bmatrix}
+\]
+e)\\ \\
+Für den Euler-Lagrange-Formalismus müssen erst einmal die nötigen Ableitungen durchgeführt werden. Für diese wiederum wird die Lagrange-Funktion benötigt und diese lautet hier
+\begin{align*}
+	L &= T - V \\
+	  &= \frac{1}{2}m_a\left(\dot{\alpha}^2R^2 + \dot{\beta}^2s^2_{az} + 2\dot{\alpha}R\dot{\beta}s_{az}\cos(\beta)\right) + \frac{1}{2}m_r\dot{\alpha}^2R^2 + \frac{1}{2}\Theta_{yy,a}\dot{\beta}^2 + \frac{1}{2}\Theta_{yy,r}\dot{\alpha}^2 - mgs_{az}\cos(\beta)
+\end{align*}
+\newpage
+\noindent
+Die nötigen Ableitungen lauten
+\begin{align*}
+	\frac{\partial L}{\partial \alpha} &= 0 \\
+	\frac{\partial L}{\partial \beta} &= -m_a\dot{\alpha}R\dot{\beta}s_{az}\sin(\beta) + mgs_{az}\sin(\beta) \\
+	\frac{\partial L}{\partial \dot{\alpha}} &= m_a \dot{\alpha}R^2 + m_aR\dot{\beta}s_{az}\cos(\beta) + m_r\dot{\alpha}R^2 + \Theta_{yy,r}\dot{\alpha} \\
+	\frac{\partial L}{\partial \dot{\beta}} &= m_a\dot{\beta}s^2_{az} + m_a\dot{\alpha}Rs_{az}\cos(\beta) + \Theta_{yy,a}\dot{\beta}
+\end{align*}
+Die notwendigen Zeitableitungen lauten
+\begin{align*}
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\alpha}} &= m_a\ddot{\alpha}R^2 + m_aR\ddot{\beta}s_{az}\cos(\beta) - m_aR\dot{\beta}^2s_{az}\sin(\beta) + m_r\ddot{\alpha}R^2 + \Theta_{yy,r}\ddot{\alpha} \\
+	&= (\Theta_{yy,r} + (m_a + m_r)R^2)\ddot{\alpha} + \left(\cos(\beta)\ddot{\beta} - \sin(\beta)\dot{\beta}^2\right)m_aRs_{az} \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\beta}} &= m_a\ddot{\beta}s^2_{az} + m_a\ddot{\alpha}Rs_{az}\cos(\beta) - m_a\dot{\alpha}\dot{\beta}Rs_{az}\sin(\beta) + \Theta_{yy,a}\ddot{\beta} \\
+	&= (\Theta_{yy,a} + m_as^2_{az})\ddot{\beta} + \cos(\beta)\ddot{\alpha}m_aRs_{az} - m_a\dot{\alpha}R\dot{\beta}s_{az}\sin(\beta)
+\end{align*}
+Die Form der Euler-Lagrange-Gleichung sind in der Formelsammlung ersichtlich und diese lauten daher
+\[
+	\begin{bmatrix}
+		 (\Theta_{yy,r} + (m_a + m_r)R^2)\ddot{\alpha} + \left(\cos(\beta)\ddot{\beta} - \sin(\beta)\dot{\beta}^2\right)m_aRs_{az} \\
+		 (\Theta_{yy,a} + m_as^2_{az})\ddot{\beta} + \cos(\beta)\ddot{\alpha}m_aRs_{az} - mgs_{az}\sin(\beta)
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		\tau_a + FR \\
+		Fl\cos(\beta)
+	\end{bmatrix}
+\]
+f)\\ \\
+Mit den angegebenen Bedingungen folgt aus den Bewegungsgleichungen
+\[
+	\begin{bmatrix}
+	\tau_a + FR \\
+	Fl\cos(\beta)
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		0 \\
+		- gm_as_{az}\sin(\beta)
+	\end{bmatrix}
+\]
+Hieraus folgt für das gesuchte Moment
+\[
+	\tau_a = - FR
+\]
+und den gesuchten Winkel
+\begin{align*}
+	Fl\cos(\beta) &= - gm_as_{az}\sin(\beta) \\
+	-\tan(\beta) &= \frac{Fl}{s_{az}m_ag} \\
+	\beta &= - \arctan\left(\frac{Fl}{s_{az}m_ag}1\right)
+\end{align*}

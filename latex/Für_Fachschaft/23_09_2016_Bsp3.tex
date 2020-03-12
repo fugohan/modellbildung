@@ -1,0 +1,82 @@
+\newpage
+\noindent
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Man kann das System noch mit dem Vektor $\textbf{q} = [x_W , x_{1L} , y_{1L}]^T$ beschrieben werden. Die letzten beiden Koordinaten sind die Koordinaten des Lastschwerpunktes bezogen auf das Inertialsystem. Ein weiteres Beispiel wäre $\textbf{q} =[x_w , \alpha , l]^T$, wobei $l$ die abgewickelte Seillänge ist.
+b)\\ \\
+Die erforderlichen Ortsvektoren sind jene die vom Ursprung des Inertialsystem zu den Schwerpunkten der einzelnen Teile zeigen.
+\begin{align*}
+	\textbf{r}_W &= \begin{bmatrix}
+		x_W \\
+		0 \\
+		0
+	\end{bmatrix}
+	\\
+	\textbf{r}_L &= \begin{bmatrix}
+		x_W - d_0 - d_1 + x_L - (l_0 + r_T\varphi)\sin(\alpha) \\
+		-y_L - (l_0 + r_T\varphi)\cos(\alpha) \\
+		0
+	\end{bmatrix}
+\end{align*}
+c)\\ \\
+Die relevanten Geschwindigkeitsvektoren und Winkelgeschwindigkeitsvektor lauten
+\begin{align*}
+	\dot{\textbf{r}}_W &= \begin{bmatrix}
+		\dot{x}_W \\
+		0 \\
+		0
+	\end{bmatrix}
+	\\
+	\dot{\textbf{r}}_L &= \begin{bmatrix}
+		\dot{x}_W - r_T\dot{\varphi}\sin(\alpha) - (l_0 + r_T\varphi)\cos(\alpha)\dot{\alpha} \\
+		-r_T\dot{\varphi}\cos(\alpha) + (l_0 + r_T\varphi)\sin(\alpha)\dot{\alpha} \\
+		0
+	\end{bmatrix}
+	\\
+	\omega_T &= \begin{bmatrix}
+	 	0 \\
+	 	0 \\
+	 	\dot{\varphi}
+	\end{bmatrix}
+\end{align*}
+Die kinetische Energien der einzelnen Teile lauten
+\begin{align*}
+	T_W &= \frac{1}{2}m_W\dot{x}^2_W \\
+	T_T &= \frac{1}{2}J_T\dot{\varphi}^2 \\
+	T_L &= \frac{1}{2}m_L ((	\dot{x}_W - r_T\dot{\varphi}\sin(\alpha) - (l_0 + r_T\varphi)\cos(\alpha)\dot{\alpha})^2 \\
+	&+ (	-r_T\dot{\varphi}\cos(\alpha) + (l_0 + r_T\varphi)\sin(\alpha)\dot{\alpha})^2)
+\end{align*}
+Die gesamte kinetische Energie des Systems lautet
+\[
+	T_{ges} = T_W + T_T + T_L
+\]
+\newpage
+\noindent
+d)\\ \\
+Die potentiellen Einzelenergien lauten
+\begin{align*}
+	V_W &= 0 \\
+	V_L &= -m_L g (y_L + (l_0 + r_T\varphi)\cos(\alpha))
+\end{align*}
+Die potentielle Energie des Wagens ist 0, weil sich der Wagen immer in derselben Ebene befindet. Die gesamte potentielle Energie des Systems lautet
+\[
+	V_{ges} = V_L
+\]
+e)\\ \\
+Der Vektor der generalisierten Kräfte kann unmittelbar aus Angabe bestimmt werden, da jede externe Kraft bzw. Moment unmittelbar auf der entsprechenden generalisierten Koordinate wirkt. Der Vektor lautet daher
+\[
+	\tau = \begin{bmatrix}
+		F_{an} - F_R \\
+		0 \\
+		M_T
+	\end{bmatrix}
+\]
+f)\\ \\
+Die Lagrange-Funlktion lautet
+\[
+	L = T_{ges} - V_{ges}
+\]
+und damit die Euler-Lagrange-Gleichungen
+\[
+	\frac{\partial}{\partial t} \left( \frac{\partial L}{\partial \dot{\textbf{q}}}\right) - \frac{\partial L}{\partial \textbf{q}} =  \tau
+\]

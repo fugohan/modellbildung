@@ -1,0 +1,80 @@
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+Die gesuchte Zwangsbedingung kann hier unmittelbar aus der Angabe abgelesen werden. Mithilfe der Annahme $f(\varTheta, \psi) = 0$ folgt die Zwangsbedingung
+\[
+	f(\varTheta, \psi) = L \sin(\varTheta) - L \sin(\varTheta_0) - r\cos(\psi)=0
+\]
+b)\\ \\
+Die beiden gesuchten Ortsvektoren zu den Schwerpunkten der beiden Massen lauten
+\[
+	\textbf{r}_M = \begin{bmatrix}
+		l\cos(\varTheta) - h\sin(\phi) \\
+		0 \\
+		-l\sin(\varTheta) - h\cos(\psi)
+	\end{bmatrix}
+\]
+und
+\[
+	\textbf{r}_m = \begin{bmatrix}
+		-L\cos(\varTheta) - r\sin(\psi) \\
+		0 \\
+		L\sin(\varTheta) - r\cos(\psi)
+	\end{bmatrix}
+\]
+b)\\ \\
+Die gesuchten Geschwindigkeitsvektoren erhält man wie sonst, durch die zeitliche Ableitung der entsprechenden Ortsvektoren. Daher lauten dieses nun hier
+\begin{align*}
+	\textbf{v}_M &= \begin{bmatrix}
+		-l\sin(\varTheta)\dot{\varTheta} - h\cos(\phi)\dot{\phi} \\
+		0 \\
+		-l\cos(\varTheta)\dot{\varTheta} + h\sin(\phi)\dot{\phi}
+	\end{bmatrix}
+\end{align*}
+Die Geschwindigkeit der kleinen Masse $m$ muss in den Vektor
+\[
+	\textbf{v}_{m,1} = \begin{bmatrix}
+		L\sin(\varTheta)\dot{\varTheta} - r\cos(\psi)\dot{\psi} \\
+		0 \\
+		0
+	\end{bmatrix}
+\]
+und in den Vektor
+\[
+	\textbf{v}_{m,2} = \begin{bmatrix}
+		L\sin(\varTheta)\dot{\varTheta} - r\cos(\psi)\dot{\psi} \\
+		0 \\
+		L\cos(\varTheta)\dot{\varTheta} + r\sin(\psi)\dot{\psi}
+	\end{bmatrix}
+\]
+aufgeteilt werden. Der erste Vektor kann sich nur in der x-Richtung ausbreiten, da sich die Masse $m$ zu dieser Zeit in der Rille befindet. Sobald die kleinen Masse aber diese verlässt, beschreibt nun der zweite Vektor die Geschwindigkeit der Masse $m$.
+\newpage
+\noindent
+d) \\ \\
+Bevor die kinetischen Energien bestimmt werden können, müssen zuerst wieder einmal Nebenrechnungen durchgeführt werden.
+\begin{align*}
+	\textbf{v}_M^T \textbf{v}_M &= (-l\sin(\varTheta)\dot{\varTheta} - h\cos(\phi)\dot{\phi})^2 + (-l\cos(\varTheta)\dot{\varTheta} + h\sin(\phi)\dot{\phi})^2 \\
+	&= l^2\dot{\varTheta}^2\sin^2(\varTheta) + 2 l h \dot{\varTheta}\dot{\phi}\sin(\varTheta)\cos(\psi) + h^2\dot{\phi}^2\cos^2(\phi) + l^2\dot{\varTheta}^2\cos^2(\varTheta) - 2 l h \dot{\varTheta}\dot{\phi}\cos(\varTheta)\sin(\phi) + h^2\dot{\phi}^2\sin^2(\phi) \\
+	&= l^2\dot{\varTheta}^2(\sin^2(\varTheta) + \cos^2(\varTheta)) + h^2\dot{\phi}^2(\cos^2(\phi) + \sin^2(\phi)) + 2lh\dot{\varTheta}\dot{\phi} (\sin(\varTheta)\cos(\phi) - \cos(\varTheta)\sin(\phi)) \\
+	&= l^2\dot{\varTheta}^2 + h^2\dot{\phi}^2 + 2lh\dot{\varTheta}\dot{\phi}\sin(\varTheta - \phi) \\
+	\textbf{v}_{m,1}^T\textbf{v}_{m,1} &= (	L\sin(\varTheta)\dot{\varTheta} - r\cos(\psi)\dot{\psi})^2 \\
+	\textbf{v}_{m,2}^T\textbf{v}_{m,2} &= (	L\sin(\varTheta)\dot{\varTheta} - r\cos(\psi)\dot{\psi})^2 + (L\cos(\varTheta)\dot{\varTheta} + r\sin(\psi)\dot{\psi})^2 \\
+	&= L^2\dot{\varTheta}^2\sin^2(\varTheta) - 2Lr\dot{\varTheta}\dot{\psi}\sin(\varTheta)\cos(\psi) + r^2\dot{\psi}^2\cos^2(\psi) + L^2\dot{\varTheta}^2\cos^2(\varTheta) + 2Lr\dot{\varTheta}\dot{\psi}\cos(\varTheta)\sin(\psi) + r^2\dot{\psi}^2\sin^2(\psi) \\
+	&= L^2\dot{\varTheta}^2(\sin^2(\varTheta) + \cos^2(\varTheta)) + r^2\dot{\psi}^2(\cos^2(\psi) + \sin^2(\psi)) - 2Lr\dot{\varTheta}\dot{\psi}(\sin(\varTheta)\cos(\psi) - \cos(\varTheta)\sin(\psi)) \\
+	&= L^2\dot{\varTheta}^2 + r^2\dot{\psi}^2 - 2Lr\dot{\varTheta}\dot{\psi}\sin(\varTheta - \psi)
+\end{align*}
+Da man die einzelnen Trägheitsmomente vernachlässigbar sind, muss man daher nur die translatorischen kinetischen Energien des Gesamtsystems bestimmen.
+\begin{align*}
+	T_1 &= \frac{1}{2}M(l^2\dot{\varTheta}^2 + h^2\dot{\phi}^2 + 2lh\dot{\varTheta}\dot{\phi}\sin(\varTheta - \phi)) + \frac{1}{2}m(	L\sin(\varTheta)\dot{\varTheta} - r\cos(\psi)\dot{\psi})^2 \\
+	T_2 &= \frac{1}{2}M(l^2\dot{\varTheta}^2 + h^2\dot{\phi}^2 + 2lh\dot{\varTheta}\dot{\phi}\sin(\varTheta - \phi)) + \frac{1}{2}m(L^2\dot{\varTheta}^2 + r^2\dot{\psi}^2 - 2Lr\dot{\varTheta}\dot{\psi}\sin(\varTheta - \psi))
+\end{align*}
+e) \\ \\
+Die potentiellen Teilenergien des Gesamtsystems lauten
+\begin{align*}
+	V_M &= Mg(-l\sin(\varTheta) - h\cos(\psi)) \\
+	V_m &= mg(L\sin(\varTheta) - r\cos(\psi)) \\
+\end{align*}
+Daraus folgen die potentiellen Energien der beiden Phasen.
+\begin{align*}
+	V_1 &= V_M \\
+	V_2 &= V_M + V_m
+\end{align*}

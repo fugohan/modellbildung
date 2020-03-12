@@ -1,0 +1,70 @@
+\textbf{Beispiel 4} \\ \\
+a) \\ \\
+Da es sich hier um eine Problemstellung handelt die nur vom Radius r abhängt sieht $\Delta$ folgendermaßen aus
+\[
+	\Delta = \frac{\partial^2}{\partial r^2} + \frac{1}{r}\frac{\partial}{\partial r}
+\]
+Für den stationären Fall (keine zeitlichen Ableitungen) folgt für die Wärmeleitgleichung
+\[
+	\frac{\partial^2 T_R}{\partial r^2} + \frac{1}{r}\frac{\partial T_R}{\partial r} = 0
+\]
+b) \\ \\
+Durch die gegebene Substitution erhält man die Gleichung
+\[
+	f' + \frac{f}{r} = 0
+\]
+Setzt man nun für $f$ die gegebene Funktion erhält man
+\[
+	-\frac{c_0}{r^2} + \frac{c_0}{r^2} = 0
+\]
+Daraus kann man schließen, dass die gegebene Funktion die Wärmeleitgleichung dieses Problems löst, was zu zeigen war. \\ \\
+c) \\ \\
+Ausgehend von der Differentialgleichung
+\[
+	\frac{dT_R}{dr} = \frac{c_0}{r}
+\]
+erhält man die Lösung dieser wie folgt
+\begin{align*}
+	dT_R &= \frac{c_0}{r}dr\\
+	T_R &=  c_0\ln(r) + c_1
+\end{align*}
+d) \\ \\
+Mit den Randbedingungen
+\begin{align*}
+	T_i &= c_0\ln(r_i) + c_1 \\
+	T_a &= c_0\ln(r_a) + c_1
+\end{align*}
+folgen die Konstanten
+\begin{align*}
+	T_i - c_0\ln(r_i) &= T_a - c_0\ln(r_a) \\
+	T_i - T_a &= c_0 ( \ln(r_i) - \ln(r_a)) \\
+	c_0 &= \frac{T_i - T_a}{\ln(\frac{r_i}{r_a})}
+\end{align*}
+und
+\[
+	c_1 = T_i - \frac{T_i - T_a}{\ln(\frac{r_i}{r_a})}\ln(r_i)
+\]
+Mit diesen folgt die Gleichung 
+\begin{align*}
+	T_R(r) &= \frac{T_i - T_a}{\ln(\frac{r_i}{r_a})}\ln(r) + T_i - \frac{T_i - T_a}{\ln(\frac{r_i}{r_a})}\ln(r_i) \\
+	&= T_i + \frac{T_i - T_a}{\ln(\frac{r_i}{r_a})}\ln(\frac{r}{r_i})
+\end{align*}
+f)\\ \\
+Die Wärmestromdichten lauten
+\begin{align*}
+	\dot{q}_i &= \alpha_i (T_D - T_i) \\
+	\dot{q}_a &= \alpha_a (T_a - T_L)
+\end{align*}
+Über die Fläche A integriert erhalten wir die Wärmeströme
+\begin{align*}
+	\dot{Q}_i &= \alpha_i A_i (T_D - T_i) \\
+	\dot{Q}_a &= \alpha_a A_a (T_a - T_L)
+\end{align*}
+Der letzte auftretende Wärmestrom lautet
+\begin{align*}
+	\dot{Q}_\lambda = -\lambda A(r)\frac{dT_r}{dr} = -\lambda 2\pi \cancel{r}L \frac{T_i - T_a}{\ln(\frac{r_i}{r_a})} \frac{\cancel{r_i}}{\cancel{r}}\frac{1}{\cancel{r_i}} = -2\pi\lambda L\frac{T_i - T_a}{\ln(\frac{r_i}{r_a})}
+\end{align*}
+Diese drei Wärmeströme stehen zueinander mit folgender Beziehung
+\[
+	\dot{Q}_i = \dot{Q}_a = \dot{Q}_\lambda
+\]

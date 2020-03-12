@@ -1,0 +1,78 @@
+\newpage
+\noindent
+\textbf{Beispiel 2}\\ \\
+a)\\ \\
+spezifische Wärmekapazität $c_P$ in $J/(kgK)$ \\
+Wärmleitfähigkeit $\lambda$ in $W/(mK)$ \\ \\
+b)\\ \\
+entsprechende Randbedingungen: \\ 
+\begin{align*}
+	x &= 0: T(0,t) = T_0 \\
+	x &= L: \partial T(L,t)/\partial x = 0 \quad (\text{adiabate Randbedingung zweiter Art})
+\end{align*}
+c) \\ \\
+Die gesuchte Wärmestromdichte kann mittels der Formel für die Wärmestromdichte an der Kontaktfläche zweier Festkörper bestimmt werden.
+\[
+	\dot{q}_w(T) = \alpha (T_w - T(x,t))
+\]
+d)\\ \\
+i)\\
+Der geeignete Zustandsvektor lautet hier
+\[
+	\textbf{T}(t) = [T_1(t),T_2(t),T_3(t)]^\text{T}
+\]
+ii)\\
+Die Form für die Rückwartsdifferenz und zentrale Differenz kann aus der Formelsammlung entnommen werden. Daher lauten die Rückwärtsdifferenzen
+\begin{align*}
+	\frac{\partial T(\Delta x,t)}{\partial x} &= \frac{T_1 - T_0}{\Delta x} \\
+	\frac{\partial T(i\Delta x,t)}{\partial x} &= \frac{T_i - T_{i-1}}{\Delta x} \quad \text{für} \quad i = 2,3
+\end{align*}
+und die zentralen Differenzen
+\begin{align*}
+	\frac{\partial^2 T(i\Delta x,t)}{\partial x^2} &= \frac{(T_{i-1} - 2T_i + T_{i+1})}{\Delta x^2} \quad \text{für} \quad i = 1,2 \\
+	\frac{\partial^2 T(L,t)}{\partial x^2} &= \frac{2T_2 - 2T_3}{\Delta x^2}
+\end{align*}
+\newpage
+\noindent
+iii)\\
+Ersetzt man nun die bisherigen Erkenntnis in die Gleichung aus der Angabe ein erhält man die Gleichungen
+\begin{align*}
+	\rho c_P \dot{T}_1(t) + \rho c_P \frac{1}{\Delta x}(T_1 - T_0) &= \lambda \frac{1}{\Delta x^2}(T_0 - 2T_1 + T_2) + \frac{4}{d_h}\alpha (T_w - T_1(t)) \\
+	\rho c_P \dot{T}_2(t) + \rho c_P \frac{1}{\Delta x}(T_2 - T_1) &= \lambda \frac{1}{\Delta x^2}(T_1 - 2T_2 + T_3) + \frac{4}{d_h}\alpha (T_w - T_2(t)) \\
+	\rho c_P \dot{T}_3(t) + \rho c_P \frac{1}{\Delta x}(T_3 - T_2) &= \lambda \frac{1}{\Delta x^2}(2T_2 - 2T_3) + \frac{4}{d_h}\alpha (T_w - T_3(t))
+\end{align*}
+Vergleicht man nun diese drei Gleichungen mit der Form aus der Angabe erhält man die Matrizen
+\begin{align*}
+	\textbf{K} &= \frac{1}{\Delta x}\begin{bmatrix}
+		1 & 0 & 0 \\
+		-1 & 1 & 0 \\
+		0 & -1 & 1 
+	\end{bmatrix}
+	\\
+	\textbf{D} &= \frac{1}{\Delta x^2}\begin{bmatrix}
+		-2 & 1 & 0 \\
+		1 & -2 & 1 \\
+		0 & 2 & -2 
+	\end{bmatrix}
+\end{align*}
+und die Vektoren
+\begin{align*}
+	\textbf{b}_v &= \frac{T_0}{\Delta x}\begin{bmatrix}
+		-1 \\
+		0 \\
+		0
+	\end{bmatrix}
+	\\
+	\textbf{b}_\lambda &= \frac{T_0}{\Delta x^2}\begin{bmatrix}
+		1 \\
+		0 \\
+		0
+	\end{bmatrix}
+	\\
+	\dot{\textbf{q}}_w(\textbf{T}) &= \alpha (T_w\textbf{\text{1}} - \textbf{T})
+\end{align*}
+e) \\ \\
+Durch lösen der Differentialgleichung (1) aus der Angabe erhält man unter Beachtung der Stationärität und den Randbedingungen die folgende Lösung
+\[
+	T(x) = (T_0 - T_w)exp\left(-\frac{4\alpha}{\rho c_P v d_h}x\right) + T_w
+\]
