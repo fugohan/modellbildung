@@ -7,13 +7,13 @@ Der Schwingenwinkel lässt sich folgendermaßen bestimmen
 \end{align*}
 Dessen Ableitung lautet
 \begin{align*}
-	\dot{\varphi_S} &= \frac{1}{\left( \frac{r_K\cos\varphi_K}{h_K + r_K\sin\varphi_K}\right)^2 + 1} \frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi_K}\\
-	&= \frac{1}{\frac{r_K^2\cos^2\varphi_K}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K} + 1}\frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi_K} \\
-	&= \frac{1}{\frac{r_K^2\cos^2\varphi_K + h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}}\frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi_K} \\
-	&= \frac{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}{r_K^2\cos^2\varphi_K + h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi_K} \\
-	&= \frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{r_K^2\cos^2\varphi_K + h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi_K} \\
-	&= -\frac{r_K^2 + r_Kh_K\sin\varphi_K}{r_K^2 + 2\sin\varphi_Kr_kh_K + h_K^2}\dot{\varphi_K}\\
-	&= -\frac{r_K(r_K + h_K\sin\varphi_K)}{r_K^2 + 2\sin\varphi_Kr_kh_K + h_K^2}\dot{\varphi_K}
+	\dot{\varphi}_S &= \frac{1}{\left( \frac{r_K\cos\varphi_K}{h_K + r_K\sin\varphi_K}\right)^2 + 1} \frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi}_K\\
+	&= \frac{1}{\frac{r_K^2\cos^2\varphi_K}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K} + 1}\frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi}_K \\
+	&= \frac{1}{\frac{r_K^2\cos^2\varphi_K + h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}}\frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi}_K \\
+	&= \frac{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}{r_K^2\cos^2\varphi_K + h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi}_K \\
+	&= \frac{-r_K\sin\varphi_K(h_K + r_K\sin\varphi_K) - r_K\cos\varphi_K(r_K\cos\varphi_K)}{r_K^2\cos^2\varphi_K + h_K^2 + 2h_Kr_K\sin\varphi_K + r_K^2\sin^2\varphi_K}\dot{\varphi}_K \\
+	&= -\frac{r_K^2 + r_Kh_K\sin\varphi_K}{r_K^2 + 2\sin\varphi_Kr_kh_K + h_K^2}\dot{\varphi}_K\\
+	&= -\frac{r_K(r_K + h_K\sin\varphi_K)}{r_K^2 + 2\sin\varphi_Kr_kh_K + h_K^2}\dot{\varphi}_K
 \end{align*}
 b) \\ \\
 Die Länge der Feder beträgt
@@ -35,14 +35,14 @@ und der zugehörige Geschwindigkeitsvektor lautet
 		\cos\varphi_S \\
 		-\sin\varphi_S
 	\end{bmatrix}
-	\dot{\varphi_S}
+	\dot{\varphi}_S
 \]
 d) \\ \\
 Die beiden kinetischen Energie lauten
 \begin{align*}
-	T_K &= \frac{1}{2} I_K \dot{\varphi_K}^2 \\
-	T_S &= \frac{1}{2}I_S\dot{\varphi_S}^2 + \frac{1}{2}m_Sl_S^2\dot{\varphi_S}^2 \\
-	    &= \frac{1}{2}(m_S + l_s^2)\dot{\varphi_S}^2
+	T_K &= \frac{1}{2} I_K \dot{\varphi}_K^2 \\
+	T_S &= \frac{1}{2}I_S\dot{\varphi}_S^2 + \frac{1}{2}m_Sl_S^2\dot{\varphi}_S^2 \\
+	    &= \frac{1}{2}(m_S + l_s^2)\dot{\varphi}_S^2
 \end{align*}
 e)\\ \\
 Die beiden potentiellen Energien lauten
@@ -60,11 +60,11 @@ g)\\ \\
 Die Lagrange-Funktion lautet hier
 \begin{align*}
 	L &= T - V \\
-	  &= \frac{1}{2}\left(I_K +(I_S + m_Sl_S^2)\left( \frac{r_K(r_K + h_K\sin\varphi_K)}{r_K^2 + 2\sin\varphi_Kr_kh_K + h_K^2}\right)^2\right)\dot{\varphi_K}^2 \\
+	  &= \frac{1}{2}\left(I_K +(I_S + m_Sl_S^2)\left( \frac{r_K(r_K + h_K\sin\varphi_K)}{r_K^2 + 2\sin\varphi_Kr_kh_K + h_K^2}\right)^2\right)\dot{\varphi}_K^2 \\
 	  &- l_Sm_sg\cos\left( \arctan\left( \frac{r_K\cos\varphi_K}{h_K + r_K\sin\varphi_K}\right)\right) \\
 	  &- \frac{1}{2}k_F\left(h_s \frac{r_K\cos\varphi_K}{h_K + r_K\sin\varphi_K} + l_{F0}\right)
 \end{align*}
 Die Bewegungsgleichung lässt sich mit folgender Formel bestimmen
 \[
-	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi_K}}\right) - \frac{\partial L}{\partial \varphi_K} = Q
+	\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{\varphi}_K}\right) - \frac{\partial L}{\partial \varphi_K} = Q
 \]

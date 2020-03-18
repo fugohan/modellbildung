@@ -1,0 +1,113 @@
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+Das Drehmoment, welches von den Antriebskräfte im Rotorzentrum der einzelnen Rotorblätter erzeugt wird lautet
+\[
+	\tau_{R,a} = 3F_{R,a}l_R
+\]
+Im stationären muss die Beziehung
+\[
+	\tau_{R,a} = \tau_G + \tau_v
+\]
+erfüllt sein. Der Einsetzen des gegebenen geschwindigkeitsabhängigen Reibmoments folgt
+\[
+	\omega^* = \frac{F_{R,a}l_R - \tau_G}{\mu_v}
+\]
+b)\\ \\
+Durch den Impulserhaltungssatz folgen die beiden Gleichungen
+\begin{align*}
+	m_1\ddot{x} &= -F_{S1}\cos(\varphi) \\
+	m_1\ddot{y} &= -F_{S1}\sin(\varphi)
+\end{align*}
+Da sich die Masse auf einer Kreisbahn bewegt gilt
+\begin{align*}
+	x &= l_R\cos(\varphi) \\
+	y &= l_R\sin(\varphi)
+\end{align*}
+Die zweifachen zeitlichen Ableitung dieser Größen lauten
+\begin{align*}
+	\ddot{x} &= -l_R\omega^2\cos(\varphi) \\
+	\ddot{y} &= -L_R\omega^2\sin(\varphi)
+\end{align*}
+Durch Einsetzen in Impulserhaltungssatz folgt schließlich
+\[
+	F_{S1} = m_1l_R\omega^2
+\]
+Analog lauten die Kräfte der anderen Rotorblätter
+\begin{align*}
+	F_{S2} &= m_2l_R\omega^2 \\
+	F_{S3} &= m_3l_R\omega^2
+\end{align*}
+c)\\ \\
+Da die drei Rotorblätter zueinander um den Faktor $\frac{2\pi}{3}$ verdreht sind, lautet die resultierende Kraft
+\[
+	\textbf{F}_C = \begin{bmatrix}
+		F_{S1}\cos(\varphi) + F_{S2}\cos(\varphi + \frac{2\pi}{3}) + F_{S3}\cos(\varphi - \frac{2\pi}{3}) \\
+		F_{S1}\sin(\varphi) + F_{S2}\sin(\varphi + \frac{2\pi}{3}) + F_{S3}\sin(\varphi - \frac{2\pi}{3})
+	\end{bmatrix}
+\]
+\newpage
+\noindent
+i)\\ \\
+in diesem Fall folgt 
+\[
+\textbf{F}_C = \begin{bmatrix}
+	ml_R\omega^2\left(\cos(\varphi) + \cos(\varphi + \frac{2\pi}{3}) + \cos(\varphi - \frac{2\pi}{3})\right) \\
+	ml_R\omega^2\left(\sin(\varphi) + \sin(\varphi + \frac{2\pi}{3}) + \sin(\varphi - \frac{2\pi}{3})\right)
+\end{bmatrix}
+= 
+\begin{bmatrix}
+	0 \\
+	0
+\end{bmatrix}
+\]
+Die Klammerausdrücke müssen 0 werden, was durch die entsprechenden Summensätze gezeigt werden kann.\\ \\
+ii)\\ \\
+Hier lautet die resultierende Kraft
+\[
+	\textbf{F}_C = \begin{bmatrix}
+	ml_R\omega^2\left(1.1\cos(\varphi) + \cos(\varphi + \frac{2\pi}{3}) + \cos(\varphi - \frac{2\pi}{3})\right) \\
+	ml_R\omega^2\left(1.1\sin(\varphi) + \sin(\varphi + \frac{2\pi}{3}) + \sin(\varphi - \frac{2\pi}{3})\right)
+	\end{bmatrix}
+\]
+Die vereinfachten Klammerausdrücke können wieder mit den entsprechenden Summensätzen bestimmt werden und lauten daher
+\begin{align*}
+\left(1.1\cos(\varphi) + \cos(\varphi + \frac{2\pi}{3}) + \cos(\varphi - \frac{2\pi}{3})\right) = \\
+0.1\cos(\varphi) + \underbrace{\left(\cos(\varphi) + \cos(\varphi + \frac{2\pi}{3}) + \cos(\varphi - \frac{2\pi}{3})\right)}_{=0} \\
+\left(1.1\sin(\varphi) + \sin(\varphi + \frac{2\pi}{3}) + \sin(\varphi - \frac{2\pi}{3})\right) = \\
+0.1\sin(\varphi) + \underbrace{\left(\sin(\varphi) + \sin(\varphi + \frac{2\pi}{3}) + \sin(\varphi - \frac{2\pi}{3})\right)}_{=0}
+\end{align*}
+Somit lautet schließlich die resultierende Kraft
+\[
+	\textbf{F}_C = 0.1ml_R\omega^2\begin{bmatrix}
+		\cos(\varphi) \\
+		\sin(\varphi)
+	\end{bmatrix}
+\]
+d)\\ \\
+Im Angriffspunkt gilt
+\begin{align*}
+	F_{R,w}^A &= 2F_{R,w} \\
+	F_{C,y}^A &= 2F_{C,y} \\
+	F_{C,z}^A &= F_{C,z}
+\end{align*}
+Die Kräftebilanz im Angriffspunkt lautet
+\begin{align*}
+	gleich\textbf{e}_x &: 2F_{R,w} = (F_{A1} + F_{A2}\cos(\frac{\pi}{4}))\cos(\frac{\pi}{4}) \\
+	\textbf{e}_y &: 2f_{C,y} = (-F_{A1} + F_{A2})\cos(\frac{\pi}{4})\sin(\frac{\pi}{4})\\
+	\textbf{e}_z &: F_M = (F_{A1} + F_{A2})\sin(\frac{\pi}{4}) - F_{C,z}
+\end{align*}
+Durch lösen dieses Gleichungssystem (3 Unbekannte, 3 Gleichungen) erhält man
+\begin{align*}
+	F_{A1} &= 2F_{R,w} - 2F_{C,y} \\
+	F_{A2} &= 2F_{R,w} + 2F_{C,y} \\
+	F_M &= 2\sqrt{2}F_{R,w} - F_{C,z}
+\end{align*}
+e)\\ \\
+Mit der Gleichung aus der Angabe folgt
+\[
+	F_{S,i} := c_f(l_{R,i} - l_{R0}) = m_il_{R,i}\omega^2
+\]
+Um die gesuchte Größe zu ermitteln muss man die obige Gleichung einfach umformen und man erhält
+\[
+	l_{R,i} = \frac{c_fl_{R0}}{c_f - m_i\omega^2}
+\]

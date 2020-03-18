@@ -1,0 +1,110 @@
+\textbf{Beispiel 2}\\ \\
+a)\\ \\
+Dieses System wird durch einen Freiheitsgrad komplett beschrieben, z.B der Kurbelwinkel $\alpha$. \\ \\
+b)\\ \\
+Als geeigneter Freiheitsgrad wurde der Winkel $\alpha$ gewählt. Es gilt die Zwangsbeziehung
+\[
+	R_1\sin(\alpha) = R_2\sin(\beta)
+\]
+Dadurch lautet der Winkel $\beta$
+\[
+	\beta = \arcsin\left(\frac{R_1}{R_2}\sin(\alpha)\right)
+\]
+c)\\ \\
+Die Ortsvektoren zu den Körperschwerpunkten lauten für die Kurbelwelle 
+\[
+	\textbf{r}_{S1} = \begin{bmatrix}
+		e\cos(\alpha) \\
+		e\sin(\alpha) \\ 
+		0
+	\end{bmatrix}
+\]
+die Pleuelstange
+\[
+	\textbf{r}_{S2} = \begin{bmatrix}
+		R_1\cos(\alpha) + \frac{R_2}{2}\cos(\beta(\alpha)) \\
+		\frac{R_2}{2}\sin(\beta(\alpha))
+	\end{bmatrix}
+\]
+und der für den Kolben
+\[
+	\textbf{r}_K = \begin{bmatrix}
+		R_1\cos(\alpha) + R_2\cos(\beta(\alpha)) \\
+		0 \\
+		0		
+	\end{bmatrix}
+\]
+\newpage
+\noindent
+Die Geschwindigkeiten lauten für die Kurbelwelle
+\[
+	\textbf{v}_{S1} = \begin{bmatrix}
+		-e\sin(\alpha)\dot{\alpha }\\
+		e\cos(\alpha)\dot{\alpha} \\ 
+		0
+	\end{bmatrix}
+	\qquad
+	\omega_{S1} = \dot{\alpha}
+\]
+die Pleuelstange
+\[
+	\textbf{v}_{S2} = \begin{bmatrix}
+		-R_1\sin(\alpha)\dot{\alpha} - \frac{R_2}{2}\sin(\beta)\frac{d\beta}{d\alpha}\dot{\alpha} \\
+		\frac{R_2}{2}\cos(\beta)\frac{d\beta}{d\alpha}\dot{\alpha} \\
+		0
+	\end{bmatrix}
+	\qquad
+	\omega_{S2} = \frac{d\beta}{d\alpha}\dot{\alpha} 
+\]
+und für den Kolben
+\[
+	\textbf{v}_K = \begin{bmatrix}
+		-R_1\sin(\alpha)\dot{\alpha} - R_2\sin(\beta)\frac{d\beta}{d\alpha}\dot{\alpha} \\
+		0 \\
+		0
+	\end{bmatrix}
+	\qquad
+	\omega_K = 0
+\]
+e)\\ \\
+Die kinetischen Teilenergien lauten hier
+\[
+	T_{rot} = \frac{1}{2}\left(\varTheta_1\dot{\alpha}^2 + \varTheta_2\left(\frac{d\beta}{d\alpha}\dot{\alpha}\right)^2\right)
+\]
+und 
+\[
+	T_{trans} = \frac{1}{2}(m_1\textbf{v}_{S1}^T\textbf{v}_{S1} + m_2\textbf{v}_{S2}^T\textbf{v}_{S2} + m_K\textbf{v}_K^T\textbf{v}_K)
+\]
+Daher ergibt sich für die gesamte kinetische Energie
+\[
+	T = T_{rot} + T_{trans}
+\]
+f)\\ \\
+Der Ortsvektor zum Angriffspunkt der externen Kraft lautet
+\[
+	\textbf{r}_{F_p} = \begin{bmatrix}
+	R_1\cos(\alpha) + R_2\cos(\beta(\alpha)) \\
+	0 \\
+	0		
+	\end{bmatrix}
+\]
+Der Vektor der externen Kraft lautet
+\[
+	\textbf{f}_{F_p} = \begin{bmatrix}
+		-F_p \\
+		0 \\
+		0
+	\end{bmatrix}
+\]
+Die notwendige Ableitung lautet
+\[
+	\frac{\partial\textbf{r}_{F_p} }{\partial \alpha} = \begin{bmatrix}
+	-R_1\sin(\alpha)\dot{\alpha} - R_2\sin(\beta)\frac{d\beta}{d\alpha} \\
+	0 \\
+	0
+	\end{bmatrix}
+\]
+Mit der Berechnungsvorschrift für den gesuchten Vektor aus der Formelsammlung, ergibt sich für diesen
+\[
+	Q = F_p\left(R_1\sin(\alpha) + R_2\sin(\beta)\frac{d\beta}{d\alpha}\right) 
+\]

@@ -1,0 +1,35 @@
+\newpage
+\noindent
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Die richtige Formel für die Konvektion kann aus der Formelsammlung entnommen werden. Daher lautet die gesuchte Wärmestromdichte
+\[
+	\dot{q}_{aw}(x,t) = \alpha_{aw}\left(T_a(x,t) - T_w(x,t)\right)
+\]
+b)\\ \\
+Die gesuchte Wärmestromdichten können mittels des Wärmeleitgesetzes bestimmt werden und lauten somit
+\begin{align*}
+	\dot{q}_a &= -\lambda\frac{\partial}{\partial x}T_a(x,t) \\
+	\dot{q}_w &= -\lambda\frac{\partial}{\partial x}T_w(x,t)
+\end{align*}
+c)\\ \\
+Mithilfe des Hinweises aus der Angabe und der Wärmeleitgleichung für kartesische Koordinaten lautet die gesuchte Differentialgleichung
+\[
+	\rho_a c_a \frac{\partial}{\partial t}T_a(x,t) = \lambda\frac{\partial^2}{\partial x^2}T_a(x,t) + \frac{\alpha_a}{d_a}\dot{q}_s - \frac{\alpha_{aw}}{d_w}\left(T_a(x,t) - T_w(x,t)\right)
+\]
+Der zweite und der dritte Term auf der rechten Seite der Gleichung sind der zufließende und abfließende Wärmestrom aus dem Kontrollvolumen. \\ \\
+d)\\ \\
+Analog zu Punkt c) lautet die Differentialgleichung hier
+\begin{align*}
+	\underbrace{\rho_wc_w\frac{\partial}{\partial t}T_w(x,t) = \lambda\frac{\partial^2}{\partial x^2}T_w(x,t) - \rho_wc_wv_w\frac{\partial}{\partial x}T_w(x,t)}_{\text{Wärmeleitgleichung}} + \frac{\alpha_{aw}}{d_w}\left(T_a(x,t) - T_w(x,t)\right) \\
+	\rho_w c_w \left(\frac{\partial}{\partial t}T_w(x,t) + v_w\frac{\partial}{\partial x}T_w(x,t)\right) = \lambda\frac{\partial^2}{\partial x^2}T_w(x,t) + \frac{\alpha_{aw}}{d_w}\left(T_a(x,t) - T_w(x,t)\right)
+\end{align*}
+e)\\ \\
+Für das gesamte System werden hier 4 Randbedingungen benötigt. Nämlich 2 pro Differentialgleichung.\\ \\
+f)\\ \\
+Die Randbedingungen dieses Systems lauten 
+\begin{align*}
+	\dot{q}_a(0,t) &= \dot{q}_a(L,t) = 0 \\
+	T_w(0,t) &= T_w^{in}(t) \\
+	\dot{q}_w(L,t) &= 0
+\end{align*}

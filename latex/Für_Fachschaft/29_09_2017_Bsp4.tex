@@ -1,0 +1,52 @@
+\textbf{Beispiel 4}\\ \\
+a)\\ \\
+Mithilfe der Bedingungen aus der Angabe folgen für die Randbedingungen
+\begin{align*}
+	T(0) &= T_0 \\
+	\frac{\text{d}}{\text{d}x}T(x)\Bigl|_{x = L} &= 0 \qquad ...\text{adiabate Randbedingung}
+\end{align*}
+b)\\ \\
+Unter Beachtung der Hinweise und des infinitesimalen Kontrollvolumen folgt für die einzelnen Wärmeströme
+\begin{align*}
+	\dot{Q}(x) &= -\lambda\pi\frac{D^2}{4}\frac{\text{d}}{\text{d}x}T(x) \\
+	\dot{Q}(x + \text{d}x) &= 	\dot{Q}(x) - \lambda\pi\frac{D^2}{4}\frac{\text{d}^2}{\text{d}x^2}T(x)\text{d}x \\
+	\text{d}\dot{Q}_M &= \alpha\pi D(T(x) - T_\infty)\text{d}x
+\end{align*}
+Somit folgt schließlich für die Differentialgleichung
+\begin{align*}
+	& \dot{Q}_x - \dot{Q}(x + \text{d}x) - \text{d}\dot{Q}_M = 0 \\
+	& \Rightarrow \frac{\text{d}^2}{\text{d}x^2}T(x) - \frac{4\alpha}{\lambda D}\left(T(x) - T_\infty\right) = 0
+\end{align*}
+c)\\ \\
+Verwendet man die geforderte Diskretisierung lautet die gegebene Differentialgleichung
+\[
+	\frac{T(x - \Delta x) - 2T(x) + T(x + \Delta x)}{\Delta x^2} + a_1T(x) + a_2 = 0
+\]
+Unter Einhaltung der gegebenen Form aus der Angabe und den Randbedingungen aus Punkt a) lauten die gesuchten Größen \\
+\[
+	\textbf{T} = \begin{bmatrix}
+		T_1 \\
+		T_2 \\
+		T_3 
+	\end{bmatrix}
+	, \quad 
+	\textbf{D} = \frac{1}{\Delta x^2}\begin{bmatrix}
+		-2 & 1 & 0 \\
+		1 & -2 & 1 \\
+		0 & -2 & 2
+	\end{bmatrix}
+	, \quad 
+	\textbf{b}_2 = a_2\begin{bmatrix}
+		1 \\
+		1 \\
+		1
+	\end{bmatrix}
+	+ \frac{1}{\Delta x^2}
+	\begin{bmatrix}
+		T_0 \\
+		0 \\
+		0
+	\end{bmatrix}
+	, \quad 
+	b_1 = a_1
+\]

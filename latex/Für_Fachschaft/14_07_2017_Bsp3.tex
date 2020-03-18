@@ -1,0 +1,62 @@
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Die Leistungsbilanz für das elektronische Bauteil lautet
+\[
+	-\dot{q}_s + g_0h - \dot{q}_b = 0
+\]
+und daraus folgt
+\[
+	\dot{q}_s = g_0h - \dot{q}_b
+\]
+b) \\ \\
+Mit der Formel
+\[
+	\dot{q} = \alpha (T - T_\infty)
+\]
+folgt für die Oberflächentemperatur
+\[
+	T_s = T_\infty + \frac{\dot{q}_s}{\alpha}
+\]
+\newpage
+\noindent
+c)\\ \\
+Um die Differentialgleichung bestimmen zu können muss man die Wärmeleitgleichung für die kartesischen Koordinaten hernehmen. Da sich die Wärme nur in z-Richtung ausbreitet muss auch nur dieser Term der Formel verwendet werden.
+\[
+	\lambda\frac{d^2T}{dz^2} + g_0 = 0
+\]
+Mit den Randbedingungen
+\begin{align*}
+	\frac{dT}{dz}(0) &= \frac{\dot{q}_b}{\lambda} \\
+	T(h) &= T_s
+\end{align*}
+d) \\ \\
+Für den Temperaturverlauf im Bauteil muss jetzt die Differentialgleichung gelöst werden.
+\begin{align*}
+		\lambda\frac{d^2T}{dz^2} + g_0 = 0 \\
+		\frac{d^2T}{dz^2} = -\frac{g_0}{\lambda} \\
+		\frac{dT}{dz} = -\frac{g_0}{\lambda}z + C_1 \\
+		T(z) = -\frac{g_0}{\lambda}\frac{z^2}{2} + C_1z + C_2
+\end{align*}
+Durch Einsetzen der Randbedingungen folgt für die Konstanten
+\begin{align*}
+	\frac{dT}{dz} &= 0 + C_1 = \frac{\dot{q}_b}{\lambda} \\
+	C_1 &= \frac{\dot{q}_b}{\lambda} 
+\end{align*}
+und
+\begin{align*}
+	T_s &= -\frac{g_0}{\lambda}\frac{h^2}{2} + \frac{\dot{q}_b}{\lambda}h + C_2 \\
+	C_2 &= T_s + \frac{g_0}{\lambda}\frac{h^2}{2} - \frac{\dot{q}_b}{\lambda}h
+\end{align*}
+Jetzt noch die Konstanten einsetzen und man erhält schließlich
+\begin{align*}
+	T(z) &= -\frac{g_0}{\lambda}\frac{z^2}{2} + \frac{\dot{q}_b}{\lambda}z + T_s + \frac{g_0}{\lambda}\frac{h^2}{2} - \frac{\dot{q}_b}{\lambda}h \\
+	&= T_s \frac{1}{2}\frac{\dot{q}_b}{\lambda}(h^2 - z^2) + \frac{\dot{q}_b}{\lambda}(z - b)
+\end{align*}
+\newpage
+\noindent
+e) \\ \\
+Die maximale Position lautet
+\[
+	z_{max} = \frac{\dot{q}_b}{g_0}
+\]
+Für die maximale Temperatur existier leider keine Lösung zum vergleichen. \\ \\

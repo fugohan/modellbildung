@@ -1,0 +1,32 @@
+\newpage
+\noindent
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Die benötigte Formel kann aus der Formelsammlung entnommen werden. Die gesuchte Größe lautet somit
+\[
+	\dot{q}^\circ = (T_l - T_\infty)\frac{2\pi}{\underbrace{\frac{1}{r_i\alpha_i} + \frac{1}{\lambda_{isol} \ln\frac{r_O}{r_i}} + \frac{1}{r_O\alpha_O}}_{:= k^\circ}}
+\]
+b)\\ \\
+Da die gegebenen Leitungsparameter homogen verteilt sind gilt 
+\[
+	\int_{\mathcal{V}}\rho_lc_{p,l}\frac{\text{d}T_l}{\text{d}t}\text{d}\mathcal{V} = r_i^2\pi\rho_lc_{p,l}L\frac{\text{d}T_l}{\text{d}t}
+\]
+Die zugeführte elektrische Leistung lautet
+\[
+	P_{el} = I^2R'L
+\]
+und der Wärmestrom lautet
+\[
+	\dot{Q} = -\dot{q}^\circ L
+\]
+Durch Einsetzen in den gegebenen Energieerhaltungssatz erhält man die Differentialgleichung
+\begin{align*}
+	r_i^2\pi\rho_lc_{p,l}&L\frac{\text{d}T_l}{\text{d}t} = -\dot{q}^\circ L + I^2R'L \\
+	\frac{\text{d}T_l}{\text{d}t} &= \frac{-\dot{q}^\circ + I^2R'}{r_i^2\pi\rho_lc_{p,l}}
+\end{align*}
+c)\\ \\
+Im stationären Fall fällt die zeitliche Ableitung fällt, somit ergibt sich für gesuchte Temperatur
+\begin{align*}
+	0 &= -(T_l - T_\infty)k^\circ + I^2R' \\
+	T_l &= T_\infty + \frac{I^2R'}{k^\circ}
+\end{align*}

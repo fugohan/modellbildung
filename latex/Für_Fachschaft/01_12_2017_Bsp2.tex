@@ -1,0 +1,203 @@
+\newpage
+\noindent
+\textbf{Beispiel 2}\\ \\
+a)\\ \\
+Im Allgemeinen besitzt ein Körper im freien Raum 3 Freiheitsgrade. Dieses System besteht nun aus 2 Körper, besitzt aber noch zusätzlich 4 Zwangsbedingungen. Somit besitzt dieses System exakt $2\cdot3 - 4 = 2$ Freiheitsgrade. \\ \\
+b) \\ \\
+Für die generalisierten Koordinaten
+\[
+	\textbf{q} = \begin{bmatrix}
+		h \\
+		\varphi
+	\end{bmatrix}
+\]
+Die Ortsvektoren zu den Schwerpunkten lauten
+\begin{align*}
+	\textbf{r}_1 &= (L - h)\begin{bmatrix}
+		-\cos(\varphi) \\
+		\sin(\varphi) \\
+		0
+	\end{bmatrix}
+	\\ \\
+	\textbf{r}_2 &= \begin{bmatrix}
+		0 \\
+		0 \\
+		h
+	\end{bmatrix}
+\end{align*}
+Die dazugehörigen Geschwindigkeitsvektoren lauten
+\begin{align*}
+	\dot{\textbf{r}}_1 &= \begin{bmatrix}
+		(L - h)\dot{\varphi}\sin(\varphi) + \dot{h}\cos(\varphi) \\
+		(L - h)\dot{\varphi}\sin(\varphi) - \dot{h}\sin(\varphi) \\
+		0
+	\end{bmatrix}
+	\\ \\
+	\dot{\textbf{r}}_2 &= \begin{bmatrix}
+		0 \\
+		0 \\
+		\dot{h}
+	\end{bmatrix}
+\end{align*}
+Die kinetische Energie lautet
+\[
+	T = \frac{1}{2}m_1\dot{\textbf{r}}_1^T\dot{\textbf{r}}_1 + \frac{1}{2}\dot{\textbf{r}}_2^T\dot{\textbf{r}}_2
+\]
+Die Potentielle Energie lautet
+\[
+	V = -m_2gh
+\]
+Damit gilt für die Lagrange-Funktion
+\[
+	L = T - V = \frac{1}{2}m_1\left((L - h)^2\dot{\varphi}^2 + \dot{h}^2\right) + \frac{1}{2}m_2\dot{h}^2 + m_2gh
+\]
+\newpage
+\noindent
+Analog dazu für die generalisierten Koordinaten
+\[
+	\textbf{q} = \begin{bmatrix}
+		r \\
+		\varphi
+	\end{bmatrix}
+\]
+\begin{align*}
+	\textbf{r}_1 = r\begin{bmatrix}
+		-\cos(\varphi) \\
+		\sin(\varphi) \\
+		0
+	\end{bmatrix}
+	, \quad
+	\textbf{r}_2 = \begin{bmatrix}
+		0 \\
+		0 \\
+		L - r
+	\end{bmatrix}
+	\\
+	\dot{\textbf{r}}_1 = \begin{bmatrix}
+		r\dot{\varphi}\sin(\varphi) - \dot{r}\cos(\varphi) \\
+		r\dot{\varphi}\cos(\varphi) + \dot{r}\sin(\varphi) \\
+		0
+	\end{bmatrix}
+	, \quad
+	\dot{\textbf{r}}_2 = \begin{bmatrix}
+		0 \\
+		0 \\
+		-\dot{r}
+	\end{bmatrix}
+\end{align*}
+\begin{align*}
+	T &= \frac{1}{2}m_1\dot{\textbf{r}}_1^T\dot{\textbf{r}}_1 + \frac{1}{2}\dot{\textbf{r}}_2^T\dot{\textbf{r}}_2 \\
+	V &= -m_2g(L - r)
+\end{align*}
+\[
+	L = T - V = \frac{1}{2}m_1\left(r^2\dot{\varphi}^2 + \dot{r}^2\right) + \frac{1}{2}m_2\dot{r}^2 + m_2g(L - r)
+\]
+c)\\ \\
+Für die generalisierten Koordinaten
+\[
+	\textbf{q} = \begin{bmatrix}
+	h \\
+	\varphi
+	\end{bmatrix}
+\]
+Zuerst muss der Vektor der generalisierten Kräfte bestimmt werden. Der Vektor der externen Kraft lautet
+\[
+	\textbf{f}_e = \begin{bmatrix}
+		0 \\
+		0 \\
+		f_e
+	\end{bmatrix}
+\]
+Die dafür nötigen Ableitungen lauten
+\begin{align*}
+	\frac{\partial \textbf{r}_2}{\partial h} = \begin{bmatrix}
+		0 \\
+		0 \\
+		1
+	\end{bmatrix}
+	, \quad
+	\frac{\partial \textbf{r}_2}{\partial \varphi} = \begin{bmatrix}
+	0 \\
+	0 \\
+	0
+	\end{bmatrix}
+\end{align*}
+Damit lautet der Vektor der generalisierten Kräfte
+\[
+	\textbf{f}_q = \begin{bmatrix}
+		f_e \\
+		0
+	\end{bmatrix}
+\]
+\newpage
+\noindent
+Um den Euler-Lagrange-Formalismus durchzuführen werden zuerst ein paar Ableitungen benötigt. Diese lauten hier
+\begin{align*}
+	\frac{\partial L}{\partial h} &= -m_1(L - h)\dot{\varphi}^2 + m_2g \\
+	\frac{\partial L}{\partial \varphi} &= 0 \\
+	\frac{\partial L}{\partial \dot{h}} &= m_1\dot{h} + m_2\dot{h} = \dot{h}(m_1 + m_2) \\
+	\frac{\partial L}{\partial \dot{\varphi}} &= m_1(L - h)^2\dot{\varphi} \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{h}} &= \ddot{h}(m_1 + m_2) \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\varphi}} &= -2m_1(L - h)\dot{h}\dot{\varphi} + m_1(L - h)^2\ddot{\varphi}
+\end{align*}
+Die erste Bewegungsgleichung lautet
+\begin{align*}
+	\ddot{h}(m_1 &+ m_2) + m_1(L - h)\dot{\varphi}^2 - m_2g = f_e \\
+	\ddot{h} &= \frac{f_e + m_2g - m_1(L - h)\dot{\varphi}^2}{m_1 + m_2}
+\end{align*}
+Die zweite Bewegungsgleichung lautet
+\begin{align*}
+	-2m_1(L - h)\dot{h}\dot{\varphi} &+ m_1(L - h)^2\ddot{\varphi} = 0 \\
+	(L - h)\ddot{\varphi} &= 2\dot{h}\dot{\varphi} \\
+	\ddot{\varphi} &= \frac{2\dot{h}\dot{\varphi}}{(L - h)}
+\end{align*}
+\newpage
+\noindent
+Analog für die generalisierten Koordinaten 
+\[
+	\textbf{q} = \begin{bmatrix}
+	r \\
+	\varphi
+	\end{bmatrix}
+\]
+\begin{align*}
+		\textbf{f}_e = \begin{bmatrix}
+	0 \\
+	0 \\
+	f_e
+	\end{bmatrix}
+	, \quad
+	\frac{\partial \textbf{r}_2}{\partial r} = \begin{bmatrix}
+	0 \\
+	0 \\
+	-1
+	\end{bmatrix}
+	, \quad
+	\frac{\partial \textbf{r}_2}{\partial \varphi} = \begin{bmatrix}
+	0 \\
+	0 \\
+	0
+	\end{bmatrix}
+\end{align*}
+\[
+	\textbf{f}_q = \begin{bmatrix}
+	-f_e \\
+	0
+	\end{bmatrix}
+\]
+\begin{align*}
+	\frac{\partial L}{\partial r} = m_1r\dot{\varphi}^2 - m_2g &,\quad \frac{\partial L}{\partial \varphi} = 0 \\
+	\frac{\partial L}{\partial \dot{r}} = m_1\dot{r} + m_2\dot{r} = \dot{r}(m_1 + m_2) &,\quad \frac{\partial L}{\partial \dot{\varphi}} = m_1r^2\dot{\varphi} \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{r}} = \ddot{r}(m_1 + m_2) &, \quad \frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\varphi}} = 2m_1r\dot{r}\dot{\varphi} + m_1r^2\ddot{\varphi}
+\end{align*}
+\begin{align*}
+	\ddot{r}(m_1 &+ m_2) -  m_1r\dot{\varphi}^2 + m_2g = -f_e \\
+	\ddot{r} &= \frac{-f_e - m_2g + m_1r\dot{\varphi}^2}{m_1 + m_2}
+\end{align*}
+\begin{align*}
+	2m_1r\dot{r}\dot{\varphi} &+ m_1r^2\ddot{\varphi} = 0 \\
+	r\ddot{\varphi} &= -2\dot{r}\dot{\varphi} \\
+	\ddot{\varphi} &= -\frac{2\dot{\varphi}\dot{r}}{r}
+\end{align*}
+d)\\ \\
+Da nun $h = z_2 = \text{konst}$ muss auch $r = \text{konst}$ gelten. Daraus kann man schließen, dass deren zeitliche Ableitungen verschwinden. Unter diesen Umständen besitzt dieses System nur noch einen Freiheitsgrad, den Winkel $\varphi$. Aus der zweiten Bewegungsgleichung folgt das auch $\dot{\varphi} = 0$ gelten muss. Somit bewegt sich $m_1$ mit einer konstanten Winkelgeschwindigkeit auf einer Kreisbahn. Der Mittelpunkt dieser Kreisbewegung hängt ausschließlich von den Anfangsbedingungen ab.

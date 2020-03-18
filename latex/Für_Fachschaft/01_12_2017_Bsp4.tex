@@ -1,0 +1,57 @@
+\newpage
+\noindent
+\textbf{Beispiel 4}\\ \\
+a)\\ \\
+Die Wärmestromdichte aufgrund der freien Konvektion lautet
+\[
+	\dot{q}_2 = -\alpha(T_2 - T_\infty)
+\]
+Der Wärmestrom der durch das Gasgemisch hervorgeht lautet
+\[
+	\dot{q}_2 = \frac{1}{d_1\pi}\dot{q}_G^\circ
+\]
+Somit ergibt sich für die gesuchte Temperatur
+\begin{align*}
+	-\alpha(T_2 &- T_\infty) = \frac{1}{d_2\pi}\dot{q}_G^\circ \\
+	T_2 &= \frac{1}{d_1\pi\alpha}\dot{q}_G^\circ + T_\infty
+\end{align*}
+b)\\ \\
+Die Sichtfaktoren lauten für dieses System
+\begin{align*}
+	F_{11} &= 0 \quad A_1 \text{ist konvex} \\
+	F_{12} &= 1 - F_{11} = 1 \\
+	F_{21} &= \frac{A_1}{A_2}F_{12} = \frac{d_1}{d_2} = D \\
+	F_{22} &= 1 - F_{21} = 1 - D
+\end{align*}
+Damit lautet die Sichtfaktormatrix
+\[
+	\textbf{F} = \begin{bmatrix}
+		0 & 1 \\
+		D & 1 - D
+	\end{bmatrix}
+\]
+c)\\ \\
+Mit der Formel für die Nettowärmestromdichte aus der Formelsammlung ergibt sich der Zusammenhang
+\[
+	\begin{bmatrix}
+		\dot{q}_1 \\
+		\dot{q}_2
+	\end{bmatrix}
+	=
+	\frac{\sigma\varepsilon_2}{\varepsilon_2(1 - D) + 1}
+	\begin{bmatrix}
+		1 & -1 \\
+		-D & D
+	\end{bmatrix}
+	\begin{bmatrix}
+		T_1^4 \\
+		T_2^4
+	\end{bmatrix}
+\]
+d)\\ \\
+Relativ analog zu Punkt a) ergibt sich
+\begin{align*}
+	\dot{q}_1 &= k(T_1^4 - T_2^4), \, \text{mit} \, k = \frac{\sigma\varepsilon_2}{\varepsilon_2(1 - D) + 1} \\
+	\dot{q}_1 &= \frac{1}{d_1\pi}\dot{q}^\circ \\
+	T_1 &= \left(\frac{1}{kd_1\pi}\dot{q}^\circ + T_2^4\right)^{\frac{1}{4}}
+\end{align*}

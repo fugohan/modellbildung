@@ -1,0 +1,155 @@
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+Um den gesuchten Abstand zu ermitteln, muss man die Formel
+\[
+	\textbf{r}_S = \frac{\sum_{j=1}^{N}\textbf{r}_{Sj}m_j}{\sum_{j=1}^{N}m_j}
+\]
+betrachten. Unter Beachtung dieser Form folgt nun schließlich für den gesuchten Abstand
+\begin{align*}
+	l_{AM} &= \frac{m_Al_A - m_Ml_M}{m_{AM}} 
+\end{align*}
+mit $m_{AM} = m_A + m_M$. Dies hat nur eine Ähnlichkeit mit der obigen Formel, da anstatt von Abstandsvektoren nur die tatsächlichen Abstände verwendet wurden. Das dazugehörige Massenträgheitsmoment kann schließlich mit dem Satz von Steiner ermittelt werden und lautet somit
+\[
+	\varTheta_{AM,zz} = \varTheta_{A,zz} + m_A(l_A - l_{AM})^2 + \varTheta_{M,zz} + m_M(l_{AM} + l_M)^2
+\]
+b)\\ \\
+Die geeigneten generalisierten Koordinaten lauten hier
+\[
+	\textbf{q} = \begin{bmatrix}
+		x \\
+		\varphi_A
+	\end{bmatrix}
+\]
+und somit lautet der Ortsvektor der Ersatzmasse
+\[
+	\textbf{r}_{AM} = l_{AM}\begin{bmatrix}
+		-\sin(\varphi_A) \\
+		\cos(\varphi_A)
+	\end{bmatrix}
+\]
+und der Ortsvektor des Schlittens
+\[
+	\textbf{r}_S = x\begin{bmatrix}
+		-\sin(\varphi_A) \\
+		\cos(\varphi_A)
+	\end{bmatrix}
+\]
+c)\\ \\
+Nun müssen man für die Geschwindigkeitsvektoren die Ortsvektoren nach den generalisierten Koordinaten ableiten. Damit erhalten wir
+\begin{align*}
+	\dot{\textbf{r}}_{AM} &= l_{AM}\begin{bmatrix}
+		-\cos(\varphi_A) \\
+		-\sin(\varphi_A)
+	\end{bmatrix}\dot{\varphi}_A
+	\\ \\
+	\dot{\textbf{r}}_S &= x\begin{bmatrix}
+		-\cos(\varphi_A) \\
+		-\sin(\varphi_A)
+	\end{bmatrix}\dot{\varphi}_A
+	+\dot{x}
+	\begin{bmatrix}
+		-\sin(\varphi_A) \\
+		\cos(\varphi_A)
+	\end{bmatrix}
+\end{align*}
+\newpage
+\noindent
+Deren Betragsquadrate lauten
+\begin{align*}
+	||\dot{\textbf{r}}_{AM}||^2_2 &= l^2_{AM}\left(\sin^2(\varphi_A) + \cos^2(\varphi_A)\right)\dot{\varphi}_A^2 \\
+				 				  &= l^2_{AM}\dot{\varphi}_A^2 \\ \\
+	||\dot{\textbf{r}}_{S}||^2_2 &=	x^2\left(\sin^2(\varphi_A) + \cos^2(\varphi_A)\right)\dot{\varphi}_A^2 + \dot{x}^2\left(\sin^2(\varphi_A) + \cos^2(\varphi_A)\right)	\\
+	&= x^2\dot{\varphi}_A^2 + \dot{x}^2
+\end{align*}
+d)\\ \\
+Die kinetische Energie des gesamten Systems lautet
+\begin{align*}
+	T &= \frac{1}{2}m_{AM}||\dot{\textbf{r}}_{AM}||^2_2 + \frac{1}{2}m_S||\dot{\textbf{r}}_{S}||^2_2 + \frac{1}{2}(\varTheta_{AM,zz} + \varTheta_{S,zz})\dot{\varphi}_A^2 \\
+	&= \frac{1}{2}m_{AM}l^2_{AM}\dot{\varphi}_A^2 + \frac{1}{2}m_S\left(x^2\dot{\varphi}_A^2 + \dot{x}^2\right) + \frac{1}{2}(\varTheta_{AM,zz} + \varTheta_{S,zz})\dot{\varphi}_A^2 \\ \\
+	V &= 0
+\end{align*}
+e)\\ \\
+Die Lagrange-Funktion lautet in allgemeiner Form
+\[
+	L = T - V
+\]
+und die Euler-Lagrange-Gleichungen
+\[
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = f_{d,i} + f_{q,i}, \qquad i\in\{1,2\}
+\]
+f) \\ \\
+Bevor nun die einzelnen bestimmt werden können, muss die Lagrange-Funktion konkret ausgewertet. Diese lautet daher
+\[
+	L = \frac{1}{2}m_{AM}l^2_{AM}\dot{\varphi}_A^2 + \frac{1}{2}m_S\left(x^2\dot{\varphi}_A^2 + \dot{x}^2\right) + \frac{1}{2}(\varTheta_{AM,zz} + \varTheta_{S,zz})\dot{\varphi}_A^2
+\]
+\newpage
+\noindent
+Die Ableitungen lautet
+\begin{align*}
+	\frac{\partial L}{\partial \dot{x}} &= m_S\dot{x} \\
+	\frac{\partial L}{\partial \dot{\varphi}_A} &= m_{AM}l^2_{AM}\dot{\varphi}_A + m_Sl^2_S\dot{\varphi}_A + (\varTheta_{AM,zz} + \varTheta_{S,zz})\dot{\varphi}_A \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{x}} &= m_S\ddot{x} \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\varphi}_A} &= m_{AM}l^2_{AM}\ddot{\varphi_A} + m_Sx^2\ddot{\varphi_A} + 2m_Sx\dot{\varphi}_A\dot{x} + (\varTheta_{AM,zz} + \varTheta_{S,zz})\ddot{\varphi_A} \\
+	\frac{\partial L}{\partial x} &= m_Sx\dot{\varphi}_A^2 \\
+	\frac{\partial L}{\partial \varphi_A} &= 0
+\end{align*}
+g)\\ \\
+Der Vektor für die generalisierten dissipativen Kräfte lautet
+\[
+	\textbf{f}_d = \begin{bmatrix}
+		-d_s\dot{x} \\
+		-d_A\dot{\varphi}_A
+	\end{bmatrix}
+\]
+h)\\ \\
+Die Formel zur Bestimmung der generalisierten Kräfte kann der Formelsammlung entnehmen. Der benötigte Ortsvektor ist der des Schlittens. Die benötigte Ableitung für die generalisierte Kraft lautet 
+\[
+	\frac{\partial \textbf{r}_S}{\partial x} = \begin{bmatrix}
+		-\sin(\varphi_A) \\
+		\cos(\varphi_A)
+	\end{bmatrix}
+\]
+Der Vektor der externen Kraft lautet
+\[
+	\textbf{f}_S = F_S\begin{bmatrix}
+		\sin(\varphi_A) \\
+		-\cos(\varphi_A)
+	\end{bmatrix}
+\]
+Der Vektor der Momente bezogen auf die generalisierten Koordinaten lautet
+\[
+	\textbf{m}_A = \begin{bmatrix}
+		0 \\
+		M_A
+	\end{bmatrix}
+\]
+Somit lautet der Vektor der generalisierten Kräfte
+\[
+	\textbf{f}^T_q = \textbf{f}_S^T	\frac{\partial \textbf{r}_S}{\partial x} + \textbf{m}^T_A = \begin{bmatrix}
+		-F_S & M_A
+	\end{bmatrix}^T
+\]
+\newpage
+\noindent
+i)\\ \\
+Die Euler-Lagrange-Gleichungen lauten
+\begin{align*}
+	m_S\ddot{x} - m_Sx\dot{\varphi}_A^2 &= -d_S\dot{x} - F_S \\
+	m_{AM}l^2_{AM}\ddot{\varphi_A} + m_Sx^2\ddot{\varphi_A} + 2m_Sx\dot{\varphi}_A\dot{x} &+ (\varTheta_{AM,zz} + \varTheta_{S,zz})\ddot{\varphi_A} = -d_A\dot{\varphi}_A + M_A
+\end{align*}
+Vereinfacht man diese Gleichungen erhält man die Bewegungsgleichungen und diese lauten
+\begin{align*}
+	\ddot{x} &= \frac{m_Sx\dot{\varphi}^2_A - d_S\dot{x} - F_S}{m_S} \\
+	\ddot{\varphi}_A &= \frac{-2m_Sx\dot{\varphi}_A\dot{x} - d_A\dot{\varphi}_A + M_A}{m_{AM}l^2_{AM} + m_Sx^2 + (\varTheta_{AM,zz} + \varTheta_{S,zz})}
+\end{align*}
+j)\\ \\
+Aus der ersten Bewegungsgleichung folgt im stationären Fall
+\begin{align*}
+		0 &= \frac{m_Sx_0\omega^2_A - F_S}{m_S} \\
+		x_0 &= \frac{F_S}{m_S\omega_A^2}
+\end{align*}
+und aus der zweiten
+\begin{align*}
+	0 &= \frac{ - d_A\omega_A + M_{A,0}}{m_{AM}l^2_{AM} + m_Sx^2 + (\varTheta_{AM,zz} + \varTheta_{S,zz})} \\
+	M_{A,0} &= d_A\omega_A^2	
+\end{align*}

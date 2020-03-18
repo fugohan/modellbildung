@@ -92,3 +92,80 @@ Und deren Betragbeträge lauten
 	\text{analog dazu}: \\
 	||\dot{\textbf{r}}_3||_2^2 &= \left(\frac{l_1}{3}\right)^2\dot{\varphi_1}^2 + \left(\frac{l_3}{2}\right)^2\dot{\varphi_3}^2 + \frac{1}{3}l_1l_3\cos(\varphi_1 - \varphi_3)\dot{\varphi_1}\dot{\varphi_3}
 \end{align*}
+c)\\ \\
+Nun soll die gesamte kinetische Energie des Systems bestimmt werden. Diese setzt sich aus der translatorischen Energie
+\[
+	T_{trans} = \frac{1}{2}||\dot{\textbf{r}}_1||^2_2 + \frac{1}{2}||\dot{\textbf{r}}_2||^2_2 + \frac{1}{2}||\dot{\textbf{r}}_3||^2_2
+\]
+und der rotatorischen Energie
+\[
+	T_{rot} = \frac{1}{2}\varTheta_1\dot{\varphi_1} + \frac{1}{2}\varTheta_2\dot{\varphi_2} + \frac{1}{2}\varTheta_3\dot{\varphi_3}
+\]
+zusammen.
+\newpage
+\noindent
+Somit lautet die gesamte kinetische Energie des Systems
+\begin{align*}
+	T &= T_{trans} + T_{rot} \\
+	  &= \frac{1}{2}\left(m_1\left(\frac{l_1}{6}\right)^2 + m_2 \left(\frac{2l_1}{3}\right)^2 + m_3\left(\frac{l_1}{3}\right)^2 + \varTheta_1\right)\dot{\varphi_1}^2 \\
+	  &+ \frac{1}{2}\left(m_2\left(\frac{l_2}{2}\right)^2 + \varTheta_2\right)\dot{\varphi_2}^2 + \frac{1}{2}\left(m_3\left(\frac{l_3}{2}\right)^2 + \varTheta_3\right)\dot{\varphi_3}^2 \\
+	  &+ \frac{1}{3}m_2l_1l_2\cos(\varphi_1 - \varphi_2)\dot{\varphi_1}\dot{\varphi_2} + \frac{1}{6}m_3l_1l_3\cos(\varphi_1 - \varphi_3)\dot{\varphi_1}\dot{\varphi_3}
+\end{align*}
+d)\\ \\
+Die potentielle Energie dieses Systems lautet
+\begin{align*}
+	V &= m_1g\left(h + \frac{l_1}{6}\sin(\varphi_1)\right) + m_2g\left(h + \frac{2l_1}{3}\sin(\varphi_1) + \frac{l_2}{2}\sin(\varphi_2)\right) \\
+	&+ m_3g\left(h - \frac{l_1}{3}\sin(\varphi_3) - \frac{l_3}{2}\sin(\varphi_3)\right)
+\end{align*}
+e)\\ \\
+Die allgemeiner Form lautet die Lagrange-Funktion
+\[
+	L = T - V
+\]
+und der Euler-Lagrange-Formalismus
+\[
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\varphi}_i} - \frac{\partial L}{\partial \varphi_i} = f_{q,i}, \qquad i \in \{1,2,3\}
+\]
+f)\\ \\
+Bevor man den Vektor für die generalisierten Kräfte bestimmen kann, benötigt man zuerst den Ortsvektor zum Angriffspunkt und dieser lautet
+\[
+	\textbf{r}_e = \begin{bmatrix}
+		0 \\
+		h
+	\end{bmatrix}
+	+
+	\frac{2l_1}{3}
+	\begin{bmatrix}
+		\cos(\varphi_1) \\
+		\sin(\varphi_1)
+	\end{bmatrix}
+	+ l_2
+	\begin{bmatrix}
+		\cos(\varphi_2) \\
+		\sin(\varphi_2)
+	\end{bmatrix}
+\]
+Die partiellen Ableitungen nach generalisierten Koordinaten dieses Vektors lauten
+\begin{align*}
+	\frac{\partial \textbf{r}_e}{\partial \varphi_1} &= \frac{2l_1}{3}\begin{bmatrix}
+		-\sin(\varphi_1) \\
+		\cos(\varphi_1)
+	\end{bmatrix} \\
+		\frac{\partial \textbf{r}_e}{\partial \varphi_2} &= l_2\begin{bmatrix}
+			-\sin(\varphi_2) \\
+			\cos(\varphi_2)
+	\end{bmatrix} \\
+	\frac{\partial \textbf{r}_e}{\partial \varphi_1} &= \begin{bmatrix}
+		0 \\
+		0
+	\end{bmatrix}
+\end{align*}
+Mit der dem Vektor $\textbf{f}_e$ aus der Angabe und der Rechenvorschrift aus der Angabe lautet der gesuchte Vektor
+\begin{align*}
+	\textbf{f}_q = \begin{bmatrix}
+		\frac{2l_1}{3}\sin(\varphi_1) \\
+		l_2 \sin(\varphi_2) \\
+		0
+	\end{bmatrix}
+	f_{e,x}
+\end{align*}

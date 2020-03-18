@@ -1,0 +1,57 @@
+\newpage
+\noindent
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Die Formel für den konvektiven Wärmeübergang wird der Formelsammlung entnommen und somit lauten die gesuchten Wärmestromdichten
+\begin{align*}
+	\dot{q}_{BG} &= \alpha(T_B - T_G(t)) \\ 
+	\dot{q}_{MG} &= \alpha(T_M - T_G(t)) \\
+	\dot{q}_{DG} &= \alpha(T_D - T_G(t))
+\end{align*}
+Die SI-Einheit von $\alpha$ lautet
+\[
+	[\alpha] = \frac{W}{m^2K}
+\]
+b)\\ \\
+Die Sichtfaktormatrix muss die Form
+\[
+	\textbf{F} = \begin{bmatrix}
+		F_{B-B} & F_{B-M} & F_{B-D} \\
+		F_{M-B} & F_{M-M} & F_{M-D} \\
+		F_{D-B} & F_{D-M} & F_{D-D}
+	\end{bmatrix}
+\]
+besitzen. Die einzelnen Sichtfaktor werden mit der Summationsregel und dem Reziprozitätsgesetz bestimmt. Außerdem muss man auch noch beachten, ob es sich bei manchen Flächen um konvexe Flächen handelt, da sich dann die entsprechenden Sichtfaktoren einfach aufstellen lassen. Unter Beachtung all dieser Bedingungen lauten hier sämtliche Sichtfaktoren
+\begin{align*}
+	F_{B-B} &= F_{D-D} = 0 & F_{M-D} &= \frac{A_D}{A_M}(1 - F) \\
+	F_{B-D} &= F_{D-B} = F & F_{M-B} &= \frac{A_B}{A_M}(1 - F)\\
+	F_{B_M} &= F_{M-B} = 1 - F & F_{M-M} &= 1 - 2\frac{A_B}{A_M}(1 - F)
+\end{align*}
+c)\\ \\
+Unter Beachtung der Formel für die Nettowärmestromdichte aus der Formelsammlung erhält man für die gesuchten Größen
+\begin{align*}
+	 \dot{\textbf{q}}_r = \begin{bmatrix}
+		\dot{q}_{r,B} \\
+		\dot{q}_{r,M} \\
+		\dot{q}_{r,D}
+	\end{bmatrix}
+	, \quad
+	\textbf{T}^4 = \begin{bmatrix}
+		T_B^4 \\
+		T_M^4 \\
+		T_D^4
+	\end{bmatrix}
+	, \quad
+	\varepsilon = \begin{bmatrix}
+		\varepsilon_B \\
+		\varepsilon_M \\
+		\varepsilon_D
+	\end{bmatrix}
+	\\ \\
+	\textbf{P} = \text{diag}{\varepsilon}(\textbf{E} - \textbf{F}(\textbf{E} - \text{diag}{\varepsilon}))^{-1}(\textbf{E} - \textbf{F})\sigma
+\end{align*}
+d)\\ \\
+Für die Differentialgleichung wird anhand der Energieerhaltung aufgestellt und lautet dadurch
+\[
+	\rho Vc_p\frac{\text{d}}{\text{d}t}T_B(t) = L - \alpha A_B(T_B - T_G) - A_B\dot{q}_{r,B}
+\]
