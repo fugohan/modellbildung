@@ -1,4 +1,43 @@
 \newpage
 \noindent
 \textbf{Beispiel 3} \\ \\
-asdasdfsadfsdfsad
+a) \\ \\
+%\[q^T=\left[x_W \qu \alpha \qu \varphi \right]\]
+\noindent
+Begründung: Das System hat 3 Freiheitsgrade, daher fallen i und iv schon mal weg. In der Skizze ist zu sehen das \(x_W\) nicht konstant ist und daher lautet meine Antwort iii. \\ \\ b) \\ \\ \noindent
+Um die Lage des kombinierten Schwerpunktes zu bestimmen multipliziert man jeweils den Ort des Schwerpunktes mit der Masse des jeweiligen Schwerpunktes und dividiert diese mit der Gesamtmasse.
+\[l_{SP} = \frac{\frac{l_s}{2}m_s+l_s\,3\,m_s}{4\,m_s} = \frac{7\,l_s}{8}\]
+
+\noindent
+Mittels dem Satz vom Steiner lässt sich das neue Massenträgheitsmoment, wie folgt, bestimmen:
+\[\theta_{SP} = \theta_S+3 m_s \left(\frac{49}{64}l_s^2 \right)\] %TODO: Laut Lösung 3/16 und nicht 3*49/64
+c) \\\\
+\noindent
+Die potentielle Energie in diesem System besteht aus zwei Komponenten. Zunächst wäre da mal der Feder-Anteil der aus \(V_{c1}(q) = \frac{c}{2}(x_W - \alpha R)^2 \) besteht und die andere Komponente ist die potentielle Energie im Stab. Zusammen ergibt sich daraus die gesamte potentielle Energie: \[V(q) = m_{SP}\, g\, \cos{(\varphi)}\, l_{SP} + \frac{c}{2} (x_W - \alpha R)^2\]
+
+\noindent d) \\\\
+
+\noindent
+Die kinetische Energie des Systems besteht aus dem Translatorischen-Anteil und dem Rotatorischen-Anteil.
+
+\[T(q,\dot{q}) = \frac{m_W}{2} \dot{x}_w^2 + \theta_R \dot{alpha}^2 + \frac{m_{SP}}{2} \dot{r}_{SP}^T\dot{r}_{SP} + \frac{\theta_{SP}}{2}\dot{\varphi}^2 \]
+
+\[r_{SP} = \begin{bmatrix} x_W + \sin{(\varphi)}\ l_{SP}  \\ \cos{(\varphi)}\ l_{SP}\end{bmatrix},\quad  \dot{r}_{SP}=\begin{bmatrix}
+  \dot{x_W} + \dot{\varphi}\ \cos{(\varphi)}\ l_{SP}  \\ -\dot{\varphi}\ \sin{(\varphi)}\ l_{SP}
+\end{bmatrix}\]
+e) \\\\
+\noindent
+Um die Generalisierte Kräfte zu bestimmen muss man zunächst einmal die äußere Störkraft \(F_d\) bestimmen. Diese lautet \(F_d=-f_d \begin{bmatrix}
+  1 \\ 0
+\end{bmatrix}\) Außerdem braucht man die Ableitungen des Ortes der äußeren Störkraft nach den generalisierten Koordininaten:
+\[ \frac{\partial r_S}{\partial x_W} = \begin{bmatrix}
+  1 \\ 0
+\end{bmatrix}, \quad \frac{\partial r_S}{\partial \alpha }  = \begin{bmatrix}
+  0 \\ 0
+\end{bmatrix}, \quad \frac{\partial r_S}{\partial \varphi} = \begin{bmatrix}
+  \cos(\varphi)\ l_S \\ - \sin(\varphi)\ l_S
+\end{bmatrix}\]
+Mit der Formel aus der Formelsammlung folgt:
+\[f_q = \sum_{i=0}^N F_D \frac{\partial r_S}{\partial q_i} = \begin{bmatrix}
+  -f_d \\ \tau_m \\ -\cos(\varphi)\ f_d
+\end{bmatrix}\]
