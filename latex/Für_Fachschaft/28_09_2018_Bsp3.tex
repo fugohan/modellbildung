@@ -1,0 +1,137 @@
+\newpage
+\noindent
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+Dieses System besitzt genau einen Freiheitsgrad und der lautet
+\[
+	\textbf{q}^T = \begin{bmatrix}
+		\alpha
+	\end{bmatrix}
+\]
+b)\\ \\
+Der Abstand $s$ lautet
+\[
+	s = \sqrt{(R - r)^2 - \left(\frac{l}{2}\right)^2}
+\]
+und der Winkel $\gamma$ lautet
+\[
+	\gamma = \arcsin\left(\frac{l}{2(R - r)}\right)
+\]
+c)\\ \\
+Der Ortsvektoren zum Schwerpunkt lautet für die Grundplatte
+\[
+	\textbf{r}_G = \begin{bmatrix}
+		s\cos(\alpha) \\
+		s\sin(\alpha)
+	\end{bmatrix}
+\]
+für die Vorderrolle
+\[
+	\textbf{r}_{RV} = \begin{bmatrix}
+		(R - r)\cos(\alpha - \gamma) \\
+		(R - r)\sin(\alpha -  \gamma)
+	\end{bmatrix}
+\]
+und für die Hinterrolle
+\[
+	\textbf{r}_{RH} = \begin{bmatrix}
+		(R - r)\cos(\alpha + \gamma) \\
+		(R - r)\sin(\alpha + \gamma)
+	\end{bmatrix}
+\]
+d) \\ \\
+Die geforderten Werte lauten für die Grundplatte
+\begin{align*}
+	\textbf{v}_G &= \begin{bmatrix}
+		-s\sin(\alpha)\dot{\alpha} \\
+		s\cos(\alpha)\dot{\alpha}
+	\end{bmatrix}
+	\\
+	||\textbf{v}_G|| &= s\dot{\alpha} \\
+	\omega_G &= \dot{\alpha}
+\end{align*}
+für die Vorderrolle
+\begin{align*}
+	\textbf{v}_{RV} &= \begin{bmatrix}
+		-(R - r)\sin(\alpha - \gamma)\dot{\alpha} \\
+		(R - r)\cos(\alpha - \gamma)\dot{\alpha}	
+	\end{bmatrix}
+	\\
+	||\textbf{v}_{RV}|| &= (R - r)\dot{\alpha} \\
+	\omega_{RV} &= \frac{r - R}{r}\dot{\alpha}
+\end{align*}
+und für die Hinterrolle
+\begin{align*}
+	\textbf{v}_{RH} &= \begin{bmatrix}
+	-(R - r)\sin(\alpha + \gamma)\dot{\alpha} \\
+	(R - r)\cos(\alpha + \gamma)\dot{\alpha}	
+	\end{bmatrix}
+	\\
+	||\textbf{v}_{RH}|| &= (R - r)\dot{\alpha} \\
+	\omega_{RH} &= \frac{r - R}{r}\dot{\alpha}
+\end{align*}
+e)\\ \\
+Die kinetische Energie dieses Systems setzt sich aus der translatorischen und rotatorischen Teilenergie zusammen. Diese lauten
+\begin{align*}
+	T_t &= \frac{1}{2}||\textbf{v}_G||^2m_G + \frac{1}{2}||\textbf{v}_{RV}||^2m_R +\frac{1}{2}||\textbf{v}_{RH}||^2m_R \\
+	&= \frac{1}{2}m_gs^2\dot{\alpha}^2 + \frac{1}{2}m_R(R - r)^2\dot{\alpha}^2 + \frac{1}{2}m_R(R - r)^2\dot{\alpha}^2 \\ \\
+	T_r &= \frac{1}{2}\omega_G^2I_G + \frac{1}{2}\omega_{RV}I_R + \frac{1}{2}\omega_{RH}I_R
+\end{align*}
+Damit ergibt sich für die gesamte kinetische Energie des Systems
+\begin{align*}
+	T &= T_t + T_r \\
+	  &= \frac{1}{2}m_gs^2\dot{\alpha}^2 + \frac{1}{2}m_R(R - r)^2\dot{\alpha}^2 + \frac{1}{2}m_R(R - r)^2\dot{\alpha}^2 + \frac{1}{2}\omega_G^2I_G + \frac{1}{2}\omega_{RV}I_R + \frac{1}{2}\omega_{RH}I_R
+\end{align*}
+f)\\ \\
+Die potentiellen Teilenergien lauten
+\begin{align*}
+	V_G &= -m_Gg\sin(\alpha) \\
+	V_{RV} &= -m_Rg(R - r)\sin(\alpha -  \gamma) \\
+	V_{RH} &= -m_Rg(R - r)\sin(\alpha +  \gamma)
+\end{align*}
+Damit ergibt sich für die gesamte potentielle Energie des Systems
+\begin{align*}
+	V &= V_G + V_{RV} + V_{RH} \\
+	  &= -m_Gg\sin(\alpha) - m_Rg(R - r)\sin(\alpha -  \gamma) - m_Rg(R - r)\sin(\alpha +  \gamma)
+\end{align*}
+g)\\ \\
+Der Vektor der externen Kraft lautet
+\[
+	\textbf{F}_R = F_R\begin{bmatrix}
+		\sin(\alpha) \\
+		-\cos(\alpha)
+	\end{bmatrix}
+\]
+Der Ortsvektor zum Angriffspunkt dieser Kraft lautet wiederum
+\[
+	\textbf{r}_F = \begin{bmatrix}
+		s\cos(\alpha) \\
+		s\sin(\alpha)
+	\end{bmatrix}
+\]
+Damit lautet die generalisierte Kraft
+\[
+	\tau_{F_R} = \left(\frac{\partial \textbf{r}_F}{\partial \textbf{q}}\right)^T\textbf{F}_R = -sF_R
+\]
+h)\\ \\
+Um den Euler-Lagrange-Formalismus durchzuführen benötigt man erstmal die Lagrange-Funktion. Diese lautet
+\begin{align*}
+	L &= T - V \\
+	  &= \frac{1}{2}m_gs^2\dot{\alpha}^2 + \frac{1}{2}m_R(R - r)^2\dot{\alpha}^2 + \frac{1}{2}m_R(R - r)^2\dot{\alpha}^2 + \frac{1}{2}\omega_G^2I_G + \frac{1}{2}\omega_{RV}I_R + \frac{1}{2}\omega_{RH}I_R \\
+	  &+ m_Gg\sin(\alpha) + m_Rg(R - r)\sin(\alpha -  \gamma) + m_Rg(R - r)\sin(\alpha +  \gamma)
+\end{align*}
+Die notwendigen Ableitungen lauten
+\begin{align*}
+	\frac{\partial L}{\partial \alpha} &= m_Gg\cos(\alpha) + m_Rg(R - r)\cos(\alpha - \gamma) + m_Rg(R - r)\cos(\alpha + \gamma) \\
+	\frac{\partial L}{\partial \dot{\alpha}} &= m_Gs^2\dot{\alpha} + m_R(R - r)\dot{\alpha} + m_R(R - r)\dot{\alpha} + \dot{\alpha}I_G  + 2\left(\frac{r - R}{r}\right)^2\dot{\alpha}I_R \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\alpha}} &= \ddot{\alpha}\left(m_Gs^2 +  m_R(R - r) + m_R(R - r) + 2\left(\frac{r - R}{r}\right)^2I_R\right)
+\end{align*}
+Somit lautet die Euler-Lagrange-Gleichung
+\begin{align*}
+	\ddot{\alpha}&\left(m_Gs^2 +  m_R(R - r) + m_R(R - r) + 2\left(\frac{r - R}{r}\right)^2I_R\right) \\
+	&-m_Gg\cos(\alpha) - m_Rg(R - r)\cos(\alpha - \gamma) - m_Rg(R - r)\cos(\alpha + \gamma) = -sF_R
+\end{align*}
+Durch Umformen erhält man die Bewegungsgleichung
+\[
+	\ddot{\alpha} = \frac{g(m_Gs\cos(\alpha) + m_R(R - r)(\cos(\alpha - \gamma) + \cos(\alpha + \gamma)))}{2\left(\frac{1}{2}m_Gs^2 + m_R(R - r)^2 + \frac{1}{2}I_G + I_R\left(\frac{r - R}{r}\right)^2\right)}
+\]
