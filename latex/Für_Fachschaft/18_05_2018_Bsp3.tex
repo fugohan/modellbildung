@@ -1,0 +1,134 @@
+\newpage
+\noindent
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Die beiden gesuchten Ortsvektoren lauten
+\begin{align*}
+	\textbf{r}_{S_g} &= \begin{bmatrix}
+		a\sin(\varphi_g) \\
+		-a\cos(\varphi_g) \\
+		0					
+	\end{bmatrix}
+	\\ \\
+	\textbf{r}_{S_k} &= \begin{bmatrix}
+		l\sin(\varphi_g) + b\sin(\varphi_k) \\
+		-\cos(\varphi_g) - b\cos(\varphi_k) \\
+		0
+	\end{bmatrix}
+\end{align*}
+Die zugehörigen Geschwindigkeitsvektoren lauten
+\begin{align*}
+	\dot{\textbf{r}}_{S_g} &= \begin{bmatrix}
+		a\cos(\varphi_g)\omega_g \\
+		a\sin(\varphi_g)\omega_g \\
+		0
+	\end{bmatrix}
+	\\ \\
+	\dot{\textbf{r}}_{S_k} &= \begin{bmatrix}
+		l\omega_g\cos(\varphi_g) + b\omega_k\cos(\varphi_k) \\
+		l\omega_g\sin(\varphi_g) + b\omega_k\cos(\varphi_k) \\
+		0
+	\end{bmatrix}
+\end{align*}
+b)\\ \\
+Die benötigten Zwischenberechnung ergeben
+\begin{align*}
+	||\dot{\textbf{r}}_{S_g}||_2^2 &= a^2\omega^2_g \\
+	||\dot{\textbf{r}}_{S_k}||_2^2 &= (l\omega_g\cos(\varphi_g) + b\omega_k\cos(\varphi_k))^2 + (l\omega_g\sin(\varphi_g) + b\omega_k\cos(\varphi_k))^2 \\
+	&= l^2\omega^2_g + b^2\omega^2_k  + 2lb\omega_g\omega_k\cos(\varphi_g - \varphi_k)
+\end{align*}
+c)\\ \\
+Die beiden Komponenten der kinetischen Energie lautet
+\begin{align*}
+	T_{tran} &= \frac{m_g}{2}a^2\omega^2_g + \frac{m_k}{2}\left(2lb\omega_g\omega_k\cos(\varphi_g - \varphi_k)\right) \\
+	T_{rot} &= \frac{\varTheta_g}{2}\omega^2_g + \frac{\varTheta_k}{2}\omega^2_k
+\end{align*}
+Zusätzlich lautet noch die potentielle Energie
+\[
+	V = -g\left[m_ga\cos(\varphi_g) + m_k(l\cos(\varphi_g) + b\cos(\varphi_k))\right]
+\]
+\newpage
+\noindent
+c)\\ \\
+Um die Massenmatrix \textbf{M} zu bestimmen müssen Ableitung vorher durchgeführt werden die folgendes ergeben.
+\begin{align*}
+	\frac{\partial T}{\partial \omega_g} &= m_g a^2\omega_g + m_k\left(l^2\omega_g + bl\omega_k\cos(\varphi_g - \varphi_k)\right) + \varTheta_g\omega_g \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial T}{\partial \omega_g} &= m_ga^2\dot{\omega}_g + m_kl^2\dot{\omega}_g + m_kbl\dot{\omega}_k\cos(\varphi_g - \varphi_k) - m_klb\sin(\varphi_g - \varphi_k)(\omega_g - \omega_k) + \varTheta_g\dot{\omega}_g \\ \\
+	\frac{\partial T}{\partial \omega_k} &= m_k\left(b^2\omega_k + 2lb\omega_g\cos(\varphi_g - \varphi_k)\right) + \varTheta_k\omega_k \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial T}{\partial \omega_k} &= m_k\left(b^2\dot{\omega}_k + lb\dot{\omega}_g\cos(\varphi_g - \varphi_k) - bl\omega_g\sin(\varphi_g - \varphi_k)(\omega_g - \omega_k)\right) + \varTheta_k\dot{\omega}_k
+\end{align*}
+Durch Koeffizientenvergleich mit 
+\[
+	\textbf{M}\ddot{\textbf{q}} 
+\]
+erhalten man für die Massenmatrix
+\[
+	\textbf{M} = \begin{bmatrix}
+		m_ga^2 + m_kl^2 + \varTheta_g & m_klb\cos(\varphi_g - \varphi_k) \\
+		m_klb\cos(\varphi_g - \varphi_k) & m_kb^2 + \varTheta_k
+	\end{bmatrix}
+\]
+Der Vektor für die externe Kraft lautet
+\[
+	\textbf{F}_c = F-c\begin{bmatrix}
+		\cos(\varphi_k) \\
+		\sin(\varphi)_k
+	\end{bmatrix}
+\]
+Der Ortsvektor zum Angriffspunkt dieser Kraft lautet wiederum
+\[
+	\textbf{r}_{f_c} = \begin{bmatrix}
+		l\sin(\varphi_g) + \left(l_d + \frac{l_m}{2}\right)\sin(\varphi_k) \\
+		l\cos(\varphi_g) + \left(l_d + \frac{l_m}{2}\right)\cos(\varphi_k)
+	\end{bmatrix}
+\]
+Die notwendigen Ableitungen lauten
+\[
+	\frac{\partial \textbf{r}_{f_c}}{\partial \varphi_g} = \begin{bmatrix}
+			l\cos(\varphi_g) \\
+			l\sin(\varphi_g)
+		\end{bmatrix}
+		\quad,\quad
+		\frac{\partial \textbf{r}_{f_c}}{\partial \varphi_k} = \begin{bmatrix}
+			\left(l_d + \frac{l_m}{2}\right)\cos(\varphi_k) \\
+			\left(l_d + \frac{l_m}{2}\right)\sin(\varphi_k)
+			\end{bmatrix}
+\]
+Mit der Rechenvorschrift für die generalisierten Kräfte aus der Formelsammlung ergibt sich nun für den gesuchten Vektor
+\[
+	\tau = \begin{bmatrix}
+		M_g + F_cl\cos(\varphi_g - \varphi_k) \\
+		F_c\left(l_d + \frac{l_m}{2}\right)
+	\end{bmatrix}
+\]
+d)\\ \\
+Aus der gegebenen Bewegungsgleichung und der Tatsache, dass $\varphi_g = \varphi_k$ und $\omega_g = \omega_k$ die Bedingung
+\[
+	\frac{m_ga + m_kl}{m_{11} + m_{12}} = \frac{m_kb}{m_{21} + m_{22}}
+\]
+\newpage
+\noindent
+e)\\ \\
+Durch Anwendung der Formel \textit{Schwerpunkt eines zusammengesetzten Körpers} aus der Formelsammlung folgt für den gesuchten Abstand
+\[
+	b = \frac{l_k^2r_i^2 + l_m(r_a^2 - r_i^2)(2l_d + l_m)}{2\left(r_i^2l_k + (r_a^2 - r_i^2)l_m\right)}
+\]
+f)\\ \\
+Mithilfe des Satzes von Steiner ergibt sich für das gesuchte Massenträgheitsmoment
+\[
+	\varTheta_{m,zz}^{(S_k)} = \varTheta_{m,zz}^(S_m) + m_m\left(l_d + \frac{l_m}{2} - b\right)^2 
+\]
+mit der Masse
+\[
+	m_m = \rho_k\pi l_m(r_a^2 - r_i^2)
+\]
+g)\\ \\
+Das gesuchte Massenträgheitsmoment lautet
+\begin{align*}
+	\int_{\mathcal{V}}\rho_k(x^2 + y^2)\,\text{d}x\text{d}y\text{d}z &= \int_{\mathcal{V}}\rho_k(r^3\cos^2(\varphi) + ry^2)\,\text{d}r\text{d}\varphi\text{d}y = 
+	\int_{b - l_k}^{b}\int_{0}^{2\pi}\int_{0}^{r_i}\rho_k(r^3\cos^2(\varphi) + ry^2)\,\text{d}r\text{d}\varphi\text{d}y \\
+	&= 	\int_{b - l_k}^{b}\int_{0}^{2\pi}\rho_k\left(\frac{1}{4}r_i^4\cos^2(\varphi) + \frac{1}{2}r_i^2y^2\right)\,\text{d}\varphi\text{d}y = 	\int_{b - l_k}^{b}\rho_k\left(\frac{1}{4}r_i^4\pi + \frac{1}{2}r_i^2 2\pi y\right)\, \text{d}y \\
+	&= \rho_kr_i^2\pi l_k\left(\frac{1}{4}r_i + \frac{1}{3}(3b^2 - 3bl_k + l_k^2)\right) \\ \\
+	\varTheta_{m,zz}^{(S_k)} &= \frac{1}{3}m_s(3b^2 - 3l_kb + l_k^2) + \frac{1}{4}m_sr_i^2
+\end{align*}
+mit $m_s = \rho_kr_i^2\pi l_k$ \\ \\

@@ -1,0 +1,172 @@
+\textbf{Beispiel 4}\\ \\
+a)\\ \\
+Die Sichtfaktormatrix muss folgende Form haben
+\[
+	\textbf{F} = \begin{bmatrix}
+		F_{w,w} & F_{w,th} \\
+		F_{th,w} & F_{th,th}
+	\end{bmatrix}
+\]
+Mit den Faktoren
+\begin{align*}
+	F_{w,w} = 1 \qquad F_{w,th} = 0 \\
+	F_{th,w} = 1  \qquad F_{th,th} = 0
+\end{align*}
+b)\\ \\
+Durch Einsetzen folgt aus
+\[
+	\dot{\textbf{q}} = (\textbf{E} - \textbf{F})(\textbf{E} - (\textbf{E} - \text{diag}\{\varepsilon\})\textbf{F})^{-1}\text{diag}\{\varepsilon\}\sigma\textbf{T}^4
+\]
+folgende Nettowärmestromdichte
+\begin{align*}
+	\begin{bmatrix}
+		\dot{q}_{w,s} \\
+		\dot{q}_{th,s}
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		0 & 0 \\
+		-1 & 1
+	\end{bmatrix}
+	 \left(
+	 	\begin{bmatrix}
+	 		1 & 0 \\
+	 		0 & 1
+	 	\end{bmatrix}
+	 	-
+	 	\begin{bmatrix}
+	 		1 - \varepsilon_w & 0 \\
+	 		0 & 1 - \varepsilon_{th}
+	 	\end{bmatrix}
+	 	\cdot
+	 	\begin{bmatrix}
+	 		1 & 0 \\
+	 		1 & 0
+	 	\end{bmatrix}
+	 \right)^{-1}
+	 \begin{bmatrix}
+	 	\varepsilon_w & 0 \\
+	 	0 & \varepsilon_{th}
+	 \end{bmatrix}
+	 \sigma\begin{bmatrix}
+	 	T_w^4 \\
+	 	T_{th}^4
+	 \end{bmatrix}
+\end{align*}
+\newpage
+\noindent
+\begin{align*}
+	\begin{bmatrix}
+	\dot{q}_{w,s} \\
+	\dot{q}_{th,s}
+	\end{bmatrix}
+	&=
+	\begin{bmatrix}
+	0 & 0 \\
+	-1 & 1
+	\end{bmatrix}
+	\left(
+		\begin{bmatrix}
+			1 & 0 \\
+			0 & 1
+		\end{bmatrix}
+		-
+		\begin{bmatrix}
+			1 - \varepsilon_w & 0 \\
+			1 - \varepsilon_{th} & 0
+		\end{bmatrix}
+	\right)^{-1}
+	\begin{bmatrix}
+	\varepsilon_w & 0 \\
+	0 & \varepsilon_{th}
+	\end{bmatrix}
+	\sigma\begin{bmatrix}
+	T_w^4 \\
+	T_{th}^4
+	\end{bmatrix}
+	\\ \\
+	\begin{bmatrix}
+	\dot{q}_{w,s} \\
+	\dot{q}_{th,s}
+	\end{bmatrix}
+	&=
+		\begin{bmatrix}
+	0 & 0 \\
+	-1 & 1
+	\end{bmatrix}
+	\begin{bmatrix}
+		\varepsilon_w & 0 \\
+		\varepsilon_{th} - 1 & 0 
+	\end{bmatrix}^{-1}
+	\begin{bmatrix}
+	\varepsilon_w & 0 \\
+	0 & \varepsilon_{th}
+	\end{bmatrix}
+	\sigma\begin{bmatrix}
+	T_w^4 \\
+	T_{th}^4
+	\end{bmatrix}
+	\\ \\
+		\begin{bmatrix}
+	\dot{q}_{w,s} \\
+	\dot{q}_{th,s}
+	\end{bmatrix}
+	&=
+	\begin{bmatrix}
+	0 & 0 \\
+	-1 & 1
+	\end{bmatrix}
+	\frac{1}{\varepsilon_w}
+	\begin{bmatrix}
+		1 & 0 \\
+		1 - \varepsilon_{th} & \varepsilon_w
+	\end{bmatrix}
+	\begin{bmatrix}
+		\sigma\varepsilon_wT_w^4 \\
+		\sigma\varepsilon_{th}T_{th}^4
+	\end{bmatrix} 
+	\\ \\
+		\begin{bmatrix}
+	\dot{q}_{w,s} \\
+	\dot{q}_{th,s}
+	\end{bmatrix}
+	&=
+	\begin{bmatrix}
+	0 & 0 \\
+	-1 & 1
+	\end{bmatrix}
+	\begin{bmatrix}
+		\sigma T_w^4 \\
+		(1 - \varepsilon_{th})\sigma T_{th}^4 + \sigma \varepsilon_{th}T_{th}^4
+	\end{bmatrix}
+	\\ \\
+		\begin{bmatrix}
+	\dot{q}_{w,s} \\
+	\dot{q}_{th,s}
+	\end{bmatrix}
+	&=
+	\begin{bmatrix}
+		0 \\
+		\varepsilon_{th}\sigma(T_{th}^4 - T_w^4)
+	\end{bmatrix}
+\end{align*}
+c)\\ \\
+Aufgrund der Konvektion folgt 
+\[
+	\dot{q}_{th,k} = \alpha_{th}(T_{th} - T_{Luft})
+\]
+d)\\ \\
+Es muss natürlich 
+\[
+	\dot{q}_{th,k} + \dot{q}_{th,s} = 0
+\]
+woraus man auf
+\[
+	\alpha_{th}(T_{th} - T_{Luft}) + \varepsilon_{th}\sigma(T_{th}^4 - T_w^4) = 0
+\]
+Durch Umformen erhält man schließlich
+\[
+	T_{luft} = T_{th} + \frac{\varepsilon_{th}\sigma}{\alpha_{th}}(T_{th}^4 - T_w^4)
+\]
+e)\\ \\
+Um einen geringeren Störeinfluss zu gewährleisten, muss entweder die Emmissivität des Thermometers $\varepsilon_{th}$ verringert oder der Wärmeübergangskoeffizient $\alpha_{th}$ erhöht werden. Ersteres kann durch die Wahl eines geeigneten Materials für die Thermometeroberfläche erreicht werden. Um den Wärmeübergangskoeffizient zu erhöhen muss die Umströmung des Thermometers verändert werden. Man könnte versuchen, in der Umgebung des Thermometers turbulente Strömungsverhältnisse zu erzeugen, da im turbulenten Bereich der Wärmeübergangskoeffizient höher ist als im laminaren.

@@ -1,0 +1,31 @@
+\textbf{Beispiel 2}\\ \\
+a)\\ \\
+Mithilfe des Satz von Steiner lautet das gesuchte Massenträgheitsmoment
+\[
+	I_d = I_s + ml_s^2
+\]
+b)\\ \\
+In der Ruhelage lautet die gesuchte Länge
+\[
+	l_f = \sqrt{l_1^2 + l_{f,0}^2}
+\]
+Durch die Drehung um den Winkel $\varphi$ ergibt sich
+\[
+	l_f(\varphi) = \sqrt{l_1^2(1 - \cos(\varphi)^2) + (l_{f0} + l_1\sin(\varphi))^2}
+\]
+\newpage
+\noindent
+Somit folgt für den Winkel $\alpha_f(\varphi)$
+\[
+	\alpha_f(\varphi) = \arctan\left(\frac{l_1(1 - \cos(\varphi))}{l_{f0} + l_1\sin(\varphi)}\right)
+\]
+c)\\ \\
+Der Drehimpulserhaltungssatz für die Wippe lautet hier
+\begin{align*}
+	I_d\ddot{\varphi} = - mgl_s\cos(\varphi) - k(l_f - l_{f0})(\sin(\alpha_f)\sin(\varphi) + \cos(\alpha_f)\cos(\varphi)) - d\dot{\varphi}l_2^2\cos^2(\varphi)
+\end{align*}
+d)\\ \\
+Die gesamte im System gespeicherte Energie entspricht
+\[
+	E_{ges} = mgl_s\sin(\varphi) + \frac{1}{2}I_d\dot{\varphi}^2 + \frac{1}{2}k(l_f - l_{f0})^2
+\]

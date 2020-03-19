@@ -1,0 +1,48 @@
+\newpage
+\noindent
+\textbf{Beispiel 3}\\ \\
+a) \\ \\
+Der erste Sichtfaktor der leicht bestimmt werden kann, ist jener von Boden zu Boden. Dieser lautet
+\[
+	F_{BB} = 0
+\]
+da der Boden ja nicht auf sich selbst strahlt. Die restlichen drei Sichtfaktoren müssen mit der Summationsregel und dem Reziprozitätsgesetz bestimmt werden. Für diese gilt schließlich
+\begin{align*}
+	F_{BK} &= 1 - F_{BB} = 0 \\
+	F_{KB} &= \frac{A_B}{A_K} \\
+	F_{KK} &= 1 - F_{KB} = 1 - \frac{A_B}{A_K}
+\end{align*}
+Damit lautet die Sichtfaktormatrix
+\[
+	\textbf{F} = \begin{bmatrix}
+		0 & 1 \\
+		\frac{A_B}{A_K} & 1 - \frac{A_B}{A_K}
+	\end{bmatrix}
+\]
+b) \\ \\
+Durch Anwenden der Formel für die Nettowärmestromdichte und dem gegebenen Emissionskoeffizienten lautet die gesuchte Wärmestromdichte
+\[
+	\dot{q}_{B,s} = \varepsilon_B\sigma\left(T^4(t,d) - T_K^4\right)
+\]
+c) \\ \\
+Die gesuchte Gesamtwärmestromdichte setzt sich aus der obigen Wärmestromdichte und derer durch Konvektion hervorgerufenen Wärmestromdichte zusammen und lautet
+\[
+	\dot{q}_B = \dot{q}_{B,s} + \alpha(T(d,t) - T_R)
+\]
+d) \\ \\
+Die Differentialgleichung lautet für dieses Problem
+\[
+	\frac{\partial T(t,z)}{\partial t} = a\frac{\partial^2T(z,t)}{\partial z^2}
+\]
+Mit den Anfangs- und Randbedingungen
+\begin{align*}
+	T(0,z) &= T_0 \\
+	\frac{\partial T(t,z)}{\partial z}\Biggl|_{t,z = d} = -\frac{\dot{q}_B(t)}{\lambda}
+\end{align*}
+Abhängig vom Heizungstyp ergeben sich die Bedingungen
+\begin{align*}
+	\frac{\partial T(t,z)}{\partial z}\Biggl|_{t,z = 0} = \frac{1}{\lambda}\frac{4P_{el}}{D^2\pi} \qquad \text{für elektrische Heizung} \\
+	T(t,0) = T_W \qquad \text{für Warmwasserheizung}
+\end{align*}
+e)\\ \\
+Durch die schlechtere Wärmleitfähigkeit würde sich auch der Wärmewiderstand des Fußboden vergrößern. Bei der elektrischen Heizung bleibt der Wärmestrom gleich, wird erst bei einem höheren Temperaturniveau in den Raum abgegeben. Bei der Warmwasserheizung wird der Wärmestrom sinken, die Heizschicht die konstante Temperatur $T_W$ hat.\\ \\

@@ -1,0 +1,69 @@
+\textbf{Beispiel 4}\\ \\
+a)\\ \\
+Die Wärmestromdichten lauten im stationären Betrieb
+\[
+	\dot{q}_s = \frac{P}{A_s} \quad;\quad \dot{q}_i = \frac{P}{A_i} \quad;\quad \dot{q}_a = \frac{P}{A_a}
+\]
+b)\\ \\
+Aufgrund der angenommener Konvektion(Form aus der Formelsammlung) ergibt sich für die Außentemperatur
+\[
+	T_a = T_\infty + \frac{\dot{q}_a}{\alpha} = T_\infty + \frac{P}{A_a\alpha}
+\]
+c)\\ \\
+Die Form der allgemeinen Wärmeleitgleichung für Zylinderkoordinaten ist in der Formelsammlung ersichtlich. Dadurch das die stationäre Wärmeleitgleichung benötigt vereinfacht sich die allgemeine Form zu
+\[
+	0 = \frac{\partial}{\partial r}\left(r^2\frac{\partial T(r)}{\partial r}\right)
+\]
+Mit den Randbedingungen
+\[
+	T(r_i) = T_i \quad,\quad T(r_a) = T_a
+\]
+d) \\ \\
+Durch Lösen dieser Differentialgleichung erhält man die beiden Ansätze
+\[
+	\frac{\partial T(r)}{\partial r} = \frac{c_1}{r^2} \quad;\quad T(r) = -\frac{c_1}{r} + c_2
+\]
+Durch Einsetzen der Randbedingungen folgt die beiden Konstanten 
+\[
+	c_1 = \frac{T_i - T_a}{\frac{1}{r_a} - \frac{1}{r_i}} \quad;\quad c_2 = T_i + \frac{T_i - T_a}{\frac{1}{r_a} - \frac{1}{r_i}}\frac{1}{r_i}
+\]
+Somit lautet schließlich die gesuchte Temperatur
+\[
+	T_R = T_i + \frac{T_i - T_a}{\frac{1}{r_a} - \frac{1}{r_i}}\left(\frac{1}{r_i} - \frac{1}{r}\right)
+\]
+e)\\ \\
+Die Bedingung am Innenrand lautet
+\[
+	\frac{\partial T(r)}{\partial r}\Biggl|_{r = r_i} = \frac{T_i - T_a}{\frac{1}{r_a} - \frac{1}{r_i}}\frac{1}{r_i^2} = -\frac{\dot{q}_i}{\lambda} = -\frac{P}{A_i\lambda}
+\]
+Formt man dieses um erhält man schließlich
+\[
+	T_i = T_a - \frac{Pr_i^2\left(\frac{1}{r_a} - \frac{1}{r_i}\right)}{A_i\lambda}
+\]
+f) \\ \\
+Sämtliche Sichtfaktoren wurden durch die Summationsregel und dem Reziprozitätsgesetz bestimmt. Der einfachste Sichtfaktor zu bestimmen ist jener von Strahler auf Strahler, den dieser ist gleich 0 da der Strahler nicht auf sich selbst strahlt. Mit diesem Sichtfaktor und den genannten Regeln ergibt sich für die Sichtfaktormatrix
+\[
+	\textbf{F} = \begin{bmatrix}
+		0 & 1 \\
+		\frac{A_s}{A_i} & 1 - \frac{A_s}{A_i}
+	\end{bmatrix}
+\]
+g)\\ \\
+Durch Anwendung der Form der Nettowärmestromdichte aus der Formelsammlung ergibt sich diese
+\[
+	\begin{bmatrix}
+		\dot{q}_s \\
+		\dot{q}_i
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		\sigma(T_s^4 - T_i^4) \\
+		\sigma\frac{A_s}{A_i}(-T_s^4 + T_i^4)
+	\end{bmatrix}
+\]
+Für schwarze Strahler gilt $\varepsilon = 1$. \\ \\
+h) \\ \\ 
+Formt die erste Zeile der Nettowärmestromdichte auf die Strahlertemperatur um folgt für diese
+\[
+	T_s = \sqrt[4]{T_i^4 + \frac{\dot{q}_s}{\sigma}} = \sqrt[4]{T_i^4 + \frac{P}{A_s}\sigma}
+\]
