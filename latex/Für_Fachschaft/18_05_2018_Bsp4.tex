@@ -1,0 +1,74 @@
+\newpage
+\noindent
+\textbf{Beispiel 4}\\ \\
+a)\\ \\
+Die drei Sichtfaktoren, die die Strahlung auf sich selbst beschreiben lauten
+\[
+	F_{s1s1} = F_{s2s2} = F_{aa} = 0 
+\]
+da diese nicht auf sich selbst strahlen.
+Die restlichen Sichtfaktoren wurden mit der Cross-String-Methode, der Summationsregel und dem Reziprozitätsgesetz bestimmt.
+\begin{align*} 
+	F_{s1a} &= \frac{3b - 2b}{2b} = \frac{1}{2} \\
+	F_{s1s2} &= 1 - F_{s1a} - F_{s1s1} = \frac{1}{2} \\
+	F_{s2s1} &= \frac{A_{s1}}{A_{s2}}F_{s1s2} = \frac{1}{4} \\
+	F_{s2a} &= 1 - F_{s2s1} - F_{s2s2} = \frac{3}{4} \\
+	F_{as2} &= \frac{A_{s2}}{A_a}F_{s2a} = \frac{3}{4} \\
+	F_{as1} &= 1 - F_{as2} - F_{aa} = \frac{1}{4}
+\end{align*}
+Damit ergibt sich für die Sichtfaktormatrix
+\[
+	\textbf{F} = \begin{bmatrix}
+		0 & \frac{1}{2} & \frac{1}{2} \\
+		\frac{1}{4} & 0 & \frac{3}{4}\\
+		\frac{1}{4} & \frac{3}{4} & 0
+	\end{bmatrix}
+\]
+b)\\ \\
+Durch Anwendung der Formel für die Nettowärmestromdichte und durch Umformen erhält man
+\[
+	\begin{bmatrix}
+		\dot{q}_{s1} \\
+		\dot{q}_{s2} \\
+		\dot{q}_{a,0}
+	\end{bmatrix}
+	= \frac{\sigma}{16}
+	\begin{bmatrix}
+		14 + 2\varepsilon_a & -14 + 6\varepsilon_a & -8\varepsilon_a \\
+		-7 + 3\varepsilon_a & 7 + 9\varepsilon_a & -12\varepsilon_a \\
+		-4\varepsilon_a & -12\varepsilon_a & 16\varepsilon_a
+	\end{bmatrix}
+	\begin{bmatrix}
+		T_{s1}^4 \\
+		T_{s2}^4 \\
+		T_a^4
+	\end{bmatrix}
+\]
+c)\\ \\
+Hier muss die Wärmeleitgleichung für kartesische Koordinaten angewendet werden. Da Temperatur nur räumlich von y abhängig ist lautet nun die Wärmeleitgleichung
+\[
+	c_a\rho_a\frac{\partial T_a}{\partial t} = - \lambda_a\frac{\partial^2T_a}{\partial y^2}
+\]
+mit den Randbedingungen
+\begin{align*}
+	T(-d,t) &= T_\infty \\
+	\dot{q}_a(0,t) &= -\lambda_a\frac{\partial T_a}{\partial y} = \dot{q}_{a,0}
+\end{align*}
+\newpage
+\noindent
+d)\\ \\
+Die allgemeine stationäre Lösung der Wärmeleitgleichung lautet
+\begin{align*}
+  - \lambda_a\frac{\partial^2T_a}{\partial y^2} &= 0\\
+	 -\lambda_a \frac{\partial T_a}{\partial y} &= C_1 \\
+	 -\lambda_a T_a &= C_1y + C_2
+\end{align*}
+Durch Einsetzen der Randbedingungen ergibt sich für die Konstanten
+\begin{align*}
+	C_1 &= \dot{q}_{a,0} \\
+	C_2 &= \lambda T_\infty - \dot{q}_{a,0}d
+\end{align*}
+Dadurch lautet nun das Temperaturprofil
+\[
+	T = -\frac{\dot{q_{a,0}}}{\lambda_a}(y + d) + T_\infty
+\]
