@@ -1,0 +1,56 @@
+\newpage
+\noindent
+\textbf{Beispiel 4}\\ \\
+a)\\ \\
+Sämtliche Sichtfaktoren wurden mithilfe der Summationsregel und dem Reziproitätsgesetz ermittelt. Da der Zug einen konvexen Körper darstellt, lautet der entsprechende Sichtfaktor auch
+\[
+	F_{z,z} = 0
+\]
+Die restlichen Sichtfaktoren lauten somit
+\begin{align*}
+	F_{z,t} &= 1 - F_{z,z} = 1 \\
+	F_{t,z} &= \frac{A_z}{A_t}F_{z,t} = \frac{1}{2} \\
+	F_{t,t} &= 1 - F_{t,z} = 
+\end{align*}
+Damit lautet die Sichtfaktormatrix
+\[
+	\textbf{F} = \begin{bmatrix}
+		\frac{1}{2} & \frac{1}{2} \\
+		1 & 0
+	\end{bmatrix}
+\]
+b) \\ \\
+Durch Auswerten des Formalismus für die Nettowärmestromdichte ergibt sich für die beiden Nettowärmestromdichten
+\[
+	\dot{q} = \begin{bmatrix}
+		\dot{q}_t \\
+		\dot{q}_z
+	\end{bmatrix}
+	=
+	\frac{\varepsilon\sigma}{\varepsilon - 3}\begin{bmatrix}
+		-(T_w^4 - T_z^4) \\
+		2(T_w^4 - T_z^4)
+	\end{bmatrix}
+\]
+c) \\ \\ 
+Um die gesuchte Differentialgleichung aufzustellen benötigt man die Wärmeleitgleichung für die Zylinderkoordinaten.
+Die Differentialgleichung lautet daher
+\[
+	\rho_tc_t\frac{\partial T}{\partial t} = \lambda_t\left(\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial T}{\partial r}\right)\right)
+\]
+mit den Randbedingungen
+\begin{align*}
+	\lambda_t\frac{\partial T(r,t)}{\partial r}\Bigl|_{r = r_o} = -\dot{q}_t \\
+	\lambda_t\frac{\partial T(r,t)}{\partial r}\Bigl|_{r = r_N} = 0
+\end{align*}
+d)\\ \\
+Die diskretisierten Randbedingungen können mit Tabelle \textit{Differenzenquotienten für gleichförmige Schrittweiten} aus Formelsammlung bestimmt werden. Dieses lauten daher
+\begin{align}
+	\dot{q}_t(T_0) &= \lambda\frac{T_1 - T_{-1}}{2\Delta r}
+	0 &= \lambda_t\frac{T_{N+1} - T_{N-1}}{2\Delta r}
+\end{align}
+Das gleiche gilt auch für die Differentialgleichung. Daher lautet die diskretisierte Differentialgleichung
+\[
+	\rho_tc_t\dot{T}_i = \lambda_t\frac{1}{r_i}\left(\frac{T_{i+1} - T_{i-1}}{2\Delta r}\right) + \lambda_t\left(\frac{T_{i+1} - 2T_i + T_{i-1}}{\Delta r^2}\right) \qquad i\in\{0,...,N-1\}
+\]
+\textit{Hinweis: Beim Vereinfachen der Differentialgleichung, die Kettenregel nicht vergessen}

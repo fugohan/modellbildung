@@ -1,0 +1,121 @@
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+Grundsätzlich gilt für den Riemen hier
+\[
+	l_1 + l_2 = l
+\]
+Durch Einzeichnen zweier rechtwinkeligen Dreiecke in die Angabe gilt für die Länge 1 
+\[
+	l_1 = \sqrt{(x_R + a)^2 + y_R^2}
+\]
+und die Länge 2
+\[
+	l_2 = \sqrt{(x_R - a)^2 + y_R^2}
+\]
+Durch Einsetzen in die obige Bedingungen folgt
+\[
+	\sqrt{(x_R + a)^2 + y_R^2} + \sqrt{(x_R - a)^2 + y_R^2} - l = 0
+\]
+Durch Auflösen nach $y_R$ erhält man schließlich
+\[
+	y_R = \pm \frac{\sqrt{l^2 - 4a^2}}{2l}\sqrt{l^2 - 4x_R^2}
+\]
+b)\\ \\
+Die gesuchten Größen lauten für die Rolle
+\[
+	\textbf{p}_R = \begin{bmatrix}
+		x_R \\
+		-\kappa\sqrt{l^2 - 4x_R^2}
+	\end{bmatrix}
+	\quad,\quad
+	\dot{\textbf{p}}_R = \begin{bmatrix}
+		\dot{x}_R \\
+		\kappa\frac{4x_R\dot{x}_R}{\sqrt{l^2 - 4x_R^2}}
+	\end{bmatrix}
+\]
+und für die Last
+\[
+	\textbf{r}_L = \begin{bmatrix}
+		x_R + r\sin(\varphi) \\
+		-\kappa\sqrt{l^2 - 4x_R^2} - r\cos(\varphi)
+	\end{bmatrix}
+	\quad,\quad
+	\dot{\textbf{p}}_R = \begin{bmatrix}
+	\dot{x}_R + r\cos(\varphi)\dot{\varphi}\\
+	\kappa\frac{4x_R\dot{x}_R}{\sqrt{l^2 - 4x_R^2}} + r\sin(\varphi)\dot{\varphi}
+	\end{bmatrix}
+\]
+c)\\ \\
+Mit den Geschwindigkeiten aus Punkt b) folgt für die kinetische Energie des Systems
+\begin{align*}
+	T(\dot{q},\dot{\textbf{q}}) = &+\frac{1}{2}\theta_L\dot{\varphi}^2 + \frac{1}{2}m_R\left(\dot{x}_R^2 + \kappa^2\frac{16x^2_R\dot{x}^2_R}{l^2 - 4x_R}\right) \\
+	&+ \frac{1}{2}m_L\left(\dot{x}_R^2 + 2\dot{x}_R^2r\cos(\varphi)\dot{\varphi} + r^2\dot{\varphi}^2 + \kappa^2\frac{16x^2_R\dot{x}^2_R}{l^2 - 4x_R} + 2\kappa r\frac{4x_R\dot{x}_R}{\sqrt{l^2 - 4x_R^2}}\sin(\varphi)\dot{\varphi}\right)
+\end{align*}
+d)\\ \\
+Die gesamte potentielle Energie des Systems beläuft sich auf
+\[
+	V(\textbf{q},\dot{\textbf{q}}) = -(m_R + m_L)g\kappa\sqrt{l^2 - 4x_R^2} - m_Lgr\cos(\varphi)
+\]
+Hierzu wurden die y-Koordinaten der Ortsvektoren aus Punkt b) verwendet.
+\newpage
+\noindent
+e)\\ \\
+Der Vektor der externen Kraft lautet
+\[
+	\textbf{f}_{ext} = \begin{bmatrix}
+		F_{ext} \\
+		0
+	\end{bmatrix}
+\]
+Der Vektor zum Angriffspunkt dieser Kraft wiederum lautet
+\[
+	\textbf{r}_{f_{ext}} = \begin{bmatrix}
+		x_R + r\sin(\varphi) \\
+		-\kappa\sqrt{l^2 - 4x_R^2} - r\cos(\varphi)
+	\end{bmatrix}
+\]
+Die notwendigen Ableitungen lauten
+\[
+	\frac{\partial 	\textbf{r}_{f_{ext}}}{\partial x_R} = \begin{bmatrix}
+		1 \\
+		\kappa\frac{4x_R}{\sqrt{l^2 - 4x_R^2}}
+	\end{bmatrix}
+	\quad,\quad
+		\frac{\partial 	\textbf{r}_{f_{ext}}}{\partial \varphi} = \begin{bmatrix}
+		r\cos(\varphi) \\
+		r\sin(\varphi)
+	\end{bmatrix}
+\]
+Mit der Rechenvorschrift aus der Formelsammlung ergibt sich nun für den Vektor der generalisierten Kraft
+\[
+	\textbf{f}_q = F_{ext}\begin{bmatrix}
+		1 \\
+		r\cos(\varphi)
+	\end{bmatrix}
+\]
+f)\\ \\
+Durch den Ansatz des Euler-Lagrange-Formalismus und den Bedingungen aus der Angabe die erfüllt sein müssen, muss hier nur eine Ableitung getätigt werden aus der man die Lösung direkt ableiten kann. Dieses lautet 
+\[
+	\frac{\partial L}{\partial \varphi} = m_Lgr\sin(\varphi)
+\]
+Mit $L = T - V$ und sämtlich anderen Terme der Ableitung inklusive dieser fallen aufgrund der geforderten Bedingungen weg. Somit lautet die stationären Punkte des Systems
+\[
+	\textbf{q}_{R,1}^T = \begin{bmatrix}
+		0 & 0
+	\end{bmatrix}
+	\quad,\quad
+	\textbf{q}_{R,2}^T = \begin{bmatrix}
+	0 & \pi
+	\end{bmatrix}
+\]
+g)\\ \\
+Eine andere Option für die generalisierten Koordinaten wäre
+\[
+	\textbf{q}^T = \begin{bmatrix}
+		\psi & \varphi
+	\end{bmatrix}
+\]
+Mit
+\[
+	\psi = \arctan\left(\frac{y_R}{x_R}\right)
+\]

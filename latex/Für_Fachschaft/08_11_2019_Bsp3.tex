@@ -1,0 +1,34 @@
+\textbf{Beispiel 3}\\ \\
+a) \\ \\
+Die Energiebilanz für das in der Angabe markierte Kontrollvolumen lautet
+\[
+	0 = \dot{q}_sA_k - 2\alpha_k(T_k - T_\infty)A_k + P - \dot{m}_fc_{p,f}(T_k - T_w)
+\]
+Der linke Term beschreibt die im Volumen erzeugte Energie und der rechte Term beschreibt die zu- und abgeführte Energie.
+b) \\ \\
+Wird kein Warmwasser verbraucht lautet nun die Energiebilanz
+\[
+	0 = \dot{q}_sA_k - 2\alpha_k(T_k - T_\infty)A_k + P - kA(T_w - T_\infty)
+\]
+mit 
+\[
+	k = \frac{1}{\frac{1}{\alpha_i} + \frac{s}{\lambda} + \frac{1}{\alpha_a}} \quad,\quad kA(T_w - T_\infty) = \dot{m}_fc_{p,f}(T_k - T_w)
+\]
+Setzt man die dritte Gleichung von Punkt b) in die erste von b) ein und formt entsprechend um erhält man für die maximale Wassertemperatur
+\[
+	T_{w,max} = T_\infty + \frac{\dot{q}_sA_k + P}{2\alpha_kA_k\left(1 + \frac{kA}{\dot{m}_fc_{p,f}}\right) + kA}
+\]
+c)
+Die Differentialgleichung kann auch aus der Energiebilanz bestimmt werden und lautet somit
+\[
+	m_wc_{p,w}\frac{\text{d}}{\text{d}t}T_w(t) = -kA(T_w(t) - T_\infty) - \dot{m}c_{p,w}(T_w(t) - T\infty)
+\]
+mit der Anfangsbedingung
+\[
+	T_w(0) = T_0
+\]
+e) \\ \\
+Durch Lösen der Gleichung aus c) mit dem Anfangswert erhält man für die Lösung
+\[
+	T_w(t) = (T_0 - T_\infty)e^{-\frac{kA + \dot{m}c_{p,w}}{m_wc_{p,w}}t} + T_\infty
+\]

@@ -1,0 +1,97 @@
+\textbf{Beispiel 4}\\ \\
+a) \\ \\
+Die Sichtfaktoren lauten
+\begin{align*}
+	F_{QQ} &= 0 \\
+	F_{QS} &= 1 - F_{QQ} = 1 \\
+	F_{SQ} &= \frac{A_Q}{A_S}F_{QS} = \frac{2\pi R}{8a} \\
+	F_{SS} &= 1 - F_{SQ} = 1 - \frac{2\pi R}{8a}
+\end{align*}
+b) \\ \\
+Mit 
+\[
+	a = \frac{\pi R}{2}
+\]
+lautet die Sichtfaktormatrix
+\[
+	\textbf{F} = \begin{bmatrix}
+		\frac{1}{2} & \frac{1}{2} \\
+		1 & 0
+	\end{bmatrix}
+\]
+Rechenweg für die gesuchte Nettowärmestromdichte
+\begin{align*}
+	\dot{\textbf{q}} &= (\textbf{E} - \textbf{F})(\textbf{E} - (\textbf{E} - \text{diag}\{\varepsilon\})\textbf{F})^{-1}\text{diag}\{\varepsilon\}\sigma\textbf{T}^4 \\
+	\begin{bmatrix}
+		\dot{q}_S \\
+		\dot{q}_Q
+	\end{bmatrix}&=\begin{bmatrix}
+		\frac{1}{2} & - \frac{1}{2} \\
+		-1 & 1
+	\end{bmatrix}
+	\begin{bmatrix}
+		\frac{1 + \varepsilon_S}{2} & \frac{-1 + \varepsilon_S}{2} \\
+		-1 + \varepsilon_Q	&	1
+	\end{bmatrix}^{-1}
+	\begin{bmatrix}
+		\varepsilon_S	&	0\\
+		0	&	\varepsilon_Q		
+	\end{bmatrix}
+	\sigma
+	\begin{bmatrix}
+		T_S^4 \\
+		T_Q^4
+	\end{bmatrix}
+	\\
+	&= \frac{1}{\varepsilon_S\varepsilon_Q - 2\varepsilon_S - \varepsilon_Q}
+	\begin{bmatrix}
+		-\varepsilon_Q & \frac{\varepsilon_S}{2} \\
+		2\varepsilon_Q & -2\varepsilon_S
+	\end{bmatrix}
+	\begin{bmatrix}
+	\varepsilon_S	&	0\\
+	0	&	\varepsilon_Q		
+	\end{bmatrix}
+	\sigma
+	\begin{bmatrix}
+	T_S^4 \\
+	T_Q^4
+	\end{bmatrix}
+	\\
+	&= \frac{1}{\varepsilon_S\varepsilon_Q - 2\varepsilon_S - \varepsilon_Q}
+	\begin{bmatrix}
+	-\varepsilon_Q & \frac{\varepsilon_S}{2} \\
+	2\varepsilon_Q & -2\varepsilon_S
+	\end{bmatrix}
+	\begin{bmatrix}
+		\sigma\varepsilon_ST_S^4 \\
+		\sigma\varepsilon_QT_Q^4
+	\end{bmatrix}
+	\\
+	& \Rightarrow \dot{q}_Q = \frac{2\varepsilon_S\varepsilon_Q\sigma(T_S^4 - T_Q^4)}{\varepsilon_S\varepsilon_Q - 2\varepsilon_S - \varepsilon_Q}
+\end{align*}
+Mit $\varepsilon_S = \varepsilon_Q = 1$ lautet die gewünschte Nettowärmestromdichte
+\[
+	\dot{q}_Q = \sigma(T_Q^4 - T_S^4)
+\]
+\newpage
+\noindent
+c) \\ \\
+Die allgemeine Form der Wärmeleitunggleichung die verwendet werden soll, ist die für die Zylinderkoordinaten. Die Wärmeleitgleichung lautet daher
+\[
+	\rho c_p\frac{\partial T_Q(r,t)}{\partial t} = \lambda \left(\frac{1}{r}\frac{\partial}{\partial r}(rT_Q(r,t))\right) + g
+\]
+mit den Randbedingungen
+\begin{align*}
+	\frac{\partial T_Q(r,t)}{\partial}\Biggl|_{r = 0} &= 0 \\
+	T_Q(r,t)\biggl|_{r = R} &= T_Q(R,t1)
+\end{align*}
+d) \\ \\
+Um das stationäre Temperaturprofil zu bestimmen, muss man die zeitliche Ableitung in der partiellen Differentialgleichung 0 setzen.
+\[
+	\lambda \left(\frac{1}{r}\frac{\partial}{\partial r}(rT_Q(r,t))\right) + g = 0
+\]
+Durch Lösen dieser Gleichung und Einsetzen der Randbedingung ergibt sich für das stationäre Temperaturprofil der Quelle
+\[
+	T(r,\infty) = T_Q(R,\infty) + \frac{g}{4\lambda}\left(R^2 - r^2\right)
+\]

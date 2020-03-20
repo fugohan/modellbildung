@@ -1,0 +1,57 @@
+\textbf{Beispiel 4}\\ \\
+a)\\ \\
+Die beiden Wärmeleitgleichungen lauten
+\begin{align*}
+	\rho_Ec_{p,E}T_{E,t}(t,x) &= \lambda_ET_{E,xx}(t,x) \\
+	\rho_Ec_{p,W}T_{W,t}(t,x) &= \lambda_WT_{W,xx}(t,x)
+\end{align*}
+mit der Randbedingung
+\[
+	T_E(t,d(t)) = T_W(t,d(t))
+\]
+b)\\ \\
+Die beiden gesuchten Randbedingungen lauten
+\begin{align*}
+	T_E(t,0) &= T_0 \\
+	T_{W,x}(t,D) &= 0
+\end{align*}
+c)\\ \\
+Die Energiebilanz lautet für dieses Problem
+\[
+	h\rho_E\dot{d}(t) = \lambda_ET_{E,x}(t,d(t)) - \lambda_WT_{W,x}(t,d(t))
+\]
+\newpage
+\noindent
+d) \\ \\
+Die stationäre Verhalten der Gleichungen lauten
+\begin{align*}
+	\text{Eis} &: \left\{
+	\begin{array}{lll}
+		0 &= T_{E,xx}(x,t) \\
+		T_E(0,t) &= T_0 \\
+		T_E(d,t) &= T_s
+	\end{array}
+	\right.
+	\\
+	\text{Wasser} &: \left\{
+		\begin{array}{lll}
+			0 &= T_{W,xx}(x,t) \\
+			T_W(d,t) &= T_s \\
+			T_{W,x}(D,t) &= 0
+		\end{array}
+		\right.
+\end{align*}
+Durch Lösen der Gleichungen aus a) und Einsetzen dieser Verhalten lauten die Lösungen der Gleichungen
+\begin{align*}
+	T_E(x,t) &= T_0 + (T_s - T_0)\frac{x}{d(t)} \\
+	T_W(x,t) &= T_s
+\end{align*}
+e) \\ \\
+Durch Einsetzen der Ergebnisse von d) in die Energiebilanz von c) erhält man die Differentialgleichung
+\[
+	h\rho_E\dot{d}(t) = \lambda\frac{T_s - T_0}{d(t)}
+\]
+Durch Lösen dieser Gleichung beim gegebenen Randwert erhält man
+\[
+	d(t) = \sqrt{\frac{2\lambda_E(T_s - T_0)}{h\rho_E}t}
+\]

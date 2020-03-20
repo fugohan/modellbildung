@@ -1,0 +1,54 @@
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+Die beiden Ortsvektoren können direkt aus der Zeichnung in der Angabe abgelesen werden und lauten somit
+\begin{align*}
+	\textbf{r}_M &= \begin{bmatrix}
+		0 \\
+		l\sin(\phi)
+	\end{bmatrix}
+	\\
+	\textbf{r}_m &= \begin{bmatrix}
+		-(L + l)\cos(\phi) + r\sin(\psi) \\
+		-L\sin(\phi) - r\cos(\psi)
+	\end{bmatrix}
+\end{align*}
+b)\\ \\
+Die Geschwindigkeitsvektoren lauten hier
+\begin{align*}
+	\textbf{v}_M &= \begin{bmatrix}
+		0 \\
+		l\cos(\phi)\dot{\phi}
+	\end{bmatrix}
+	\\
+	\textbf{v}_m &= \begin{bmatrix}
+		(L + l)\sin(\psi)\dot{\psi} + r\cos(\psi)\dot{\psi} \\
+		-L\cos(\phi)\dot{\phi} + r\sin(\psi)\dot{\psi}
+	\end{bmatrix}
+\end{align*}
+Die für den nächsten Punkten benötigten Betragsquadrate lauten
+\begin{align*}
+	||\textbf{v}_M||_2^2 &= l^2\cos^2(\phi)\dot{\phi}^2 \\
+	||\textbf{v}_m||_2^2 &= ((L + l)\sin(\psi)\dot{\psi} + r\cos(\psi)\dot{\psi})^2 + (-L\cos(\phi)\dot{\phi} + r\sin(\psi)\dot{\psi})^2
+\end{align*}
+c) \\ \\
+Die kinetische Energie des Systems lautet
+\[
+	T = \frac{M}{2}l^2\cos^2(\phi)\dot{\phi}^2 + \frac{m}{2}\left(((L + l)\sin(\psi)\dot{\psi} + r\cos(\psi)\dot{\psi})^2 + (-L\cos(\phi)\dot{\phi} + r\sin(\psi)\dot{\psi})^2\right) + \frac{\theta_{zz}}{2}\dot{\psi}^2
+\]
+d)\\ \\
+Die potentielle Energie des Systems lautet
+\[
+	V = Mgl\sin(\phi) - mg(L\sin(\phi) + r\cos(\psi)) + V_0
+\]
+Um die Ruhelage zu bestimmen muss man hier nur die potentielle Energie partiell nach beiden generalisierten Koordinaten ableiten und anschließend 0 setzen. Damit ergeben sich die Ruhelagen
+\begin{align*}
+	\frac{\partial V}{\partial \phi} &= \cos(\phi)(Mgl - mgl) \\
+	\phi_R &= \arccos(0) = \left(\frac{1}{2} + j\right)\pi, \quad j\in\mathbb{N} \\
+	\frac{\partial V}{\partial \psi} &= -gr\sin(\psi) \\
+	\psi_R &= \arcsin(0) = k\pi, \quad k\in\mathbb{N}
+\end{align*}
+e)\\ \\
+Die gesuchte Form der Wurfparabel lautet
+\[
+	\textbf{r}_m(t) = -\underbrace{\textbf{e}_yg}_{\textbf{a}}\frac{(t - t^*)^2}{2} + \underbrace{\textbf{v}_m(t^*)}_{\textbf{b}}(t - t^*) + \underbrace{\textbf{r}_m(t^*)}_{\textbf{c}}
+\]

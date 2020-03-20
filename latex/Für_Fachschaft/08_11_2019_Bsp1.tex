@@ -1,0 +1,85 @@
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+Die Massen der beiden Starrkörper lauten
+\begin{align*}
+	m_1 &= \rho bhl_1 \\
+	m_2 &= \rho bhl_2
+\end{align*}
+Die Lagen der einzelnen Schwerpunkte lauten
+\begin{align*}
+	l_{1,S} &= \frac{l_1}{2} \\
+	l_{2,S} &= \frac{l_2}{2}
+\end{align*}
+b)\\ \\
+Die Ortsvektoren zu diesen Schwerpunkten lauten
+\begin{align*}
+	\textbf{r}_{S,1} &= \begin{bmatrix}
+		x - \frac{\sqrt{l_1^2 - y^2}}{2} \\
+		\frac{y}{2}
+	\end{bmatrix}
+	\\
+	\textbf{r}_{S,2} &= \begin{bmatrix}
+	x + \frac{\sqrt{l_1^2 - y^2}}{2} \\
+	\frac{y}{2}
+	\end{bmatrix}
+\end{align*}
+Die dazugehörigen Geschwindigkeiten lauten
+\begin{align*}
+	\dot{\textbf{r}}_{S,1} &= \begin{bmatrix}
+		\dot{x} + \frac{y\dot{y}}{2\sqrt{l_1^2 - y^2}} \\
+		\frac{\dot{y}}{2}
+	\end{bmatrix}
+	\\
+	\dot{\textbf{r}}_{S,2} &= \begin{bmatrix}
+		\dot{x} - \frac{y\dot{y}}{2\sqrt{l_1^2 - y^2}} \\
+		\frac{\dot{y}}{2}
+	\end{bmatrix}
+\end{align*}
+c) \\ \\
+Die kinetische Energie des Systems lautet
+\[
+	T(\dot{q},\dot{\textbf{q}}) = \frac{1}{2}m_1\dot{\textbf{r}}_{S,1}\dot{r}_{S,1} + \frac{1}{2}m_2\dot{\textbf{r}}_{S,2}\dot{r}_{S,2} +\frac{1}{2}\theta_{1,zz}^{(S)}\dot{\alpha}_1^2 + \frac{1}{2}\theta_{2,zz}^{(S)}\dot{\alpha}_2^2
+\]
+mit den Winkel
+\begin{align*}
+	\alpha_1 &= \arcsin\left(\frac{y}{l_1}\right) \\
+	\alpha_2 &= \arcsin\left(\frac{y}{l_2}\right)
+\end{align*}
+und dessen Ableitungen
+\begin{align*}
+	\dot{\alpha}_1 &= \frac{\dot{y}}{\sqrt{l_1^2 - y^2}} \\
+	\dot{\alpha}_2 &= \frac{\dot{y}}{\sqrt{l_2^2 - y^2}}
+\end{align*}
+d)\\ \\
+Die potentielle Energie lautet hier
+\[
+	V(\textbf{q}) = m_1g\frac{y}{2} + m_sg\frac{y}{2} + \frac{1}{2}c_1s_1^2 + \frac{1}{2}c_2s_2^2
+\]
+mit den Längen
+\begin{align*}
+	s_1 &= x - \sqrt{l_1^2 - y^2} \\
+	s_2 &= L - x - \sqrt{l_1^2 - y^2}
+\end{align*}
+e) \\ \\ 
+Da man nun den stationären Fall betrachten soll gilt
+\[
+	\frac{\partial V}{\partial \dot{q}} = \tau
+\]
+Die ausgewertete potentielle Energie lautet
+\[
+	V(\textbf{q}) = m_1g\frac{y}{2} + m_sg\frac{y}{2} + \frac{1}{2}c_1\left(x - \sqrt{l_1^2 - y^2}\right)^2 + \frac{1}{2}c_2\left(L - x - \sqrt{l_1^2 - y^2}\right)^2
+\]
+\newpage
+\noindent
+Die Ableitungen lauten
+\begin{align*}	
+	\frac{\partial V(\textbf{q})}{\partial x} &= c_1\left(x - \sqrt{l_1^2 - y^2}\right) - c_2\left(L - x - \sqrt{l_2^2 - y^2}\right) \\
+	\frac{\partial V(\textbf{q})}{\partial y} &= \frac{1}{2}m_1g + \frac{1}{2}m_2g - c_1\left(x - \sqrt{l_1^2 - y^2}\right)\frac{y}{\sqrt{l_1^2 - y^2}} \\
+	& + c_2\left(L - x - \sqrt{l_1^2 - y^2}\right)\frac{y}{\sqrt{l_2^2 - y^2}} 
+\end{align*}
+Damit ergeben sich für die Postion $x$ und die Kraft $F_y$
+\begin{align*}
+	x &= \frac{c_1\sqrt{l_1^2 - y^2} + c_2(L - \sqrt{l_2^2 - y^2})}{c_1 + c_2} \\
+	F_y &= \frac{1}{2}m_1g + \frac{1}{2}m_2g - c_1\left(x - \sqrt{l_1^2 - y^2}\right)\frac{y}{\sqrt{l_1^2 - y^2}} \\
+		& + c_2\left(L - x - \sqrt{l_1^2 - y^2}\right)\frac{y}{\sqrt{l_2^2 - y^2}} 
+\end{align*}
