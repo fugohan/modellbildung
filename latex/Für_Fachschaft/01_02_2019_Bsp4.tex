@@ -1,0 +1,29 @@
+\textbf{Beispiel 4}\\ \\
+a)\\ \\
+Die notwendigen partiellen Ableitungen lauten
+\begin{align*}
+	\frac{\partial T}{\partial r} &= -2C\frac{r}{R^2}\left(1 - \frac{z^2}{H^2}\right) \\
+	\frac{\partial T}{\partial z} &= -2C\left(1 - \frac{r^2}{R^2}\right)\frac{z}{H^2}
+\end{align*}
+Mit dem Wärmeleitgesetz lautet die gesuchte Wärmestromdichte
+\[
+	\dot{q}(r,z) = 2\lambda C\left(\frac{r}{R^2}\left(1 - \frac{z^2}{H^2}\right)\textbf{e}_r + \frac{z}{H^2}\left(1 - \frac{r^2}{R^2}\right)\textbf{e}_z\right)
+\]
+b)\\ \\
+Die Rechenvorschrift für die Wärmestromquellendichte $g$ lautet
+\begin{align*}
+	&\nabla\left(\lambda\nabla T(r,z)\right) + g(r,z) = 0 \\
+	&g(r,z) = -\nabla\left(\lambda\nabla T(r,z)\right)
+\end{align*}
+Dadurch lautet dieser
+\[
+	g(r,z) = 2\lambda C\left(\frac{2}{R^2}\left(1 - \frac{z^2}{H^2}\right) + \frac{1}{H^2}\left(1 - \frac{r^2}{R^2}\right)\right)
+\]
+c)\\ \\
+$\int_{\Omega}g(r,z) \text{d}V$ beschreibt die gesamte Wärmeproduktion in $\Omega$ und $\int_{\partial \Omega}\dot{\textbf{q}}(r,z)\cdot\textbf{n}(r,\varphi,z)\text{d}A$ beschreibt den gesamten Wärmestrom der über den Rand $\partial \Omega$ nach außen gelangt. \\ \\
+d)\\ \\
+Das gegebene Integral ergibt
+\begin{align*}
+	\int_{\partial \Omega}\dot{\textbf{q}}(r,z)\cdot\textbf{n}(r,\varphi,z)\text{d}A &= \int_{-H}^{H}\int_{0}^{2\pi}2\lambda C\left(\frac{R}{R^2}\left(1 - \frac{z^2}{H^2}\right)\right)\text{d}\varphi\text{d}z + \int_{0}^{2\pi}\int_{-R}^{R}2\lambda C\left(\frac{H}{H^2}\left(1 - \frac{r^2}{R^2}\right)\right)\text{d}r\text{d}\varphi \\
+	&= \pi\lambda CH\left(\frac{16}{3} + \frac{2R^2}{H^2}\right)
+\end{align*}

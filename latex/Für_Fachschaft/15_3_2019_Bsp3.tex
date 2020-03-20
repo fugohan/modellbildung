@@ -10,34 +10,39 @@ Um die Lage des kombinierten Schwerpunktes zu bestimmen multipliziert man jeweil
 
 \noindent
 Mittels dem Satz vom Steiner lässt sich das neue Massenträgheitsmoment, wie folgt, bestimmen:
-\[\theta_{SP} = \theta_S+3 m_s \left(\frac{49}{64}l_s^2 \right)\] %TODO: Laut Lösung 3/16 und nicht 3*49/64
+\begin{align*}
+	\varTheta_{SP} &= \varTheta_S + m_s\left(x^2_{sp,s} + y^2_{sp,s}\right) + m_p\left(x^2_{sp,p} + y^2_{sp,p}\right) \\
+	&= \varTheta_{SP} + m_s\frac{9}{64},_sl_s^2 + 3m_s\frac{1}{64}l_s^2 \\
+	&= \varTheta_{SP} + \frac{3}{16}m_sl_s^2
+\end{align*}
+In den Klammer sind die Koordinaten der Verschiebungsvektoren, der einzelnen Schwerpunkt zum neuen Schwerpunkt einsetzen. \\ \\
 c) \\\\
 \noindent
-Die potentielle Energie in diesem System besteht aus zwei Komponenten. Zunächst wäre da mal der Feder-Anteil der aus \(V_{c1}(q) = \frac{c}{2}(x_W - \alpha R)^2 \) besteht und die andere Komponente ist die potentielle Energie im Stab. Zusammen ergibt sich daraus die gesamte potentielle Energie: \[V(q) = m_{SP}\, g\, \cos{(\varphi)}\, l_{SP} + \frac{c}{2} (x_W - \alpha R)^2\]
+Die potentielle Energie in diesem System besteht aus zwei Komponenten. Zunächst wäre da mal der Feder-Anteil der aus \(V_{c1}(q) = \frac{c}{2}(x_W - \alpha R)^2 \) besteht und die andere Komponente ist die potentielle Energie im Stab. Zusammen ergibt sich daraus die gesamte potentielle Energie: \[V(q) = m_{SP} g \cos{(\varphi)} l_{SP} + \frac{c}{2} (x_W - \alpha R)^2\]
 
 \noindent d) \\\\
 
 \noindent
 Die kinetische Energie des Systems besteht aus dem Translatorischen-Anteil und dem Rotatorischen-Anteil.
 
-\[T(q,\dot{q}) = \frac{m_W}{2} \dot{x}_w^2 + \theta_R \dot{alpha}^2 + \frac{m_{SP}}{2} \dot{r}_{SP}^T\dot{r}_{SP} + \frac{\theta_{SP}}{2}\dot{\varphi}^2 \]
+\[T(q,\dot{q}) = \frac{m_W}{2} \dot{x}_w^2 + \theta_R \dot{\alpha}^2 + \frac{m_{SP}}{2} \dot{\textbf{r}}_{SP}^T\dot{\textbf{r}}_{SP} + \frac{\theta_{SP}}{2}\dot{\varphi}^2 \]
 
-\[r_{SP} = \begin{bmatrix} x_W + \sin{(\varphi)}\ l_{SP}  \\ \cos{(\varphi)}\ l_{SP}\end{bmatrix},\quad  \dot{r}_{SP}=\begin{bmatrix}
+\[\textbf{r}_{SP} = \begin{bmatrix} x_W + \sin{(\varphi)}\ l_{SP}  \\ \cos{(\varphi)}\ l_{SP}\end{bmatrix},\quad  \dot{\textbf{r}}_{SP}=\begin{bmatrix}
   \dot{x_W} + \dot{\varphi}\ \cos{(\varphi)}\ l_{SP}  \\ -\dot{\varphi}\ \sin{(\varphi)}\ l_{SP}
 \end{bmatrix}\]
 e) \\\\
 \noindent
-Um die Generalisierte Kräfte zu bestimmen muss man zunächst einmal die äußere Störkraft \(F_d\) bestimmen. Diese lautet \(F_d=-f_d \begin{bmatrix}
+Um die Generalisierte Kräfte zu bestimmen muss man zunächst einmal die äußere Störkraft \(\textbf{F}_d\) bestimmen. Diese lautet \(\textbf{F}_d=-f_d \begin{bmatrix}
   1 \\ 0
 \end{bmatrix}\) Außerdem braucht man die Ableitungen des Ortes der äußeren Störkraft nach den generalisierten Koordininaten:
-\[ \frac{\partial r_S}{\partial x_W} = \begin{bmatrix}
+\[ \frac{\partial \textbf{r}_S}{\partial x_W} = \begin{bmatrix}
   1 \\ 0
-\end{bmatrix}, \quad \frac{\partial r_S}{\partial \alpha }  = \begin{bmatrix}
+\end{bmatrix}, \quad \frac{\partial \textbf{r}_S}{\partial \alpha }  = \begin{bmatrix}
   0 \\ 0
-\end{bmatrix}, \quad \frac{\partial r_S}{\partial \varphi} = \begin{bmatrix}
+\end{bmatrix}, \quad \frac{\partial \textbf{r}_S}{\partial \varphi} = \begin{bmatrix}
   \cos(\varphi)\ l_S \\ - \sin(\varphi)\ l_S
 \end{bmatrix}\]
 Mit der Formel aus der Formelsammlung folgt:
-\[f_q = \sum_{i=0}^N F_D \frac{\partial r_S}{\partial q_i} = \begin{bmatrix}
+\[\textbf{f}_q = \sum_{i=0}^N \textbf{F}_D \left(\frac{\partial \textbf{r}_S}{\partial q_i}\right)^T = \begin{bmatrix}
   -f_d \\ \tau_m \\ -\cos(\varphi)\ f_d
 \end{bmatrix}\]

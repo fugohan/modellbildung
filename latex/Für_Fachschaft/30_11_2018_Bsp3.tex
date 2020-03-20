@@ -1,0 +1,98 @@
+\newpage
+\noindent
+\textbf{Beispiel 3}\\ \\
+a)\\ \\
+Das gewünschte Massenträgheitsmoment lautet
+\begin{align*}
+	\theta_h &= \int_{-\frac{d_H}{2}}^{\frac{d_H}{2}}\int_{-\frac{\varphi_H}{2}}^{\frac{\varphi_H}{2}}\int_{r_i}^{r_a}\rho r^3\,\text{d}r\text{d}\varphi\text{d}z \\
+	&= \int_{-\frac{d_H}{2}}^{\frac{d_H}{2}}\int_{-\frac{\varphi_H}{2}}^{\frac{\varphi_H}{2}}\frac{1}{4}\rho(r_a^4 - r_i^4)\,\text{d}\varphi\text{d}z \\
+	&=  \int_{-\frac{d_H}{2}}^{\frac{d_H}{2}}\frac{1}{4}\rho(r_a^4 - r_i^4\varphi_H\,\text{d}z \\
+	&=\frac{1}{4}\rho(r_a^4 - r_i^4\varphi_Hd_H
+\end{align*}
+b) \\ \\
+Durch die Rechenvorschrift zur Ermittelung eines Schwerpunktes aus dem Skript folgt für den gesuchten Abstand
+\[
+	r_p = \frac{2}{3}\frac{r_a^3 - r_i^3}{r_a^2 - r_i^2}\frac{\sin\left(\frac{\varphi_H}{2}\right)}{\frac{\varphi_H}{2}}
+\]
+c)\\ \\
+Die gesuchten Ortsvektoren lauten
+\[
+	\textbf{r}_c = \begin{bmatrix}
+		x_C \\
+		0 \\
+		0
+	\end{bmatrix}
+	\quad,\quad
+	\textbf{r}_p = \begin{bmatrix}
+		l_x + r_p\sin(\alpha) \\
+		l_y - r_p\cos(\alpha) \\
+		0
+	\end{bmatrix}
+\]
+Die entsprechenden Geschwindigkeitsvektoren lauten
+\[
+	\dot{\textbf{r}}_c = \begin{bmatrix}
+		\dot{x}_c \\
+		0 \\
+		0		
+	\end{bmatrix}
+	\quad,\quad
+	\dot{\textbf{r}}_p = \begin{bmatrix}
+		r_p\cos(\alpha)\dot{\alpha} \\
+		r_p\sin(\alpha)\dot{\alpha} \\
+		0
+	\end{bmatrix}
+\]
+d) \\ \\
+Die kinetische Energie des Systems lautet hier
+\[
+	T_{kin} = \frac{1}{2}m_c\dot{x}^2_c \frac{1}{2}\theta_p\dot{\alpha}^2
+\]
+\newpage
+\noindent
+e)\\ \\
+Bei der potentiellen Energie berücksichtigt man die des Hammer und die der Federn. Diese lauten
+\begin{align*}
+	V_h &= m_pgr_p(1 - \cos(\alpha)) \\
+	V_1 &= \frac{1}{2}c_{f,1}\left(x_c - \frac{l_L}{3} - l_{0,1}\right)^2 \\
+	V_2 &= \frac{1}{2}c_{f,2}\left(\sqrt{(\textbf{p}_p - \textbf{p}_c)^T(\textbf{p}_p - \textbf{p}_c)} - l_{0,2}\right)^2 \\
+	&= \frac{1}{2}c_{f,2}\left(\sqrt{(l_x - x_c)^2 + l_y^2 + r_p^2 + 2r_p((l_x - x_c)\sin(\alpha) - l_y\cos(\alpha))}\right)
+\end{align*}
+f)\\ \\
+Der Vektor der externen Kraft
+\[
+	\textbf{F} = F\begin{bmatrix}
+		\cos(\delta) \\
+		\sin(\delta) \\
+		0
+	\end{bmatrix}
+\]
+Der Ortsvektor zum Angriffspunkt lautet
+\[
+	\textbf{r}_f = \begin{bmatrix}
+		l_x + r_i\sin\left(\alpha + \frac{\varphi_H}{2}\right) \\
+		l_y - r_i\cos\left(\alpha + \frac{\varphi_H}{2}\right) \\
+		0		
+	\end{bmatrix}
+\]
+Die notwendigen Ableitungen lauten
+\[
+	\frac{\partial \textbf{r}_f}{\partial x_c} = \begin{bmatrix}
+		0 \\
+		0 \\
+		0
+	\end{bmatrix}
+	\quad,\quad
+		\frac{\partial \textbf{r}_f}{\partial \alpha} = \begin{bmatrix}
+	r_i\cos\left(\alpha + \frac{\varphi_H}{2}\right) \\
+	r_i\sin\left(\alpha + \frac{\varphi_H}{2}\right)\\
+	0
+	\end{bmatrix}
+\]
+Somit ergibt sich mit der Rechenvorschrift aus der Formelsammlung für die generalisierten Kräfte
+\[
+	\tau = \begin{bmatrix}
+		0 \\
+		-F\cos(\delta)r_i\cos\left(\alpha + \frac{\varphi_H}{2}\right) - F\sin(\delta)r_i\sin\left(\alpha + \frac{\varphi_H}{2}\right)
+	\end{bmatrix}
+\]

@@ -1,0 +1,100 @@
+\newpage
+\noindent
+\textbf{Beispiel 2}\\ \\
+a)\\ \\
+Der gesuchte Ortsvektor lautet
+\[
+	\textbf{r}(\textbf{q}) = \begin{bmatrix}
+		\sin(\alpha) \\
+		\cos(\alpha)
+	\end{bmatrix}
+	(l + s)
+\]
+b)\\ \\
+Bevor die kinetische Energie bestimmt werden kann, wird noch der Geschwindigkeitsvektor benötigt und des Betragsquadrat benötigt. Diese lauten
+\begin{align*}
+	\dot{\textbf{r}} &= \begin{bmatrix}
+		\sin(\alpha) \\
+		-\cos(\alpha)
+	\end{bmatrix}
+	\dot{s} + \begin{bmatrix}
+		\cos(\alpha) \\
+		\sin(\alpha)
+	\end{bmatrix}
+	(l + s)\dot{\alpha}
+	\\
+	||\dot{\textbf{r}}||^2_2 &= \dot{s}^2 + (l + s)^2\dot{\alpha}^2
+\end{align*}
+Somit lautet die kinetische Energie
+\begin{align*}
+	T = \frac{m}{2}\left(\dot{s}^2 + (l + s)^2\dot{\alpha}^2\right) + \frac{\theta}{2}\underbrace{\left(\dot{\alpha}^2 + 2\dot{\alpha}\dot{\beta} + \dot{\beta}^2\right)}_{(\dot{\alpha} + \dot{\beta})^2}
+\end{align*}
+c)\\ \\
+Die potentielle Energie des Systems lautet 
+\[
+	V = -mg(l + s)\cos(\alpha) + \frac{1}{2}cs^2
+\]
+d)\\ \\
+Der Vektor lautet für die Dämpferkraft
+\[
+	\textbf{f}_d = -d\dot{s}\begin{bmatrix}
+		\sin(\alpha) \\
+		-\cos(\alpha)
+	\end{bmatrix}
+\]
+und die externe Kraft
+\[
+	\textbf{f}_t = f_t\begin{bmatrix}
+		\cos(\alpha) \\
+		\sin(\alpha)
+	\end{bmatrix}
+\]
+Der Angriffspunkt dieser beiden Kräfte ist der Vektor aus Punkt a). Sämtlich notwendigen Ableitung werden in der Manipulator-Jacobimatrix zusammengefasst. Diese lautet
+\[
+	\frac{\partial \textbf{r}}{\partial \textbf{q}} = \begin{bmatrix}
+		\sin(\alpha) & (l + s)\cos(\alpha) & 0 \\
+		-\cos(\alpha) & (l + s)\sin(\alpha) & 0
+	\end{bmatrix}	
+\]
+Dadurch folgt für die verallgemeinerten Kräfte der Vektor
+\[
+	\textbf{f}_q = \begin{bmatrix}
+	1
+	\end{bmatrix}
+\]
+\newpage
+\noindent
+e)\\ \\
+Als erstes wird die Lagrange-Funktion benötigt. Dieses lautet für dieses System
+\begin{align*}
+	L &= T - V \\
+	  &= \frac{m}{2}\left(\dot{s}^2 + (l + s)^2\dot{\alpha}^2\right) + \frac{\theta}{2}\left(\dot{\alpha}^2 + 2\dot{\alpha}\dot{\beta} + \dot{\beta}^2\right) + mg(l + s)\cos(\alpha) - \frac{1}{2}cs^2
+\end{align*}
+Die notwendigen Ableitungen lauten
+\begin{align*}
+	\frac{\partial L}{\partial s} &= m(l + s)\dot{\alpha}^2 + mg\cos(\alpha) -cs \\
+	\frac{\partial L}{\partial \dot{s}} &= m\dot{s} \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{s}} &= m\ddot{s} 
+	\\ \\
+	\frac{\partial L}{\partial \alpha} &= -mg(l + s)\sin(\alpha) \\
+	\frac{\partial L}{\partial \dot{\alpha}} &= m(l + s)^2\dot{\alpha} + \theta(\dot{\alpha} + \dot{\beta}) \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\alpha}} &= 2m(l + s)\dot{s}\dot{\alpha} + m(l + s)^2\ddot{\alpha} + \theta(\ddot{\alpha} + \ddot{\beta})
+	\\ \\
+	\frac{\partial L}{\partial \beta} &= 0 \\
+	\frac{\partial L}{\partial \dot{\beta}} &= \theta(\dot{\alpha} + \dot{\beta}) \\
+	\frac{\text{d}}{\text{d}t}\frac{\partial L}{\partial \dot{\beta}} &= \theta(\ddot{\alpha} + \ddot{\beta})
+\end{align*}
+Somit lauten die Bewegungsgleichungen
+\[
+	\begin{bmatrix}
+		m\ddot{s} - m(l + s)\dot{\alpha}^2 - mg\cos(\alpha)	+ cs \\
+		2m(l + s)\dot{s}\dot{\alpha} + m(l + s)^2\ddot{\alpha} + \theta\ddot{\alpha} + \theta\ddot{\beta} + mg(l + s)\sin(\alpha) \\
+		\theta\ddot{\alpha} + \theta\ddot{\beta}
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		-d\dot{s} \\
+		(l + s)f_t \\
+		0
+	\end{bmatrix}
+\]

@@ -1,0 +1,40 @@
+\textbf{Beispiel 1}\\ \\
+a)\\ \\
+Die Energieerhaltung für die Flüssigkeit lautet
+\[
+	\rho V(h)c_p\dot{T} = -A(h)\dot{q}(T,T_\infty)
+\]
+b)\\ \\
+Beweis:
+\begin{align*}
+	\rho V(h)c_p\dot{T} &= -A(h)\dot{q}(T,T_\infty) \\
+	\dot{T} &= -\frac{A(h)}{V(h)}\frac{1}{\rho c_p}\dot{q}(T,T_\infty) = -\text{const}\frac{1}{\rho c_p}\dot{q}(T,T_\infty)
+\end{align*}
+c)\\ \\
+Auswertung:
+\[
+	\frac{A(h_0)}{V(h_0)} = \frac{r_0^2\pi}{h_0r^2_0\pi} = \frac{1}{h_0}
+\]
+Die Differentialgleichung lautet
+\begin{align*}
+	V(h) &= \int_{0}^{h}A(\tilde{h})\text{d}\tilde{h} \\
+	\frac{\text{d}V(h)}{\text{d}h} &= \frac{\text{d}}{\text{d}h}\int_{0}^{h}A(\tilde{h})\text{d}\tilde{h} = A(h) \\
+	\frac{\text{d}V(h)}{\text{d}h} &= \frac{1}{h_0}V(h)
+\end{align*}
+Allgemeine Lösung der Differentialgleichung
+\begin{align*}
+	V(h) = Ce^{\frac{h}{h_0}}
+\end{align*}
+Durch Einsetzen von $h = h_0$ lautet die explizite Lösung
+\[
+	V(h) = V_0e^{\frac{h}{h_0} - 1}
+\]
+e)\\ \\
+Mit
+\[
+	\dot{q}(T,T_\infty) = \alpha(T - T\infty)
+\]
+und der Gleichungen a) und b) und der Starttemperatur ergibt für den Verlauf des Abkühlvorganges
+\[
+	T = T_\infty + (T_0 - T_\infty)e^{-\frac{\alpha}{h_0\rho c_p}t}
+\]

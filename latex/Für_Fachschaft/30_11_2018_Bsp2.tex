@@ -1,0 +1,34 @@
+\newpage
+\noindent
+\textbf{Beispiel 2}\\ \\
+a)\\ \\
+Durch Anwendung der Cross-String-Methode ergibt sich für den gesuchten Sichtfaktor
+\[
+	F_{PW} = \frac{1}{2} - \frac{1}{\pi}\arctan\left(\frac{d_P}{b}\right)
+\]
+b) \\ \\
+Die vollständige Sichtfaktormatrix lautet
+\[
+	\textbf{F} = \begin{bmatrix}
+		0 & F_{PW} & 1 - F_{PW} \\
+		F_{WP} & 0 & 1 - F_{WP} \\
+		0 & 0 & 1
+	\end{bmatrix}
+\]
+c)\\ \\
+Durch Einsetzen in die Nettowärmestromdichte und vereinfachen dieser Gleichung ergibt sich für $\dot{q}_W$
+\[
+	\dot{q}_W = \frac{\sigma \varepsilon_W}{1 - (1 - \varepsilon_P)(1 - \varepsilon_W)F_{WP}F_{PW}}\left(-\varepsilon_PF_{WP}T_P^4 + (1 - (1 - \varepsilon_P)F_{WP}F_{PW})T_W^4\right)
+\]
+d) \\ \\
+Durch einfache Überlegung lautet das stationäre Temperaturprofil
+\[
+	T_S(s) = T_W- \frac{T_W - T_0}{d_W}z
+\]
+Der erste Teil ist die Anfangstemperatur und der zweite Teil beschreibt die zeitliche Abnahmerate. \\ \\
+e)\\ \\
+Hier soll nun eine Randbedingung aufgestellt werden. Für dieses gilt
+\[
+	\lambda\frac{\partial T_S}{\partial z}\biggl|_{z = 0} = \frac{\lambda}{h}(T_0 - T_W) = \dot{q}_W(T_P,T_W)
+\]
+Die Wärmestromdichte $\dot{q}_W(T_P,T_W)$ wurde aus Punkt c) genommen. \\ \\ 
